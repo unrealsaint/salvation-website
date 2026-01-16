@@ -1,0 +1,158 @@
+.un_nav {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100;
+  background-color: rgba(29, 29, 29, 0.95);
+  height: 4rem;
+}
+.un_nav #navMobile {
+  position: fixed;
+  top: 0;
+  left: -10000rem;
+}
+.un_navMobile {
+  display: none;
+}
+.un_navEnd {
+  display: flex;
+  align-items: center;
+}
+.un_navEnd select {
+  padding: 0.4rem 0.3rem;
+  color: rgba(255, 255, 255, 0.65);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.un_navEnd select:hover {
+  color: white;
+}
+.un_navEnd select option {
+  border-radius: 0;
+  background-color: black;
+  color: white;
+  border: none;
+}
+.un_nav ul {
+  padding: 0;
+  list-style: none;
+}
+.un_navList {
+  display: flex;
+  gap: 6rem;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  z-index: 2;
+}
+.un_navList label {
+  display: flex;
+  width: 100%;
+}
+.un_navList li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.un_navList li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  width: 0.2rem;
+  height: 0.2rem;
+  right: -3.2rem;
+  border: 0.15rem solid white;
+  transform: rotate(45deg);
+  opacity: 0.25;
+}
+.un_navList li a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.6);
+}
+.un_navList li a:hover {
+  color: white;
+}
+.un_navUser {
+  display: flex;
+  position: relative;
+  z-index: 3;
+}
+.un_navUser li:nth-child(2) a svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.un_navUser li {
+  padding: 0 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.un_navUser li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  width: 0.2rem;
+  height: 0.2rem;
+  right: -0.25rem;
+  border: 0.15rem solid white;
+  transform: rotate(45deg);
+  opacity: 0.25;
+}
+.un_navUser li a {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+.un_navUser li a:hover svg {
+  opacity: 1;
+}
+.un_navUser li a svg {
+  transition: 0.3s;
+  width: 1.6rem;
+  height: 1.6rem;
+  opacity: 0.4;
+  filter: invert(100%);
+}
+.un_navSelect {
+  height: 4rem;
+}
+.un_navServer {
+  display: flex;
+  height: 4rem;
+  gap: 1rem;
+}
+.un_navServer h5 {
+  color: gray;
+  font-weight: normal;
+  position: absolute;
+  top: -0.8rem;
+  pointer-events: none;
+  z-index: 3;
+}
+.un_navWrapper {
+  display: flex;
+  align-items: center;
+}
+.un_navIcon {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  z-index: 3;
+}
+.un_navIcon img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+}/*# sourceMappingURL=nav.css.map */

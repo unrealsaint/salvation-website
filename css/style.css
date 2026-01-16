@@ -1,0 +1,111 @@
+@import url(./main.css);
+@import url(./nav.css);
+@import url(./files.css);
+@import url(./theme.css);
+@import url(./font.css);
+@import url(./media.css);
+body:lang(pl) {
+  font-family: "Strong Sword";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+select,
+input {
+  font-family: "Arpona";
+}
+
+h1 {
+  background-clip: text;
+  background-image: url(../images/texture.jpg);
+  -webkit-text-fill-color: transparent;
+  filter: brightness(120%);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+  font-family: "Prasia";
+  color: white;
+}
+
+.un_container {
+  width: min(90%, 85rem);
+  margin: 0 auto;
+  position: relative;
+}
+
+.animation::after {
+  animation: mask 1s steps(39) forwards;
+}
+
+@keyframes mask {
+  0% {
+    -webkit-mask-position: 0 0;
+  }
+  100% {
+    -webkit-mask-position: 100% 0;
+  }
+}
+html {
+  font-size: var(--base-font-size);
+}
+
+@media (max-width: 480px) {
+  :root {
+    --base-font-size: 3.1vw;
+  }
+}
+@media (min-width: 481px) and (max-width: 769px) {
+  :root {
+    --base-font-size: 2.8vw;
+  }
+}
+@media (min-width: 770px) and (max-width: 1024px) {
+  :root {
+    --base-font-size: 0.9vw;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1619px) {
+  :root {
+    --base-font-size: 0.9vw;
+  }
+}
+@media (min-width: 1620px) and (max-width: 1920px) {
+  :root {
+    --base-font-size: 16px;
+  }
+}
+@media (min-width: 1921px) {
+  :root {
+    --base-font-size: 16px;
+  }
+}
+.fancybox-bg {
+  background: black !important;
+}
+
+.compensate-for-scrollbar {
+  margin-right: 0 !important;
+}
+
+.fancybox-iosfix {
+  position: absolute !important;
+}
+
+#sparks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 8;
+  overflow: hidden;
+  mix-blend-mode: screen;
+  opacity: 0.5;
+}/*# sourceMappingURL=style.css.map */

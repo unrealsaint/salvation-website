@@ -1,0 +1,193 @@
+.un_nav {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100;
+    background-color: rgba(29, 29, 29, 0.95);
+    height: 4rem;
+
+
+    #navMobile {
+        position: fixed;
+        top: 0;
+        left: -10000rem;
+    }
+
+    &Mobile {
+        display: none;
+    }
+
+    &End {
+        display: flex;
+        align-items: center;
+
+        select {
+            padding: 0.4rem 0.3rem;
+            color: rgba(255, 255, 255, 0.65);
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: .3s;
+
+            &:hover {
+                color: white;
+            }
+
+            option {
+                border-radius: 0;
+                background-color: black;
+                color: white;
+                border: none;
+            }
+        }
+    }
+
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    &List {
+        display: flex;
+        gap: 6rem;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        width: fit-content;
+        z-index: 2;
+
+
+        label {
+            display: flex;
+            width: 100%;
+        }
+
+        li {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            &:not(:last-child)::before {
+                content: '';
+                position: absolute;
+                width: 0.2rem;
+                height: 0.2rem;
+                right: -3.2rem;
+                border: 0.15rem solid white;
+                transform: rotate(45deg);
+                opacity: 0.25;
+            }
+
+            a {
+                text-decoration: none;
+                cursor: pointer;
+                transition: .3s;
+                color: rgba(255, 255, 255, 0.6);
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &User {
+        display: flex;
+        position: relative;
+        z-index: 3;
+
+        li:nth-child(2) {
+            a {
+                svg {
+                    width: 1.4rem;
+                    height: 1.4rem;
+                }
+            }
+        }
+
+        li {
+            padding: 0 1.5rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            &:not(:last-child)::before {
+                content: '';
+                position: absolute;
+                width: 0.2rem;
+                height: 0.2rem;
+                right: -0.25rem;
+                border: 0.15rem solid white;
+                transform: rotate(45deg);
+                opacity: 0.25;
+            }
+
+            a {
+                color: white;
+                display: flex;
+                align-items: center;
+                gap: 0.7rem;
+                text-decoration: none;
+
+                &:hover {
+                    svg {
+                        opacity: 1;
+                    }
+                }
+
+                svg {
+                    transition: .3s;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    opacity: 0.4;
+                    filter: invert(100%);
+                }
+            }
+        }
+    }
+
+    &Select {
+        height: 4rem;
+    }
+
+    &Server {
+        display: flex;
+        height: 4rem;
+        gap: 1rem;
+
+        h5 {
+            color: gray;
+            font-weight: normal;
+            position: absolute;
+            top: -0.8rem;
+            pointer-events: none;
+            z-index: 3;
+        }
+    }
+
+    &Wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &Icon {
+        width: fit-content;
+        display: flex;
+        position: relative;
+        z-index: 3;
+
+        img {
+            width: 4rem;
+            height: 4rem;
+            object-fit: cover;
+
+        }
+    }
+}

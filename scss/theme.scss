@@ -1,0 +1,188 @@
+
+:root {
+    --theme_1-bg: center 0, center 0;
+    --theme_1-icon: hue-rotate(280deg);
+    --theme_1-keyIcon: hue-rotate(290deg);
+    --theme_1-btn: blur(2rem) hue-rotate(255deg) brightness(130%) contrast(100%);
+    --theme_1-logo: invert(100%) hue-rotate(120deg) brightness(100%) grayscale(70%);
+
+    --theme_2-bg: center 0;
+    --theme_2-icon: hue-rotate(190deg) brightness(180%);
+    --theme_2-keyIcon: hue-rotate(60deg);
+    --theme_2-btn: blur(2rem) hue-rotate(205deg) brightness(150%) contrast(100%);
+    --theme_2-logo: hue-rotate(15deg);
+}
+
+
+body.theme_1::after {
+    background-position: var(--theme_1-bg);
+    background-image: url('../images/bg/theme/backgroundmain.png') !important;
+}
+
+.theme_1 {
+
+    .un_files {
+        &Option {
+            div {
+                div {
+                    &::before {
+                        filter: var(--theme_1-btn);
+                    }
+                }
+            }
+        }
+    }
+
+    &-icon {
+        img {
+            filter: var(--theme_1-icon);
+        }
+    }
+
+    .un_nav {
+        &Icon {
+            img {
+                filter: var(--theme_1-icon);
+            }
+        }
+    }
+
+    .un_header {
+        &Logo {
+            img {
+                filter: var(--theme_1-logo);
+            }
+        }
+
+        &Key {
+            &-btn {
+                label {
+                    span {
+                        &::before {
+                            filter: var(--theme_1-btn);
+                        }
+                    }
+                }
+            }
+        }
+
+        &Key {
+            &-list {
+                ul {
+                    li {
+                        span:nth-child(1) {
+                            &::before {
+                                filter: var(--theme_1-keyIcon);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+body.theme_2::after {
+    background-image: url('../images/bg/theme/bg2.jpg') !important;
+    background-position: center 0 !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.theme_2 {
+
+    .un_files {
+        &Option {
+            div {
+                div {
+                    &::before {
+                        filter: var(--theme_2-btn);
+                    }
+                }
+            }
+        }
+    }
+
+    &-icon {
+        img {
+            filter: var(--theme_2-icon);
+        }
+    }
+
+    .un_nav {
+        &Icon {
+            img {
+                filter: var(--theme_2-icon);
+            }
+        }
+    }
+    .un_header {
+
+        &Logo {
+            img {
+                filter: var(--theme_2-logo);
+            }
+        }
+
+        &Key {
+            &-btn {
+                label {
+                    span {
+                        &::before {
+                            filter: var(--theme_2-btn);
+                        }
+                    }
+                }
+            }
+        }
+
+        &Key {
+            &-list {
+                ul {
+                    li {
+                        span:nth-child(1) {
+                            &::before {
+                                filter: var(--theme_2-keyIcon);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+body {
+    margin: 0;
+    background-color: rgb(17, 17, 17);
+    font-family: 'Arpona';
+   
+    &::after {
+        content: '';
+        width: 100%;
+        height: 104vh;
+        background-position: center 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        mask: url(../images/mask_up.webp);
+        mask-size: 4000% 100%;
+        mask-position: 100% 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(rgb(0, 0, 0), rgba(32, 32, 32, 0.95));
+        mask: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7), rgb(0, 0, 0));
+        bottom: -7vh;
+        left: 0;
+        z-index: 1;
+    }
+}
