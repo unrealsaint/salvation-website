@@ -165,10 +165,6 @@ const theme = [
                         download: 'Download',
                         options: [
                             {
-                                title: 'Mega',
-                                url: 'https://mega.nz/file/SvRSRR4C#8tU0cnVNTFi7g8CEmiR5PUuBnV44kt0uNlu_XRjYq9A'
-                            },
-                            {
                                 title: 'Google Drive',
                                 url: 'https://drive.google.com/file/d/1bSUs5c60QXf03RoD3hckOVDGw1qX2V9G/view?usp=sharing'
                             },
@@ -179,10 +175,6 @@ const theme = [
                         fileSize: '107 MB',
                         download: 'Download',
                         options: [
-                            {
-                                title: 'Mega',
-                                url: 'https://mega.nz/file/froQgSZD#fkLe9H5MSopo4mfFYHYrX81-7W-OsRq2yrU9x_Pa4uM'
-                            },
                             {
                                 title: 'Google Drive',
                                 url: 'https://drive.google.com/file/d/1Bmp-p0hluFFfcP_ZSLKu69WdUUdaFreT/view?usp=sharing'
@@ -206,10 +198,6 @@ const theme = [
                         download: 'Pobierz',
                         options: [
                             {
-                                title: 'Mega',
-                                url: 'https://mega.nz/file/SvRSRR4C#8tU0cnVNTFi7g8CEmiR5PUuBnV44kt0uNlu_XRjYq9A'
-                            },
-                            {
                                 title: 'Google Drive',
                                 url: 'https://drive.google.com/file/d/1bSUs5c60QXf03RoD3hckOVDGw1qX2V9G/view?usp=sharing'
                             },
@@ -220,10 +208,6 @@ const theme = [
                         fileSize: '107 MB',
                         download: 'Pobierz',
                         options: [
-                            {
-                                title: 'Mega',
-                                url: 'https://mega.nz/file/froQgSZD#fkLe9H5MSopo4mfFYHYrX81-7W-OsRq2yrU9x_Pa4uM'
-                            },
                             {
                                 title: 'Google Drive',
                                 url: 'https://drive.google.com/file/d/1Bmp-p0hluFFfcP_ZSLKu69WdUUdaFreT/view?usp=sharing'
@@ -400,10 +384,6 @@ const theme = [
                         download: 'Download',
                         options: [
                             {
-                                title: 'Mega',
-                                url: 'https://mega.nz/file/oFwlgChA#L7mdWQwyARYkyMrZufhAIF7NNJmrbl3PejPcpvHmqAQ'
-                            },
-                            {
                                 title: 'Google Drive',
                                 url: 'https://drive.google.com/file/d/1skQLWi7TXnEms-QCXQdvTO6-I1mOuhT6/view?usp=sharing'
                             },
@@ -425,10 +405,6 @@ const theme = [
                         fileSize: '11.71 GB',
                         download: 'Pobierz',
                         options: [
-                            {
-                                title: 'Mega',
-                                url: 'https://mega.nz/file/oFwlgChA#L7mdWQwyARYkyMrZufhAIF7NNJmrbl3PejPcpvHmqAQ'
-                            },
                             {
                                 title: 'Google Drive',
                                 url: 'https://drive.google.com/file/d/1skQLWi7TXnEms-QCXQdvTO6-I1mOuhT6/view?usp=sharing'
