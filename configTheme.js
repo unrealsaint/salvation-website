@@ -169,17 +169,6 @@ const theme = [
                                 url: 'https://drive.google.com/file/d/1bSUs5c60QXf03RoD3hckOVDGw1qX2V9G/view?usp=sharing'
                             },
                         ]
-                    },
-                    {
-                        title: 'Download System (Optional)',
-                        fileSize: '107 MB',
-                        download: 'Download',
-                        options: [
-                            {
-                                title: 'Google Drive',
-                                url: 'https://drive.google.com/file/d/1Bmp-p0hluFFfcP_ZSLKu69WdUUdaFreT/view?usp=sharing'
-                            },
-                        ]
                     }
                 ],
                 support: {
