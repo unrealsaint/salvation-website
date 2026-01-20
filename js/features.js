@@ -30,10 +30,7 @@ function initializeFeaturesPage() {
     // Get current language (reuse from script.js if available)
     const getStoredLanguage = () => {
         const storedLanguage = localStorage.getItem('selectedLanguage');
-        const browserLanguage = navigator.language || navigator.languages[0];
-        const languageCode = browserLanguage.split('-')[0];
-        const availableLanguages = ['en', 'pl'];
-        return storedLanguage || (availableLanguages.includes(languageCode) ? languageCode : 'en');
+        return storedLanguage || 'en';
     };
 
     const currentLanguage = getStoredLanguage();

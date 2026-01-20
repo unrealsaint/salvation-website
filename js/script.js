@@ -14,7 +14,7 @@ const getBrowserLanguage = () => {
 
 const getStoredLanguage = () => {
     const storedLanguage = localStorage.getItem('selectedLanguage');
-    return storedLanguage || getBrowserLanguage();
+    return storedLanguage || 'en';
 };
 
 const findServerById = (serverId) => theme.find(server => server.id === serverId);
