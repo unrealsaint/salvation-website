@@ -8,7 +8,7 @@ const theme = [
             pl: 'High Five'
         },
 
-        exp: 'X15',
+        exp: 'X5',
         header: {
             title: {
                 en: "Welcome to High Five Salvation Project",
@@ -27,42 +27,42 @@ const theme = [
         rates: [
             {
                 type: 'Experience',
-                value: 'x15',
+                value: 'x5',
                 icon: 'images/icons/5.png'
             },
             {
                 type: 'SP',
-                value: 'x15',
+                value: 'x5',
                 icon: 'images/icons/5.png'
             },
             {
                 type: 'Adena',
-                value: 'x7.5',
+                value: 'x3',
                 icon: 'images/icons/5.png'
             },
             {
                 type: 'Drop',
-                value: 'x7.5',
+                value: 'x5',
                 icon: 'images/icons/5.png'
             },
             {
                 type: 'Spoil',
-                value: 'x7.5',
+                value: 'x5',
                 icon: 'images/icons/5.png'
             },
             {
                 type: 'Quest',
-                value: 'x1',
+                value: 'x3',
                 icon: 'images/icons/5.png'
             },
             {
                 type: 'Seal Stones',
-                value: 'x7.5',
+                value: 'x5',
                 icon: 'images/icons/5.png'
             },
             {
                 type: 'Raid Drop',
-                value: 'x4.5',
+                value: 'x5',
                 icon: 'images/icons/5.png'
             },
             {
@@ -189,17 +189,6 @@ const theme = [
                             {
                                 title: 'Google Drive',
                                 url: 'https://drive.google.com/file/d/1bSUs5c60QXf03RoD3hckOVDGw1qX2V9G/view?usp=sharing'
-                            },
-                        ]
-                    },
-                    {
-                        title: 'Pobierz System',
-                        fileSize: '107 MB',
-                        download: 'Pobierz',
-                        options: [
-                            {
-                                title: 'Google Drive',
-                                url: 'https://drive.google.com/file/d/1Bmp-p0hluFFfcP_ZSLKu69WdUUdaFreT/view?usp=sharing'
                             },
                         ]
                     }
