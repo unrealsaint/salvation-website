@@ -1,23 +1,10 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "**",
-            "use": "@vercel/static"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/",
-            "dest": "/index.html"
-        },
-        {
-            "src": "/features",
-            "dest": "/features.html"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/$1"
-        }
-    ]
+  "version": 2,
+  "builds": [{"src": "**", "use": "@vercel/static"}],
+  "routes": [
+    {"src": "/", "dest": "/index.html"},
+    {"src": "/features", "dest": "/features.html"},
+    {"src": "/sitemap.xml", "dest": "/sitemap.xml", "headers": {"Content-Type": "application/xml; charset=utf-8"}},
+    {"src": "/(.*)", "dest": "/$1"}
+  ]
 }
