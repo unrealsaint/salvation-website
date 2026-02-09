@@ -98,6 +98,12 @@
     justify-content: center;
     height: fit-content;
   }
+  .un_headerLogo img {
+    width: min(30rem, 90vw);
+  }
+  .un_headerLogo .un_headerLogo-oasis {
+    width: min(26rem, 78vw);
+  }
   .un_headerWrapper h1 {
     width: 100%;
   }

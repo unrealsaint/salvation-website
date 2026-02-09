@@ -27,6 +27,9 @@ body.theme_1::after {
 .theme_1 .un_headerLogo img {
   filter: var(--theme_1-logo);
 }
+.theme_1 .un_headerLogo .un_headerLogo-oasis {
+  filter: none;
+}
 .theme_1 .un_headerKey-btn label span::before {
   filter: var(--theme_1-btn);
 }
@@ -51,6 +54,9 @@ body.theme_2::after {
 }
 .theme_2 .un_headerLogo img {
   filter: var(--theme_2-logo);
+}
+.theme_2 .un_headerLogo .un_headerLogo-oasis {
+  filter: none;
 }
 .theme_2 .un_headerKey-btn label span::before {
   filter: var(--theme_2-btn);

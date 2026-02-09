@@ -741,10 +741,21 @@
 }
 .un_headerLogo {
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 .un_headerLogo img {
   margin: 0 auto;
   width: 30rem;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.un_headerLogo .un_headerLogo-oasis {
+  width: 26rem;
+  max-width: 100%;
 }
 .un_headerWrapper {
   height: 100%;
