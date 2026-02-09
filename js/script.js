@@ -267,8 +267,11 @@ const updateGlobalContent = (language, selectedServer = null) => {
         stepsContainer.innerHTML = lang[language].howToStart.steps.map(step => {
             // Check if this is the "Go to Download" button
             const isDownloadButton = step.linkTitle === 'Go to Download' || step.linkTitle === 'Przejdź do pobierania';
+            const isPanelButton = step.linkTitle === 'Go to Panel' || step.linkTitle === 'Przejdź do panelu';
             const linkClass = isDownloadButton ? 'download-trigger' : '';
-            const linkHref = isDownloadButton ? '#' : step.href;
+            let linkHref = step.href;
+            if (isDownloadButton) linkHref = '#';
+            else if (isPanelButton && effectiveServer && effectiveServer.panelUrl) linkHref = effectiveServer.panelUrl;
             const linkTarget = isDownloadButton ? '' : 'target="_blank"';
             
             return `

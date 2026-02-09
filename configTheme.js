@@ -5,6 +5,7 @@ const theme = [
         id: '1',
         loginUrl: 'https://account.oasis-world.eu/',
         registerUrl: 'https://account.oasis-world.eu/ucp/?page=register',
+        panelUrl: 'https://account.oasis-world.eu/',
         name: {
             en: 'High Five',
             pl: 'High Five'
@@ -214,6 +215,7 @@ const theme = [
         id: '2',
         loginUrl: 'https://account.oasis-interlude.com/login.php',
         registerUrl: 'https://account.oasis-interlude.com/register.php',
+        panelUrl: 'https://account.oasis-interlude.com/',
         name: {
             en: 'Interlude+',
             pl: 'Interlude+'

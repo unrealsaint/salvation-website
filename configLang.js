@@ -20,8 +20,8 @@ const lang = {
             steps: [
                 {
                     number: 'I',
-                    title: 'Create your Master Account',
-                    paragraph: 'Go to registration page and create your master account for our project',
+                    title: 'Create Account',
+                    paragraph: 'Go to registration page and create your account for our project',
                     href: '/account',
                     linkTitle: 'Go to Panel',
                 },
@@ -29,7 +29,7 @@ const lang = {
                 {
                     number: 'II',
                     title: 'Download the Game Files',
-                    paragraph: 'Download the game files or updater',
+                    paragraph: 'Download the game files',
                     href: '/download',
                     linkTitle: 'Go to Download',
                 },
