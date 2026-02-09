@@ -81,6 +81,15 @@ Then open `http://localhost:8000` in your browser.
 - **Languages**: Edit `configLang.js` to add or modify translations
 - **Styling**: SCSS files are in `scss/` directory, compiled CSS in `css/`
 
+## SEO
+
+The site includes meta descriptions, Open Graph and Twitter Card tags, canonical URLs, `robots.txt`, and `sitemap.xml`. If your live domain is not `https://oasis-world.eu`, search and replace that URL in:
+
+- `index.html` (canonical, og:url, og:image, twitter:image, JSON-LD)
+- `features.html` (canonical, og:url, og:image, twitter:image, BreadcrumbList)
+- `robots.txt` (Sitemap URL)
+- `sitemap.xml` (all `<loc>` URLs)
+
 ## License
 
 All trademarks referenced herein are the properties of their respective owners.
