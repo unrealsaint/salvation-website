@@ -3,6 +3,8 @@ const theme = [
         theme: 'theme_1', /*You can choose between theme_1 and 2 (Contact us at Templstock for more themes)*/
         defaultTheme: true,
         id: '1',
+        loginUrl: 'https://account.oasis-world.eu/',
+        registerUrl: 'https://account.oasis-world.eu/ucp/?page=register',
         name: {
             en: 'High Five',
             pl: 'High Five'

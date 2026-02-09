@@ -207,13 +207,18 @@ const updateGlobalContent = (language, selectedServer = null) => {
         navServerTitle.textContent = lang[language].nav.select;
     }
 
+    const effectiveServer = selectedServer || findServerById(getStoredServer());
+    const isRegisterLink = (link) => link.text === 'Register' || link.text === 'Zarejestruj się';
     const linksWithoutLabels = lang[language].nav.links
         .filter(link => !link.for)
-        .map(link => `
+        .map(link => {
+            const href = (isRegisterLink(link) && effectiveServer && effectiveServer.registerUrl) ? effectiveServer.registerUrl : link.href;
+            return `
         <li>
-            <a href="${link.href}">${link.text}</a>
+            <a href="${href}">${link.text}</a>
         </li>
-    `).join('');
+    `;
+        }).join('');
 
     const navLinksContainer = document.querySelector('.un_navList');
     const linksWithLabels = lang[language].nav.links
@@ -244,9 +249,12 @@ const updateGlobalContent = (language, selectedServer = null) => {
     });
 
     const userLinksContainer = document.querySelector('.un_navUser');
-    userLinksContainer.innerHTML = lang[language].nav.userLinks.map(link => `
-        <li><a href="${link.href}">${link.icon}${link.text}</a></li>
-    `).join('');
+    const defaultLoginHref = (lang[language].nav.userLinks.find(l => l.text === 'Login' || l.text === 'Zaloguj się') || {}).href || '/login';
+    const loginHref = effectiveServer && effectiveServer.loginUrl ? effectiveServer.loginUrl : defaultLoginHref;
+    userLinksContainer.innerHTML = lang[language].nav.userLinks.map(link => {
+        const href = (link.text === 'Login' || link.text === 'Zaloguj się') ? loginHref : link.href;
+        return `<li><a href="${href}">${link.icon}${link.text}</a></li>`;
+    }).join('');
 
 
     const stepsTitle = document.querySelector('.un_startSteps h1');
