@@ -371,191 +371,135 @@ function initializeFeaturesPage() {
             return;
         }
 
-        // High Five Salvation content (existing)
+        // High Five Salvation content – Oasis Salvation server configs
         const detailedFeatures = {
             en: {
                 title: `${serverName} - Complete Features`,
                 content: `
                     <div class="un_featuresPageDetailed">
                         <div class="un_featuresPageDetailSection">
-                            <h3>Server Information</h3>
-                            <p>Oasis World High Five Salvation is a non-P2W server where all advantages must be earned through dedication and skill. The server is guaranteed to run continuously, providing a stable and fair gaming environment for all players.</p>
-                            <ul>
-                                <li>Server time: UTC +0</li>
-                                <li>No pay-to-win advantages</li>
-                                <li>All items, enchants, and bonuses earned through gameplay</li>
-                                <li>Fair competition for all players</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Gameplay Features</h3>
-                            <ul>
-                                <li><strong>2 instance runs per HWID limit</strong> - Balanced instance farming</li>
-                                <li><strong>Autolearn skills</strong> - Divine Inspiration and forgotten scroll skills excluded</li>
-                                <li><strong>Auto loot</strong> - Convenient item collection</li>
-                                <li><strong>Drop list on monsters</strong> - See what monsters drop by hovering</li>
-                                <li><strong>Offline shop</strong> - Duration 5 days before being kicked</li>
-                                <li><strong>Auto Augment</strong> - With wished augment selection</li>
-                                <li><strong>Auto item enchant</strong> - Streamlined enchanting process</li>
-                                <li><strong>Auto attribute enchant</strong> - Automatic attribute management</li>
-                                <li><strong>Auto potions</strong> - Automatic potion usage</li>
-                                <li><strong>Inventory slots 100</strong> - Extended inventory capacity</li>
-                                <li><strong>Summons get buffs from master</strong> - Enhanced summon system</li>
-                                <li><strong>Sub class up to level 85</strong> - Extended subclass progression</li>
-                                <li><strong>Certification skills on sub classes</strong> - Full subclass functionality</li>
-                                <li><strong>All classes have 1 additional sell slot</strong> - Enhanced trading</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Skills & Buffs</h3>
-                            <ul>
-                                <li><strong>Weight limit increased x5</strong> - Carry more items</li>
-                                <li><strong>Restore life does not work in Raid Boss or Epic Boss</strong> - Balanced PvE</li>
-                                <li><strong>Cancel return buffs after 15 seconds</strong> - Strategic gameplay</li>
-                                <li><strong>Curse of Fear</strong> - Base reuse time increased from 3s to 10s, land rate decreased from 80 to 60</li>
-                                <li><strong>Fear</strong> - Base reuse time increased from 5s to 10s, land rate decreased from 80 to 60</li>
-                                <li><strong>Counter Critical and Chant of Protection</strong> - Cannot be stacked, they replace each other</li>
-                                <li><strong>Buff slots</strong> - 24 + 4 (divine inspiration) + 12 (dances and songs)</li>
-                                <li><strong>Buff duration</strong> - 3 hours, selfbuffs retail</li>
-                                <li><strong>Malaria, flu, rheuma</strong> - Only available in Hot Springs, work as debuffs, cleansable</li>
-                                <li><strong>Buff block skill</strong> - To avoid buffs from non party members</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Items & Equipment</h3>
-                            <ul>
-                                <li><strong>MP potions</strong> - 500 + 500 over 9s dot, reuse time 10s</li>
-                                <li><strong>Warrior's Temporary healing potion</strong> - Reuse time 10s</li>
-                                <li><strong>New recipes</strong> - x100 materials craft has been added</li>
-                                <li><strong>Blessed Epic Jewels</strong> - Enhanced epic jewelry system with same bonuses but Elegia m.def</li>
-                                <li>Blessed jewels can be obtained by combining regular jewels with Soul's Bottle (drop from bosses)</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Clans & Party</h3>
-                            <ul>
-                                <li><strong>Max clans in alliance</strong> - 1</li>
-                                <li><strong>Max clan members</strong> - 108</li>
-                                <li><strong>Clan penalty</strong> - 30 minutes</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Profession / Subclass / Nobless</h3>
-                            <ul>
-                                <li><strong>First class change</strong> - FREE</li>
-                                <li><strong>Second class change</strong> - FREE</li>
-                                <li><strong>Third class change</strong> - QUEST</li>
-                                <li><strong>Subclass</strong> - QUEST/TW H5 quest, doesn't require Baium</li>
-                                <li><strong>Nobless</strong> - QUEST/TW, H5 quest, doesn't require Barakiel</li>
-                                <li><strong>Rim Kamaloka</strong> - Enabled, without PC Cafe points requirement</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Raid Boss Respawn Times</h3>
-                            <ul>
-                                <li><strong>Common Raids</strong> - 18h + 30m random</li>
-                                <li><strong>Sub class Raids</strong> - 8h + 30m random</li>
-                                <li><strong>Epic bosses</strong> - All epics dead on launch, PVP area inside and outside</li>
-                                <li><strong>Queen Ant, Core, Orfen</strong> - Monday to Friday specific times</li>
-                                <li><strong>Zaken</strong> - Night Time (4-40 party) and Day Time Hard (1-2 party)</li>
-                                <li><strong>Baium</strong> - Friday 18:00 - 18:30</li>
-                                <li><strong>Antharas</strong> - Saturday 18:00 - 19:00</li>
-                                <li><strong>Valakas</strong> - Sunday 18:10 - 19:00</li>
-                                <li><strong>Frintezza, Beleth, Freya</strong> - Reset Wednesday, Saturday 6:30</li>
-                                <li>Queen ant, Core, Orfen and Zaken (day) drops have been improved</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Community Board (ALT+B)</h3>
-                            <p>All-in-one services available in the community board:</p>
-                            <ul>
-                                <li><strong>Buffer</strong> - All buffs, including pet buffs, resistances. Duration 3 hours</li>
-                                <li><strong>Shop</strong> - Up to regular S grade armors, jewels and weapons. Misc items and more!</li>
-                                <li><strong>Services</strong> - Class change, gatekeeper, shop, learn skills</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Olympiads</h3>
-                            <ul>
-                                <li><strong>Cycle</strong> - 7 days</li>
-                                <li><strong>Period</strong> - Friday - Sunday 19:00 - 23:00</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Castle Siege & Territory War</h3>
-                            <ul>
-                                <li><strong>Castle Sieges</strong> - Sunday: 16:00 and 20:00</li>
-                                <li><strong>Territory War</strong> - Saturday: 20:00 - 22:00</li>
-                                <li><strong>Territory Badges</strong> - Valid in all Territories NPCs</li>
-                                <li><strong>Maximum flags</strong> - 3 flags per clan</li>
-                                <li><strong>Fortress Siege</strong> - Knight Epaulettes drop for players being registered or not</li>
-                                <li>Fortress and Castle instance NPCs are level 82+</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Enchant Rates</h3>
-                            <div class="un_enchantRates">
-                                <div>
-                                    <h4>Warrior Weapons</h4>
-                                    <ul>
-                                        <li>+0 to +3: 100%</li>
-                                        <li>+3 to +15: 70%</li>
-                                        <li>+15 to +20: 35%</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4>Mage Weapons</h4>
-                                    <ul>
-                                        <li>+0 to +3: 100%</li>
-                                        <li>+3 to +15: 40%</li>
-                                        <li>+15 to +20: 20%</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4>Armors (Full Body)</h4>
-                                    <ul>
-                                        <li>+0 to +4: 100%</li>
-                                        <li>+4 to +5: 66.6%</li>
-                                        <li>+5 to +6: 33.3%</li>
-                                        <li>+6 to +7: 25%</li>
-                                        <li>+7 to +8: 20%</li>
-                                        <li>+8 to +9: 16.6%</li>
-                                        <li>+9 to +10: 14.2%</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4>Armors & Accessories</h4>
-                                    <ul>
-                                        <li>+0 to +3: 100%</li>
-                                        <li>+3 to +4: 66.6%</li>
-                                        <li>+4 to +5: 33.3%</li>
-                                        <li>+5 to +6: 25%</li>
-                                        <li>+6 to +7: 20%</li>
-                                        <li>+7 to +8: 16.6%</li>
-                                        <li>+8 to +9: 14.2%</li>
-                                        <li>+9 to +10: 12.5%</li>
-                                    </ul>
-                                </div>
+                            <h3><img src="images/l2icons/rates.png" alt="" class="un_featuresCategoryIcon"> Core Rates</h3>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><td>XP</td><td><strong>5x</strong></td></tr>
+                                    <tr><td>SP</td><td><strong>5x</strong></td></tr>
+                                    <tr><td>Party XP/SP</td><td><strong>1.2x</strong></td></tr>
+                                </table>
                             </div>
                         </div>
 
                         <div class="un_featuresPageDetailSection">
-                            <h3>Voice Commands</h3>
+                            <h3><img src="images/l2icons/drop.png" alt="" class="un_featuresCategoryIcon"> Drop & Spoil</h3>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><td>Adena</td><td><strong>3x</strong></td></tr>
+                                    <tr><td>Item drop</td><td><strong>5x</strong></td></tr>
+                                    <tr><td>Spoil</td><td><strong>5x</strong></td></tr>
+                                    <tr><td>Raid boss</td><td><strong>3x</strong></td></tr>
+                                    <tr><td>Epic boss</td><td><strong>1x</strong> (standard)</td></tr>
+                                    <tr><td>Fishing</td><td><strong>3x</strong></td></tr>
+                                    <tr><td>Herbs</td><td><strong>3x</strong></td></tr>
+                                    <tr><td>Weapon/armor/accessory chance</td><td><strong>5x</strong></td></tr>
+                                    <tr><td>Quest item drop</td><td><strong>5x</strong></td></tr>
+                                </table>
+                            </div>
+                            <p>Equipment & materials get the rate increase too.</p>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/quest.png" alt="" class="un_featuresCategoryIcon"> Quests</h3>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><td>Quest XP/SP/Adena reward</td><td><strong>5x</strong></td></tr>
+                                    <tr><td>Quest item drop</td><td><strong>5x</strong></td></tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/manor.png" alt="" class="un_featuresCategoryIcon"> Manor / Hellbound</h3>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><td>Manor (seeds, crops)</td><td><strong>3x</strong></td></tr>
+                                    <tr><td>Extractables</td><td><strong>3x</strong></td></tr>
+                                    <tr><td>Hellbound trust gain</td><td><strong>3x</strong></td></tr>
+                                    <tr><td>Hellbound trust loss</td><td><strong>0.5x</strong></td></tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/vit.png" alt="" class="un_featuresCategoryIcon"> Vitality</h3>
+                            <p>On. Levels 0–4: bonus XP = 1.5x / 2x / 2.5x / 3x on top of 5x server. Full vitality (level 4) = up to 15x XP when farming.</p>
                             <ul>
-                                <li><strong>.mergetalisman</strong> - Combine talismans of the same type with more duration</li>
-                                <li><strong>alt+click</strong> - To remove buffs</li>
-                                <li><strong>.expon/.expoff</strong> - Commands to block the experience earning</li>
-                                <li><strong>.lock/.unlock</strong> - Commands to limit your character trades/damaging actions when used by other players</li>
+                                <li><strong>Recovery:</strong> 2x in peace zones, 4x on reconnect</li>
+                                <li><strong>Raid kill</strong> gives bonus points</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/pet.png" alt="" class="un_featuresCategoryIcon"> Pets</h3>
+                            <ul>
+                                <li><strong>Pet XP / Sin Eater XP:</strong> 5x</li>
+                                <li><strong>Pet food:</strong> 1x (standard)</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/pvp.png" alt="" class="un_featuresCategoryIcon"> Death & PvP</h3>
+                            <ul>
+                                <li><strong>PvE death:</strong> 20% chance Death Penalty debuff. De-level and skill decrease possible.</li>
+                                <li><strong>Karma (PK):</strong> With 6+ karma, you can drop items on death (adena never drops). Up to 10% inventory at risk.</li>
+                                <li><strong>Peace zone:</strong> whites safe; reds can't be killed in peace by default.</li>
+                                <li><strong>No level gap limit</strong> for PvP.</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/char_progression.png" alt="" class="un_featuresCategoryIcon"> Character & Progression</h3>
+                            <ul>
+                                <li><strong>Max level:</strong> 85</li>
+                                <li><strong>Subclasses:</strong> 3 max, from 40 to 85. Cost: 100 Coin of Luck (or subclass quest)</li>
+                                <li><strong>Weight:</strong> 8x</li>
+                                <li><strong>Respawn:</strong> 65% HP, 0% CP/MP</li>
+                                <li><strong>Auto-learn skills:</strong> On (to 85)</li>
+                                <li><strong>Buff slots:</strong> 20 (24 with premium)</li>
+                                <li><strong>Inventory:</strong> 100 base (150 Dwarf), expand to 300. Warehouse 100 (120 Dwarf), expand to 200</li>
+                                <li><strong>Private store:</strong> 3 sell / 4 buy (4/5 Dwarf), expandable</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/enchant.png" alt="" class="un_featuresCategoryIcon"> Enchant & Crafting</h3>
+                            <ul>
+                                <li><strong>Weapon/armor enchant:</strong> standard H5 rates. Premium adds +5 to scroll chance.</li>
+                                <li><strong>Element (stone/crystal/jewel/energy):</strong> config chances (e.g. 50/30/20/10%)</li>
+                                <li><strong>Blessed scroll:</strong> no safe level, can go to 0 on fail.</li>
+                                <li><strong>Crafting:</strong> standard (no time-based or bonus XP/SP)</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/premium.png" alt="" class="un_featuresCategoryIcon"> Premium (VIP)</h3>
+                            <p>Buy with Coin of Luck, 1–365 days. Same bonus all tiers:</p>
+                            <ul>
+                                <li>+30% XP, SP, adena, drop, raid, epic, quest reward/drop, fishing, spoil, siege drop, weight</li>
+                                <li>+10 craft chance, +3 masterwork, +5 enchant chance</li>
+                                <li>Seal stones: 1.3x modifier</li>
+                                <li><strong>Premium buffer:</strong> 180 min (3h) buffs. 24 buff slots, longer skill duration (e.g. 60 min)</li>
+                                <li>With premium: 6.5x XP (5x × 1.3)</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/other.png" alt="" class="un_featuresCategoryIcon"> Other</h3>
+                            <ul>
+                                <li><strong>No day-based rates</strong> (same every day)</li>
+                                <li><strong>Deep Blue:</strong> killing mobs 8+ levels below = less drop. Raid: 2 levels below</li>
+                                <li><strong>Raid/Epic respawn:</strong> standard (no global speed-up)</li>
+                                <li><strong>Shop:</strong> 1x (normal prices)</li>
+                                <li><strong>Innocent PvP drop:</strong> 0%</li>
+                                <li><strong>Olympiad:</strong> on, standard</li>
                             </ul>
                         </div>
                     </div>
@@ -566,184 +510,128 @@ function initializeFeaturesPage() {
                 content: `
                     <div class="un_featuresPageDetailed">
                         <div class="un_featuresPageDetailSection">
-                            <h3>Informacje o serwerze</h3>
-                            <p>Oasis World High Five Salvation to serwer non-P2W, gdzie wszystkie przewagi muszą być zdobyte poprzez poświęcenie i umiejętności. Serwer jest gwarantowany do ciągłej pracy, zapewniając stabilne i uczciwe środowisko gry dla wszystkich graczy.</p>
-                            <ul>
-                                <li>Czas serwera: UTC +0</li>
-                                <li>Brak przewag pay-to-win</li>
-                                <li>Wszystkie przedmioty, enchanty i bonusy zdobywane przez rozgrywkę</li>
-                                <li>Uczciwa konkurencja dla wszystkich graczy</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Funkcje Rozgrywki</h3>
-                            <ul>
-                                <li><strong>Limit 2 instancji na HWID</strong> - Zbalansowane farmienie instancji</li>
-                                <li><strong>Automatyczne uczenie umiejętności</strong> - Wykluczone Divine Inspiration i zapomniane zwoje</li>
-                                <li><strong>Automatyczny loot</strong> - Wygodne zbieranie przedmiotów</li>
-                                <li><strong>Lista dropów na potworach</strong> - Zobacz co dropują potwory</li>
-                                <li><strong>Sklep offline</strong> - Czas trwania 5 dni przed wyrzuceniem</li>
-                                <li><strong>Auto Augment</strong> - Z wybranym augmentem</li>
-                                <li><strong>Auto enchant przedmiotów</strong> - Uproszczony proces enchantowania</li>
-                                <li><strong>Auto enchant atrybutów</strong> - Automatyczne zarządzanie atrybutami</li>
-                                <li><strong>Auto potki</strong> - Automatyczne używanie potek</li>
-                                <li><strong>100 slotów w ekwipunku</strong> - Rozszerzona pojemność</li>
-                                <li><strong>Sumony otrzymują buffy od mistrza</strong> - Ulepszony system summonów</li>
-                                <li><strong>Subclass do poziomu 85</strong> - Rozszerzona progresja subclass</li>
-                                <li><strong>Umiejętności certyfikacyjne na subclass</strong> - Pełna funkcjonalność subclass</li>
-                                <li><strong>Wszystkie klasy mają 1 dodatkowy slot sprzedaży</strong> - Ulepszony handel</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Umiejętności i Buffy</h3>
-                            <ul>
-                                <li><strong>Limit wagi zwiększony x5</strong> - Noś więcej przedmiotów</li>
-                                <li><strong>Restore life nie działa na Raid Boss lub Epic Boss</strong> - Zbalansowane PvE</li>
-                                <li><strong>Anuluj return buffy po 15 sekundach</strong> - Strategiczna rozgrywka</li>
-                                <li><strong>Curse of Fear</strong> - Czas odnowienia zwiększony z 3s do 10s, szansa zmniejszona z 80 do 60</li>
-                                <li><strong>Fear</strong> - Czas odnowienia zwiększony z 5s do 10s, szansa zmniejszona z 80 do 60</li>
-                                <li><strong>Counter Critical i Chant of Protection</strong> - Nie mogą być stackowane, zastępują się nawzajem</li>
-                                <li><strong>Sloty buffów</strong> - 24 + 4 (divine inspiration) + 12 (tańce i pieśni)</li>
-                                <li><strong>Czas trwania buffów</strong> - 3 godziny, selfbuffy retail</li>
-                                <li><strong>Malaria, flu, rheuma</strong> - Tylko w Hot Springs, działają jako debuffy, można usunąć</li>
-                                <li><strong>Umiejętność blokowania buffów</strong> - Aby uniknąć buffów od osób spoza party</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Przedmioty i Ekwipunek</h3>
-                            <ul>
-                                <li><strong>Potki MP</strong> - 500 + 500 przez 9s dot, czas odnowienia 10s</li>
-                                <li><strong>Warrior's Temporary healing potion</strong> - Czas odnowienia 10s</li>
-                                <li><strong>Nowe receptury</strong> - Dodano craft z x100 materiałów</li>
-                                <li><strong>Błogosławione Epic Jewels</strong> - Ulepszony system epic jewelry z tymi samymi bonusami ale z m.def Elegia</li>
-                                <li>Błogosławione klejnoty można uzyskać łącząc zwykłe klejnoty z Soul's Bottle (drop z bossów)</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Klany i Party</h3>
-                            <ul>
-                                <li><strong>Maksymalna liczba klanów w sojuszu</strong> - 1</li>
-                                <li><strong>Maksymalna liczba członków klanu</strong> - 108</li>
-                                <li><strong>Kara klanu</strong> - 30 minut</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Profesja / Subclass / Nobless</h3>
-                            <ul>
-                                <li><strong>Pierwsza zmiana klasy</strong> - DARMOWA</li>
-                                <li><strong>Druga zmiana klasy</strong> - DARMOWA</li>
-                                <li><strong>Trzecia zmiana klasy</strong> - QUEST</li>
-                                <li><strong>Subclass</strong> - QUEST/TW H5 quest, nie wymaga Baium</li>
-                                <li><strong>Nobless</strong> - QUEST/TW, H5 quest, nie wymaga Barakiel</li>
-                                <li><strong>Rim Kamaloka</strong> - Włączone, bez wymogu punktów PC Cafe</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Czasy Odrodzenia Raid Bossów</h3>
-                            <ul>
-                                <li><strong>Zwykłe Raidy</strong> - 18h + 30m losowo</li>
-                                <li><strong>Raidy Subclass</strong> - 8h + 30m losowo</li>
-                                <li><strong>Epic bossowie</strong> - Wszyscy epicy martwi przy starcie, obszar PVP wewnątrz i na zewnątrz</li>
-                                <li><strong>Queen Ant, Core, Orfen</strong> - Poniedziałek do piątku w określonych godzinach</li>
-                                <li><strong>Zaken</strong> - Noc (4-40 party) i Dzień Hard (1-2 party)</li>
-                                <li><strong>Baium</strong> - Piątek 18:00 - 18:30</li>
-                                <li><strong>Antharas</strong> - Sobota 18:00 - 19:00</li>
-                                <li><strong>Valakas</strong> - Niedziela 18:10 - 19:00</li>
-                                <li><strong>Frintezza, Beleth, Freya</strong> - Reset środa, sobota 6:30</li>
-                                <li>Dropy Queen ant, Core, Orfen i Zaken (dzień) zostały ulepszone</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Community Board (ALT+B)</h3>
-                            <p>Wszystkie usługi dostępne w community board:</p>
-                            <ul>
-                                <li><strong>Buffer</strong> - Wszystkie buffy, w tym buffy petów, odporności. Czas trwania 3 godziny</li>
-                                <li><strong>Sklep</strong> - Do zwykłych S grade armors, jewels i broni. Różne przedmioty i więcej!</li>
-                                <li><strong>Usługi</strong> - Zmiana klasy, gatekeeper, sklep, nauka umiejętności</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Olimpiady</h3>
-                            <ul>
-                                <li><strong>Cykl</strong> - 7 dni</li>
-                                <li><strong>Okres</strong> - Piątek - Niedziela 19:00 - 23:00</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Oblężenia Zamków i Wojny Terytorialne</h3>
-                            <ul>
-                                <li><strong>Oblężenia Zamków</strong> - Niedziela: 16:00 i 20:00</li>
-                                <li><strong>Wojny Terytorialne</strong> - Sobota: 20:00 - 22:00</li>
-                                <li><strong>Odznaki Terytorialne</strong> - Ważne u wszystkich NPCs Terytoriów</li>
-                                <li><strong>Maksymalna liczba flag</strong> - 3 flagi na klan</li>
-                                <li><strong>Oblężenia Fortec</strong> - Knight Epaulettes drop dla graczy zarejestrowanych lub nie</li>
-                                <li>NPCs instancji Fortec i Zamków są poziomu 82+</li>
-                            </ul>
-                        </div>
-
-                        <div class="un_featuresPageDetailSection">
-                            <h3>Stawki Enchantowania</h3>
-                            <div class="un_enchantRates">
-                                <div>
-                                    <h4>Bronie Wojownika</h4>
-                                    <ul>
-                                        <li>+0 do +3: 100%</li>
-                                        <li>+3 do +15: 70%</li>
-                                        <li>+15 do +20: 35%</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4>Bronie Maga</h4>
-                                    <ul>
-                                        <li>+0 do +3: 100%</li>
-                                        <li>+3 do +15: 40%</li>
-                                        <li>+15 do +20: 20%</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4>Pancerze (Pełne)</h4>
-                                    <ul>
-                                        <li>+0 do +4: 100%</li>
-                                        <li>+4 do +5: 66.6%</li>
-                                        <li>+5 do +6: 33.3%</li>
-                                        <li>+6 do +7: 25%</li>
-                                        <li>+7 do +8: 20%</li>
-                                        <li>+8 do +9: 16.6%</li>
-                                        <li>+9 do +10: 14.2%</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4>Pancerze i Akcesoria</h4>
-                                    <ul>
-                                        <li>+0 do +3: 100%</li>
-                                        <li>+3 do +4: 66.6%</li>
-                                        <li>+4 do +5: 33.3%</li>
-                                        <li>+5 do +6: 25%</li>
-                                        <li>+6 do +7: 20%</li>
-                                        <li>+7 do +8: 16.6%</li>
-                                        <li>+8 do +9: 14.2%</li>
-                                        <li>+9 do +10: 12.5%</li>
-                                    </ul>
-                                </div>
+                            <h3><img src="images/l2icons/rates.png" alt="" class="un_featuresCategoryIcon"> Stawki podstawowe</h3>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><td>XP</td><td><strong>5x</strong></td></tr>
+                                    <tr><td>SP</td><td><strong>5x</strong></td></tr>
+                                    <tr><td>Party XP/SP</td><td><strong>1.2x</strong></td></tr>
+                                </table>
                             </div>
                         </div>
 
                         <div class="un_featuresPageDetailSection">
-                            <h3>Komendy Głosowe</h3>
+                            <h3><img src="images/l2icons/drop.png" alt="" class="un_featuresCategoryIcon"> Drop i Spoil</h3>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><td>Adena</td><td><strong>3x</strong></td></tr>
+                                    <tr><td>Drop przedmiotów</td><td><strong>5x</strong></td></tr>
+                                    <tr><td>Spoil</td><td><strong>5x</strong></td></tr>
+                                    <tr><td>Raid boss</td><td><strong>3x</strong></td></tr>
+                                    <tr><td>Epic boss</td><td><strong>1x</strong> (standard)</td></tr>
+                                    <tr><td>Wędkowanie</td><td><strong>3x</strong></td></tr>
+                                    <tr><td>Zioła</td><td><strong>3x</strong></td></tr>
+                                    <tr><td>Szansa broń/pancerz/akcesoria</td><td><strong>5x</strong></td></tr>
+                                    <tr><td>Drop przedmiotów z questów</td><td><strong>5x</strong></td></tr>
+                                </table>
+                            </div>
+                            <p>Ekwipunek i materiały również mają zwiększone stawki.</p>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/quest.png" alt="" class="un_featuresCategoryIcon"> Questy</h3>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><td>Nagroda XP/SP/Adena z questów</td><td><strong>5x</strong></td></tr>
+                                    <tr><td>Drop przedmiotów z questów</td><td><strong>5x</strong></td></tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/manor.png" alt="" class="un_featuresCategoryIcon"> Manor / Hellbound</h3>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><td>Manor (nasiona, plony)</td><td><strong>3x</strong></td></tr>
+                                    <tr><td>Ekstrahowane</td><td><strong>3x</strong></td></tr>
+                                    <tr><td>Zysk zaufania Hellbound</td><td><strong>3x</strong></td></tr>
+                                    <tr><td>Strata zaufania Hellbound</td><td><strong>0.5x</strong></td></tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/vit.png" alt="" class="un_featuresCategoryIcon"> Vitality</h3>
+                            <p>Włączone. Poziomy 0–4: bonus XP = 1.5x / 2x / 2.5x / 3x nałożony na 5x serwera. Pełne vitality (poziom 4) = do 15x XP przy farmieniu.</p>
                             <ul>
-                                <li><strong>.mergetalisman</strong> - Połącz talizmany tego samego typu z większym czasem trwania</li>
-                                <li><strong>alt+click</strong> - Aby usunąć buffy</li>
-                                <li><strong>.expon/.expoff</strong> - Komendy do blokowania zdobywania doświadczenia</li>
-                                <li><strong>.lock/.unlock</strong> - Komendy do ograniczenia handlu/akcji obrażeń twojej postaci gdy używane przez innych graczy</li>
+                                <li><strong>Regeneracja:</strong> 2x w strefach pokoju, 4x przy ponownym połączeniu</li>
+                                <li><strong>Zabójstwo raida</strong> daje bonusowe punkty</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/pet.png" alt="" class="un_featuresCategoryIcon"> Pety</h3>
+                            <ul>
+                                <li><strong>Pet XP / Sin Eater XP:</strong> 5x</li>
+                                <li><strong>Pokarm dla peta:</strong> 1x (standard)</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/pvp.png" alt="" class="un_featuresCategoryIcon"> Śmierć i PvP</h3>
+                            <ul>
+                                <li><strong>Śmierć PvE:</strong> 20% szansy na debuff Kary Śmierci. Możliwy delevel i spadek umiejętności.</li>
+                                <li><strong>Karma (PK):</strong> Przy 6+ karmie możesz dropować przedmioty przy śmierci (adena nigdy nie dropuje). Do 10% ekwipunku zagrożone.</li>
+                                <li><strong>Strefa pokoju:</strong> biali bezpieczni; czerwonych nie można zabić w peace domyślnie.</li>
+                                <li><strong>Brak limitu różnicy poziomów</strong> w PvP.</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/char_progression.png" alt="" class="un_featuresCategoryIcon"> Postać i progresja</h3>
+                            <ul>
+                                <li><strong>Maks. poziom:</strong> 85</li>
+                                <li><strong>Subclassy:</strong> 3 max, od 40 do 85. Koszt: 100 Coin of Luck (lub quest subclass)</li>
+                                <li><strong>Waga:</strong> 8x</li>
+                                <li><strong>Respawn:</strong> 65% HP, 0% CP/MP</li>
+                                <li><strong>Auto-learn umiejętności:</strong> Włączone (do 85)</li>
+                                <li><strong>Sloty buffów:</strong> 20 (24 z premium)</li>
+                                <li><strong>Ekwipunek:</strong> 100 bazowo (150 Krasnolud), rozszerzalny do 300. Magazyn 100 (120 Krasnolud), do 200</li>
+                                <li><strong>Prywatny sklep:</strong> 3 sprzedaż / 4 kupno (4/5 Krasnolud), rozszerzalne</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/enchant.png" alt="" class="un_featuresCategoryIcon"> Enchant i Crafting</h3>
+                            <ul>
+                                <li><strong>Enchant broni/pancerza:</strong> standardowe stawki H5. Premium dodaje +5 do szansy zwoju.</li>
+                                <li><strong>Element (kamień/kryształ/klejnot/energia):</strong> szanse z configu (np. 50/30/20/10%)</li>
+                                <li><strong>Blessed scroll:</strong> brak bezpiecznego poziomu, przy failu może zejść do 0.</li>
+                                <li><strong>Crafting:</strong> standard (bez bonusu czasowego ani XP/SP)</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/premium.png" alt="" class="un_featuresCategoryIcon"> Premium (VIP)</h3>
+                            <p>Kupno za Coin of Luck, 1–365 dni. Ten sam bonus we wszystkich tierach:</p>
+                            <ul>
+                                <li>+30% XP, SP, adena, drop, raid, epic, nagroda/drop z questów, wędkowanie, spoil, drop z siege, waga</li>
+                                <li>+10 szansa craftu, +3 masterwork, +5 szansa enchantu</li>
+                                <li>Seal stones: modyfikator 1.3x</li>
+                                <li><strong>Buffer premium:</strong> buffy 180 min (3h). 24 sloty buffów, dłuższy czas umiejętności (np. 60 min)</li>
+                                <li>Z premium: 6.5x XP (5x × 1.3)</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/other.png" alt="" class="un_featuresCategoryIcon"> Inne</h3>
+                            <ul>
+                                <li><strong>Brak stawek zależnych od dnia</strong> (takie same każdego dnia)</li>
+                                <li><strong>Deep Blue:</strong> zabijanie mobów 8+ poziomów poniżej = mniejszy drop. Raid: 2 poziomy poniżej</li>
+                                <li><strong>Respawn raid/epic:</strong> standard (bez globalnego przyspieszenia)</li>
+                                <li><strong>Sklep:</strong> 1x (normalne ceny)</li>
+                                <li><strong>Drop PvP niewinnego:</strong> 0%</li>
+                                <li><strong>Olimpiada:</strong> włączona, standard</li>
                             </ul>
                         </div>
                     </div>

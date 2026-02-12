@@ -824,6 +824,13 @@ body.features-page::after {
   position: relative;
   z-index: 10;
 }
+.un_featuresPageLogo {
+  display: block;
+  margin: 0 auto 1.5rem;
+  max-width: min(18rem, 70vw);
+  height: auto;
+  object-fit: contain;
+}
 .un_featuresPageTitle {
   font-size: 4rem;
   margin: 0 0 1.5rem 0;
@@ -842,6 +849,8 @@ body.features-page::after {
   margin-top: 6rem;
   position: relative;
   z-index: 10;
+  overflow-x: hidden;
+  min-width: 0;
 }
 .un_featuresPageSection {
   background: rgba(38, 38, 38, 0.6);
@@ -888,6 +897,7 @@ body.features-page::after {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  min-width: 0;
 }
 .un_featuresPageDetailSection {
   background: rgba(29, 29, 29, 0.6);
@@ -896,6 +906,8 @@ body.features-page::after {
   border: 0.05rem solid rgba(255, 255, 255, 0.1);
   position: relative;
   z-index: 10;
+  min-width: 0;
+  overflow-x: hidden;
 }
 .un_featuresPageDetailSection h3 {
   font-size: 2rem;
@@ -903,6 +915,15 @@ body.features-page::after {
   color: white;
   border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
   padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.un_featuresPageDetailSection h3 .un_featuresCategoryIcon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 .un_featuresPageDetailSection h4 {
   font-size: 1.5rem;
@@ -977,10 +998,13 @@ body.features-page::after {
 }
 .un_ratesTable {
   margin-top: 1.5rem;
-  overflow-x: auto;
+  max-width: 100%;
+  min-width: 0;
 }
 .un_ratesTable table {
   width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   background: rgba(38, 38, 38, 0.4);
   border-radius: 0.4rem;
@@ -991,6 +1015,17 @@ body.features-page::after {
   padding: 1rem 1.5rem;
   text-align: left;
   border-bottom: 0.05rem solid rgba(255, 255, 255, 0.1);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.un_ratesTable table td:first-child,
+.un_ratesTable table th:first-child {
+  width: 65%;
+}
+.un_ratesTable table td:last-child,
+.un_ratesTable table th:last-child {
+  width: 35%;
 }
 .un_ratesTable table th {
   background: rgba(29, 29, 29, 0.8);

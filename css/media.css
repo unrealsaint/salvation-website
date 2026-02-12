@@ -133,4 +133,18 @@
   .un_featuresList-row {
     width: 100%;
   }
+  .un_featuresPageDetailSection {
+    padding: 1.5rem 1.25rem;
+  }
+  .un_ratesTable table th,
+  .un_ratesTable table td {
+    padding: 0.75rem 0.75rem;
+    font-size: 0.95rem;
+  }
+  .un_ratesTable table td:first-child {
+    width: 60%;
+  }
+  .un_ratesTable table td:last-child {
+    width: 40%;
+  }
 }/*# sourceMappingURL=media.css.map */
