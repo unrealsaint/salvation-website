@@ -66,6 +66,10 @@ const updateCountdownLabels = (language) => {
   if (labelEl && lang[language] && lang[language].countdown) {
     labelEl.textContent = lang[language].countdown.label;
   }
+  const sublineEl = document.querySelector('.un_countdownSubline');
+  if (sublineEl && lang[language] && lang[language].countdown && lang[language].countdown.subline) {
+    sublineEl.textContent = lang[language].countdown.subline;
+  }
   document.querySelectorAll('.un_countdownUnitLabel[data-unit="days"]').forEach(el => { if (lang[language] && lang[language].countdown) el.textContent = lang[language].countdown.days; });
   document.querySelectorAll('.un_countdownUnitLabel[data-unit="hours"]').forEach(el => { if (lang[language] && lang[language].countdown) el.textContent = lang[language].countdown.hours; });
   document.querySelectorAll('.un_countdownUnitLabel[data-unit="minutes"]').forEach(el => { if (lang[language] && lang[language].countdown) el.textContent = lang[language].countdown.minutes; });

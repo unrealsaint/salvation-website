@@ -533,9 +533,14 @@
   font-family: "Prasia";
   color: rgba(255, 255, 255, 0.85);
   font-size: 1rem;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.35rem 0;
   letter-spacing: 0.15em;
   text-transform: uppercase;
+}
+.un_countdownSubline {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 1rem 0;
 }
 .un_countdownUnits {
   display: flex;
