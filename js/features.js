@@ -472,11 +472,77 @@ function initializeFeaturesPage() {
                         <div class="un_featuresPageDetailSection">
                             <h3><img src="images/l2icons/enchant.png" alt="" class="un_featuresCategoryIcon"> Enchant & Crafting</h3>
                             <ul>
-                                <li><strong>Weapon/armor enchant:</strong> standard H5 rates. Premium adds +5 to scroll chance.</li>
+                                <li><strong>Weapon/armor enchant:</strong> rates below (Salvation only). Premium adds +5 to scroll chance.</li>
+                                <li><strong>Maximum enchant level:</strong> 16. Enchanting above +16 is not possible.</li>
                                 <li><strong>Element (stone/crystal/jewel/energy):</strong> config chances (e.g. 50/30/20/10%)</li>
                                 <li><strong>Blessed scroll:</strong> no safe level, can go to 0 on fail.</li>
                                 <li><strong>Crafting:</strong> standard (no time-based or bonus XP/SP)</li>
                             </ul>
+                            <p><strong>Armor Enchant Rates (Regular Armor Pieces)</strong><br>Helmet, Chest, Legs, Boots, Gloves, Shields, Accessories (necklaces, earrings, rings, belts, etc.)</p>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><th>Enchant Level</th><th>Success Rate</th></tr>
+                                    <tr><td>0–2</td><td>100%</td></tr>
+                                    <tr><td>3</td><td>66.67%</td></tr>
+                                    <tr><td>4</td><td>33.34%</td></tr>
+                                    <tr><td>5</td><td>25% (announced)</td></tr>
+                                    <tr><td>6</td><td>20%</td></tr>
+                                    <tr><td>7</td><td>16.67%</td></tr>
+                                    <tr><td>8</td><td>14.29%</td></tr>
+                                    <tr><td>9</td><td>12.5%</td></tr>
+                                    <tr><td>10</td><td>11.12%</td></tr>
+                                    <tr><td>11</td><td>10.0%</td></tr>
+                                    <tr><td>12</td><td>9.10%</td></tr>
+                                    <tr><td>13</td><td>8.34%</td></tr>
+                                    <tr><td>14</td><td>7.70%</td></tr>
+                                    <tr><td>15</td><td>7.15%</td></tr>
+                                    <tr><td>16</td><td>6.67%</td></tr>
+                                </table>
+                            </div>
+                            <p><strong>Full Armor Enchant Rates (Full Armor Sets)</strong></p>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><th>Enchant Level</th><th>Success Rate</th></tr>
+                                    <tr><td>0–3</td><td>100%</td></tr>
+                                    <tr><td>4</td><td>66.67%</td></tr>
+                                    <tr><td>5</td><td>33.34% (announced)</td></tr>
+                                    <tr><td>6</td><td>25%</td></tr>
+                                    <tr><td>7</td><td>20%</td></tr>
+                                    <tr><td>8</td><td>16.67%</td></tr>
+                                    <tr><td>9</td><td>14.29%</td></tr>
+                                    <tr><td>10</td><td>12.5%</td></tr>
+                                    <tr><td>11</td><td>11.12%</td></tr>
+                                    <tr><td>12</td><td>10.0%</td></tr>
+                                    <tr><td>13</td><td>9.10%</td></tr>
+                                    <tr><td>14</td><td>8.34%</td></tr>
+                                    <tr><td>15</td><td>7.70%</td></tr>
+                                    <tr><td>16</td><td>6.67%</td></tr>
+                                </table>
+                            </div>
+                            <p><strong>Fighter Weapon Enchant Rates (Physical Weapons)</strong></p>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><th>Enchant Level</th><th>Success Rate</th></tr>
+                                    <tr><td>0–2</td><td>100%</td></tr>
+                                    <tr><td>3–5</td><td>70%</td></tr>
+                                    <tr><td>6</td><td>70% (announced)</td></tr>
+                                    <tr><td>7–13</td><td>70%</td></tr>
+                                    <tr><td>14</td><td>70% (announced)</td></tr>
+                                    <tr><td>15–16</td><td>35%</td></tr>
+                                </table>
+                            </div>
+                            <p><strong>Mage Weapon Enchant Rates (Magic Weapons)</strong></p>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><th>Enchant Level</th><th>Success Rate</th></tr>
+                                    <tr><td>0–2</td><td>100%</td></tr>
+                                    <tr><td>3–5</td><td>40%</td></tr>
+                                    <tr><td>6</td><td>40% (announced)</td></tr>
+                                    <tr><td>7–13</td><td>40%</td></tr>
+                                    <tr><td>14</td><td>40% (announced)</td></tr>
+                                    <tr><td>15–16</td><td>20%</td></tr>
+                                </table>
+                            </div>
                         </div>
 
                         <div class="un_featuresPageDetailSection">
@@ -604,11 +670,77 @@ function initializeFeaturesPage() {
                         <div class="un_featuresPageDetailSection">
                             <h3><img src="images/l2icons/enchant.png" alt="" class="un_featuresCategoryIcon"> Enchant i Crafting</h3>
                             <ul>
-                                <li><strong>Enchant broni/pancerza:</strong> standardowe stawki H5. Premium dodaje +5 do szansy zwoju.</li>
+                                <li><strong>Enchant broni/pancerza:</strong> stawki poniżej (tylko Salvation). Premium dodaje +5 do szansy zwoju.</li>
+                                <li><strong>Maksymalny poziom enchantu:</strong> 16. Enchant powyżej +16 nie jest możliwy.</li>
                                 <li><strong>Element (kamień/kryształ/klejnot/energia):</strong> szanse z configu (np. 50/30/20/10%)</li>
                                 <li><strong>Blessed scroll:</strong> brak bezpiecznego poziomu, przy failu może zejść do 0.</li>
                                 <li><strong>Crafting:</strong> standard (bez bonusu czasowego ani XP/SP)</li>
                             </ul>
+                            <p><strong>Stawki enchantu pancerza (zwykłe części)</strong><br>Hełm, napierśnik, nogawice, buty, rękawice, tarcze, akcesoria (naszyjniki, kolczyki, pierścienie, pasy itd.)</p>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><th>Poziom enchantu</th><th>Szansa sukcesu</th></tr>
+                                    <tr><td>0–2</td><td>100%</td></tr>
+                                    <tr><td>3</td><td>66.67%</td></tr>
+                                    <tr><td>4</td><td>33.34%</td></tr>
+                                    <tr><td>5</td><td>25% (ogłoszone)</td></tr>
+                                    <tr><td>6</td><td>20%</td></tr>
+                                    <tr><td>7</td><td>16.67%</td></tr>
+                                    <tr><td>8</td><td>14.29%</td></tr>
+                                    <tr><td>9</td><td>12.5%</td></tr>
+                                    <tr><td>10</td><td>11.12%</td></tr>
+                                    <tr><td>11</td><td>10.0%</td></tr>
+                                    <tr><td>12</td><td>9.10%</td></tr>
+                                    <tr><td>13</td><td>8.34%</td></tr>
+                                    <tr><td>14</td><td>7.70%</td></tr>
+                                    <tr><td>15</td><td>7.15%</td></tr>
+                                    <tr><td>16</td><td>6.67%</td></tr>
+                                </table>
+                            </div>
+                            <p><strong>Stawki enchantu pełnego pancerza (komplety)</strong></p>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><th>Poziom enchantu</th><th>Szansa sukcesu</th></tr>
+                                    <tr><td>0–3</td><td>100%</td></tr>
+                                    <tr><td>4</td><td>66.67%</td></tr>
+                                    <tr><td>5</td><td>33.34% (ogłoszone)</td></tr>
+                                    <tr><td>6</td><td>25%</td></tr>
+                                    <tr><td>7</td><td>20%</td></tr>
+                                    <tr><td>8</td><td>16.67%</td></tr>
+                                    <tr><td>9</td><td>14.29%</td></tr>
+                                    <tr><td>10</td><td>12.5%</td></tr>
+                                    <tr><td>11</td><td>11.12%</td></tr>
+                                    <tr><td>12</td><td>10.0%</td></tr>
+                                    <tr><td>13</td><td>9.10%</td></tr>
+                                    <tr><td>14</td><td>8.34%</td></tr>
+                                    <tr><td>15</td><td>7.70%</td></tr>
+                                    <tr><td>16</td><td>6.67%</td></tr>
+                                </table>
+                            </div>
+                            <p><strong>Stawki enchantu broni fizycznej</strong></p>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><th>Poziom enchantu</th><th>Szansa sukcesu</th></tr>
+                                    <tr><td>0–2</td><td>100%</td></tr>
+                                    <tr><td>3–5</td><td>70%</td></tr>
+                                    <tr><td>6</td><td>70% (ogłoszone)</td></tr>
+                                    <tr><td>7–13</td><td>70%</td></tr>
+                                    <tr><td>14</td><td>70% (ogłoszone)</td></tr>
+                                    <tr><td>15–16</td><td>35%</td></tr>
+                                </table>
+                            </div>
+                            <p><strong>Stawki enchantu broni magicznej</strong></p>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><th>Poziom enchantu</th><th>Szansa sukcesu</th></tr>
+                                    <tr><td>0–2</td><td>100%</td></tr>
+                                    <tr><td>3–5</td><td>40%</td></tr>
+                                    <tr><td>6</td><td>40% (ogłoszone)</td></tr>
+                                    <tr><td>7–13</td><td>40%</td></tr>
+                                    <tr><td>14</td><td>40% (ogłoszone)</td></tr>
+                                    <tr><td>15–16</td><td>20%</td></tr>
+                                </table>
+                            </div>
                         </div>
 
                         <div class="un_featuresPageDetailSection">

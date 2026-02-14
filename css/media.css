@@ -110,6 +110,16 @@
   .un_headerWrapper p {
     width: 80%;
   }
+  .un_countdownUnit {
+    min-width: 3.2rem;
+    padding: 0.5rem 0.6rem;
+  }
+  .un_countdownValue {
+    font-size: 1.4rem;
+  }
+  .un_countdownSep {
+    font-size: 1.2rem;
+  }
   .un_startChar {
     display: none;
   }

@@ -6,6 +6,72 @@ const languageSelectElement = document.getElementById('languageSwitcher');
 
 const availableLanguages = ['en', 'pl'];
 
+// Countdown to High Five Salvation server release: April 1st 19:00 UTC
+const RELEASE_DATE = new Date(Date.UTC(2026, 3, 1, 19, 0, 0, 0)); // month is 0-based
+
+let countdownInterval = null;
+
+const pad = (n) => String(Math.max(0, Math.floor(n))).padStart(2, '0');
+
+const updateCountdownDisplay = () => {
+  const el = document.getElementById('releaseCountdown');
+  if (!el) return;
+  const now = new Date();
+  const diff = RELEASE_DATE - now;
+  if (diff <= 0) {
+    if (countdownInterval) clearInterval(countdownInterval);
+    countdownInterval = null;
+    const daysEl = document.getElementById('countdownDays');
+    const hoursEl = document.getElementById('countdownHours');
+    const minutesEl = document.getElementById('countdownMinutes');
+    const secondsEl = document.getElementById('countdownSeconds');
+    if (daysEl) daysEl.textContent = '00';
+    if (hoursEl) hoursEl.textContent = '00';
+    if (minutesEl) minutesEl.textContent = '00';
+    if (secondsEl) secondsEl.textContent = '00';
+    return;
+  }
+  const d = diff / (24 * 60 * 60 * 1000);
+  const h = (d % 1) * 24;
+  const m = (h % 1) * 60;
+  const s = (m % 1) * 60;
+  const daysEl = document.getElementById('countdownDays');
+  const hoursEl = document.getElementById('countdownHours');
+  const minutesEl = document.getElementById('countdownMinutes');
+  const secondsEl = document.getElementById('countdownSeconds');
+  if (daysEl) daysEl.textContent = pad(d);
+  if (hoursEl) hoursEl.textContent = pad(h);
+  if (minutesEl) minutesEl.textContent = pad(m);
+  if (secondsEl) secondsEl.textContent = pad(s);
+};
+
+const setCountdownVisibility = (visible) => {
+  const el = document.getElementById('releaseCountdown');
+  if (!el) return;
+  el.style.display = visible ? '' : 'none';
+  el.setAttribute('aria-hidden', !visible);
+  if (visible) {
+    updateCountdownDisplay();
+    if (!countdownInterval) countdownInterval = setInterval(updateCountdownDisplay, 1000);
+  } else {
+    if (countdownInterval) {
+      clearInterval(countdownInterval);
+      countdownInterval = null;
+    }
+  }
+};
+
+const updateCountdownLabels = (language) => {
+  const labelEl = document.querySelector('.un_countdownLabel');
+  if (labelEl && lang[language] && lang[language].countdown) {
+    labelEl.textContent = lang[language].countdown.label;
+  }
+  document.querySelectorAll('.un_countdownUnitLabel[data-unit="days"]').forEach(el => { if (lang[language] && lang[language].countdown) el.textContent = lang[language].countdown.days; });
+  document.querySelectorAll('.un_countdownUnitLabel[data-unit="hours"]').forEach(el => { if (lang[language] && lang[language].countdown) el.textContent = lang[language].countdown.hours; });
+  document.querySelectorAll('.un_countdownUnitLabel[data-unit="minutes"]').forEach(el => { if (lang[language] && lang[language].countdown) el.textContent = lang[language].countdown.minutes; });
+  document.querySelectorAll('.un_countdownUnitLabel[data-unit="seconds"]').forEach(el => { if (lang[language] && lang[language].countdown) el.textContent = lang[language].countdown.seconds; });
+};
+
 const getBrowserLanguage = () => {
     const browserLanguage = navigator.language || navigator.languages[0];
     const languageCode = browserLanguage.split('-')[0];
@@ -366,6 +432,14 @@ const updateGlobalContent = (language, selectedServer = null) => {
                 </a>
             </div>
         `;
+    }
+
+    // Countdown: show only on main page when High Five (Salvation) is selected
+    const isMainPage = !!document.querySelector('.un_header');
+    const isHighFive = selectedServer && selectedServer.id === '1';
+    if (isMainPage) {
+        updateCountdownLabels(language);
+        setCountdownVisibility(isHighFive);
     }
 };
 
