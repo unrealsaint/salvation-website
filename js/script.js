@@ -292,7 +292,7 @@ const updateGlobalContent = (language, selectedServer = null) => {
 
     const navLinksContainer = document.querySelector('.un_navList');
     const linksWithLabels = lang[language].nav.links
-        .filter(link => link.for)
+        .filter(link => link.for && (!link.serverOnly || (effectiveServer && effectiveServer.id === link.serverOnly)))
         .map(link => `
         <li>
             <label for="${link.for}">
@@ -317,6 +317,27 @@ const updateGlobalContent = (language, selectedServer = null) => {
             });
         }
     });
+
+    // Add click handler for Vote button to open vote panel
+    const voteLabels = navLinksContainer.querySelectorAll('label[for="checkVote"]');
+    voteLabels.forEach(label => {
+        const anchor = label.querySelector('a');
+        if (anchor) {
+            anchor.addEventListener('click', (e) => {
+                e.preventDefault();
+                const checkVoteInput = document.getElementById('checkVote');
+                if (checkVoteInput) {
+                    checkVoteInput.checked = true;
+                }
+            });
+        }
+    });
+
+    // Vote panel title (Salvation / High Five)
+    const voteTitleEl = document.querySelector('.un_voteTitle');
+    if (voteTitleEl && lang[language].vote && lang[language].vote.pageTitle) {
+        voteTitleEl.textContent = lang[language].vote.pageTitle;
+    }
 
     const userLinksContainer = document.querySelector('.un_navUser');
     const defaultLoginHref = (lang[language].nav.userLinks.find(l => l.text === 'Login' || l.text === 'Zaloguj się') || {}).href || '/login';

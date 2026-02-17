@@ -5,6 +5,12 @@
   .un_filesMobile {
     display: block;
   }
+  .un_voteBanners {
+    gap: 1.5rem;
+  }
+  .un_voteContainer {
+    padding: 2.5rem 1.5rem 1.5rem;
+  }
   .un_nav #navMobile:checked ~ .un_navWrapper {
     left: 0;
     opacity: 1;

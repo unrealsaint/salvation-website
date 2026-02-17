@@ -217,4 +217,102 @@
 }
 .un_filesOption div ul li a:hover {
   background-color: rgba(255, 255, 255, 0.07);
+}
+
+#checkVote {
+  position: fixed;
+  left: -10000rem;
+}
+#checkVote:checked ~ .un_vote {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: all;
+}
+.un_vote {
+  opacity: 0;
+  transform: scale(1.1);
+  pointer-events: none;
+  transition: 0.3s;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.un_voteContainer {
+  width: min(90%, 50rem);
+  margin: 0 auto;
+  background-color: rgb(22, 22, 22);
+  border-radius: 0.4rem;
+  padding: 3rem 2rem 2rem;
+  position: relative;
+  border: 0.05rem solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+.un_voteClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.un_voteClose::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+.un_voteClose div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+}
+.un_voteClose div:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.un_voteClose div svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  opacity: 0.5;
+}
+.un_voteClose div svg path {
+  fill: white;
+}
+.un_voteTitle {
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+.un_voteBanners {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.un_voteBanner {
+  display: block;
+  border: 0;
+}
+.un_voteBanner img {
+  display: block;
+  border: 0;
+  max-width: 100%;
+  height: auto;
 }/*# sourceMappingURL=files.css.map */
