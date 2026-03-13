@@ -389,6 +389,26 @@ function initializeFeaturesPage() {
                         </div>
 
                         <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/party.png" alt="" class="un_featuresCategoryIcon"> Party XP/SP Bonuses</h3>
+                            <p>Party XP/SP bonuses on ${serverName} follow the official High Five party table (Party.java) and are then multiplied by our server party rate (<strong>RatePartyXp/Sp = 1.2</strong>).</p>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><th>Members</th><th>Effective XP/SP vs solo</th></tr>
+                                    <tr><td>1</td><td>1.00x (no party bonus)</td></tr>
+                                    <tr><td>2</td><td>1.32x (1.10 × 1.2)</td></tr>
+                                    <tr><td>3</td><td>1.44x (1.20 × 1.2)</td></tr>
+                                    <tr><td>4</td><td>1.56x (1.30 × 1.2)</td></tr>
+                                    <tr><td>5</td><td>1.68x (1.40 × 1.2)</td></tr>
+                                    <tr><td>6</td><td>1.80x (1.50 × 1.2)</td></tr>
+                                    <tr><td>7</td><td>2.40x (2.00 × 1.2)</td></tr>
+                                    <tr><td>8</td><td>2.52x (2.10 × 1.2)</td></tr>
+                                    <tr><td>9+</td><td>2.64x (2.20 × 1.2)</td></tr>
+                                </table>
+                            </div>
+                            <p>In practice: solo uses the base 5x server rate, while any party of 2+ members gets the official party bonus first and then +20% from the party rate.</p>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
                             <h3><img src="images/l2icons/drop.png" alt="" class="un_featuresCategoryIcon"> Drop & Spoil</h3>
                             <div class="un_ratesTable">
                                 <table>
@@ -414,6 +434,16 @@ function initializeFeaturesPage() {
                                     <tr><td>Quest item drop</td><td><strong>5x</strong></td></tr>
                                 </table>
                             </div>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/clan.png" alt="" class="un_featuresCategoryIcon"> Pledge (Clan) Missions</h3>
+                            <p>Pledge missions are special clan tasks completed by members together (or solo for the clan) that grant shared benefits.</p>
+                            <ul>
+                                <li><strong>What they do:</strong> raise clan reputation/level, grant clan currency and unlock perks like passive buffs, better clan skills, special NPCs or cosmetics.</li>
+                                <li><strong>How they work:</strong> clear objectives such as killing targets, gathering items, PvP/sieges or daily/weekly challenges, with progress from all participants combined.</li>
+                                <li><strong>Why they matter:</strong> they reward organized, active clans with stronger bonuses and give every member something meaningful to contribute.</li>
+                            </ul>
                         </div>
 
                         <div class="un_featuresPageDetailSection">
@@ -466,6 +496,16 @@ function initializeFeaturesPage() {
                                 <li><strong>Buff slots:</strong> 20 (24 with premium)</li>
                                 <li><strong>Inventory:</strong> 100 base (150 Dwarf), expand to 300. Warehouse 100 (120 Dwarf), expand to 200</li>
                                 <li><strong>Private store:</strong> 3 sell / 4 buy (4/5 Dwarf), expandable</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/subclass.png" alt="" class="un_featuresCategoryIcon"> Subclasses & Certificates</h3>
+                            <p>Subclasses let you explore different playstyles on the same character. Each subclass on Oasis Salvation can be leveled all the way to <strong>85</strong>.</p>
+                            <ul>
+                                <li>You keep all certificates and skills earned from a subclass even if you later change or delete that subclass (standard High Five behavior).</li>
+                                <li>As your subclass levels, you receive Subclass Certificates at milestone levels (e.g. 65 / 70 / 75 / 80) which can be exchanged at the proper NPC for special skills.</li>
+                                <li>Certificates can only be obtained and applied up to level 80; from 80–85 you still gain stats and skill power, but no extra certificates.</li>
                             </ul>
                         </div>
 
@@ -587,6 +627,26 @@ function initializeFeaturesPage() {
                         </div>
 
                         <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/party.png" alt="" class="un_featuresCategoryIcon"> Bonusy XP/SP w party</h3>
+                            <p>Bonusy XP/SP w party na ${serverName} opierają się na oficjalnej tabeli party High Five (Party.java), a następnie są mnożone przez naszą stawkę party (<strong>RatePartyXp/Sp = 1.2</strong>).</p>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><th>Członkowie</th><th>Efektywne XP/SP względem solo</th></tr>
+                                    <tr><td>1</td><td>1.00x (bez bonusa party)</td></tr>
+                                    <tr><td>2</td><td>1.32x (1.10 × 1.2)</td></tr>
+                                    <tr><td>3</td><td>1.44x (1.20 × 1.2)</td></tr>
+                                    <tr><td>4</td><td>1.56x (1.30 × 1.2)</td></tr>
+                                    <tr><td>5</td><td>1.68x (1.40 × 1.2)</td></tr>
+                                    <tr><td>6</td><td>1.80x (1.50 × 1.2)</td></tr>
+                                    <tr><td>7</td><td>2.40x (2.00 × 1.2)</td></tr>
+                                    <tr><td>8</td><td>2.52x (2.10 × 1.2)</td></tr>
+                                    <tr><td>9+</td><td>2.64x (2.20 × 1.2)</td></tr>
+                                </table>
+                            </div>
+                            <p>W praktyce: solo zawsze korzysta z bazowej stawki 5x, a każda party 2+ osób najpierw dostaje oficjalny bonus party, a potem dodatkowe +20% ze stawki party.</p>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
                             <h3><img src="images/l2icons/drop.png" alt="" class="un_featuresCategoryIcon"> Drop i Spoil</h3>
                             <div class="un_ratesTable">
                                 <table>
@@ -612,6 +672,16 @@ function initializeFeaturesPage() {
                                     <tr><td>Drop przedmiotów z questów</td><td><strong>5x</strong></td></tr>
                                 </table>
                             </div>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/clan.png" alt="" class="un_featuresCategoryIcon"> Misje Pledge (klanu)</h3>
+                            <p>Misje pledge to specjalne zadania klanowe wykonywane wspólnie (lub solo dla klanu), które dają wspólne korzyści.</p>
+                            <ul>
+                                <li><strong>Co dają:</strong> podnoszą reputację/poziom klanu, dają walutę klanową i odblokowują bonusy jak pasywne buffy, lepsze umiejętności klanowe, specjalne NPC czy nagrody kosmetyczne.</li>
+                                <li><strong>Jak działają:</strong> jasne cele typu zabijanie celów, zbieranie przedmiotów, PvP/oblężenia czy dzienne/tygodniowe wyzwania, z postępem sumowanym od wszystkich uczestników.</li>
+                                <li><strong>Dlaczego są ważne:</strong> nagradzają zorganizowane, aktywne klany silniejszymi bonusami i dają każdemu członkowi realny wkład w rozwój pledge.</li>
+                            </ul>
                         </div>
 
                         <div class="un_featuresPageDetailSection">
@@ -664,6 +734,16 @@ function initializeFeaturesPage() {
                                 <li><strong>Sloty buffów:</strong> 20 (24 z premium)</li>
                                 <li><strong>Ekwipunek:</strong> 100 bazowo (150 Krasnolud), rozszerzalny do 300. Magazyn 100 (120 Krasnolud), do 200</li>
                                 <li><strong>Prywatny sklep:</strong> 3 sprzedaż / 4 kupno (4/5 Krasnolud), rozszerzalne</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/subclass.png" alt="" class="un_featuresCategoryIcon"> Subclassy i certyfikaty</h3>
+                            <p>Subclassy pozwalają grać różnymi stylami na tej samej postaci. Każdą subclassę na Oasis Salvation możesz wbić aż do <strong>85 poziomu</strong>.</p>
+                            <ul>
+                                <li>Zachowujesz wszystkie certyfikaty i umiejętności zdobyte z danej subclassy, nawet jeśli później ją zmienisz lub usuniesz (standard High Five).</li>
+                                <li>Wraz z poziomem subclassy otrzymujesz Subclass Certificates na progach poziomów (np. 65 / 70 / 75 / 80), które wymieniasz u odpowiedniego NPC na specjalne umiejętności.</li>
+                                <li>Certyfikaty można zdobywać i używać tylko do 80 poziomu; od 80 do 85 nadal rosną statystyki, HP/CP/MP i siła skilli, ale bez dodatkowych certyfikatów.</li>
                             </ul>
                         </div>
 
