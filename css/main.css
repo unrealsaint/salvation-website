@@ -1037,7 +1037,6 @@ body.wiki-page::after {
   min-height: 100vh;
   background: linear-gradient(rgb(31, 31, 31), rgb(21, 21, 21)) !important;
   margin-top: 4rem;
-  overflow: hidden;
   z-index: 1;
 }
 .un_wikiPage .un_container {
@@ -1055,6 +1054,7 @@ body.wiki-page::after {
   opacity: 0.22;
   z-index: -1;
   filter: grayscale(40%);
+  pointer-events: none;
 }
 .un_wikiPage::after {
   content: "";
@@ -1065,6 +1065,7 @@ body.wiki-page::after {
   left: 0;
   background: linear-gradient(rgba(24, 28, 32, 0.88), rgba(12, 14, 18, 0.94));
   z-index: -1;
+  pointer-events: none;
 }
 .un_wikiPageHeader {
   text-align: center;

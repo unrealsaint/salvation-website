@@ -354,12 +354,22 @@ let wikiState = {
 };
 
 function getWikiLanguage() {
-    const stored = localStorage.getItem('selectedLanguage');
-    return stored === 'pl' ? 'pl' : 'en';
+    try {
+        const stored = localStorage.getItem('selectedLanguage');
+        return stored === 'pl' ? 'pl' : 'en';
+    } catch (e) {
+        const htmlLang = document.documentElement.getAttribute('lang');
+        return htmlLang === 'pl' ? 'pl' : 'en';
+    }
 }
 
 function getStoredServerId() {
-    const storedServer = localStorage.getItem('selectedServer');
+    let storedServer = null;
+    try {
+        storedServer = localStorage.getItem('selectedServer');
+    } catch (e) {
+        storedServer = null;
+    }
     if (storedServer && theme.find((s) => s.id === storedServer)) return storedServer;
     const def = theme.find((server) => server.defaultTheme);
     return def ? def.id : theme[0].id;
@@ -387,9 +397,20 @@ function filteredArticles() {
 }
 
 function setHashArticle(id) {
-    if (id && findArticle(id)) {
-        if (window.location.hash.replace('#', '') !== id) {
-            window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}#${id}`);
+    if (!id || !findArticle(id)) return;
+    const frag = `#${id}`;
+    const current = window.location.hash;
+    if (current === frag || current.replace(/^#/, '') === id) return;
+    try {
+        // Hash-only URL: avoids Firefox issues with replaceState + some path/search combinations (file://, encoded paths, etc.)
+        window.history.replaceState(null, '', frag);
+    } catch (e) {
+        try {
+            if (window.location.hash !== frag) {
+                window.location.hash = id;
+            }
+        } catch (e2) {
+            /* ignore */
         }
     }
 }
@@ -490,8 +511,14 @@ function showArticle(id, pushHash) {
 }
 
 function resolveArticleFromHash() {
-    const raw = window.location.hash.replace('#', '');
-    if (raw && findArticle(raw)) return raw;
+    let raw = window.location.hash.replace(/^#/, '');
+    if (!raw) return wikiArticles[0].id;
+    try {
+        raw = decodeURIComponent(raw);
+    } catch (e) {
+        /* keep raw */
+    }
+    if (findArticle(raw)) return raw;
     return wikiArticles[0].id;
 }
 
@@ -544,16 +571,22 @@ function initializeWikiPage() {
     const searchInput = document.getElementById('wikiSearch');
     if (searchInput) searchInput.value = '';
 
-    renderWikiChrome();
-    renderCategoryNav();
+    try {
+        renderWikiChrome();
+        renderCategoryNav();
 
-    const fromHash = resolveArticleFromHash();
-    wikiState.articleId = fromHash;
-    renderArticleList();
-    showArticle(fromHash, false);
-    setHashArticle(fromHash);
-
-    bindWikiSearch();
+        const fromHash = resolveArticleFromHash();
+        wikiState.articleId = fromHash;
+        renderArticleList();
+        showArticle(fromHash, false);
+        setHashArticle(fromHash);
+    } catch (err) {
+        if (typeof console !== 'undefined' && console.error) {
+            console.error('Wiki init error', err);
+        }
+    } finally {
+        bindWikiSearch();
+    }
 }
 
 window.addEventListener('hashchange', () => {

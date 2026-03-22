@@ -304,37 +304,39 @@ const updateGlobalContent = (language, selectedServer = null) => {
         </li>
     `).join('');
 
-    navLinksContainer.innerHTML = linksWithoutLabels + linksWithLabels;
+    if (navLinksContainer) {
+        navLinksContainer.innerHTML = linksWithoutLabels + linksWithLabels;
 
-    // Add click handler for Download button to open download window
-    const downloadLabels = navLinksContainer.querySelectorAll('label[for="checkFiles"]');
-    downloadLabels.forEach(label => {
-        const anchor = label.querySelector('a');
-        if (anchor) {
-            anchor.addEventListener('click', (e) => {
-                e.preventDefault();
-                const checkFilesInput = document.getElementById('checkFiles');
-                if (checkFilesInput) {
-                    checkFilesInput.checked = true;
-                }
-            });
-        }
-    });
+        // Add click handler for Download button to open download window
+        const downloadLabels = navLinksContainer.querySelectorAll('label[for="checkFiles"]');
+        downloadLabels.forEach(label => {
+            const anchor = label.querySelector('a');
+            if (anchor) {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const checkFilesInput = document.getElementById('checkFiles');
+                    if (checkFilesInput) {
+                        checkFilesInput.checked = true;
+                    }
+                });
+            }
+        });
 
-    // Add click handler for Vote button to open vote panel
-    const voteLabels = navLinksContainer.querySelectorAll('label[for="checkVote"]');
-    voteLabels.forEach(label => {
-        const anchor = label.querySelector('a');
-        if (anchor) {
-            anchor.addEventListener('click', (e) => {
-                e.preventDefault();
-                const checkVoteInput = document.getElementById('checkVote');
-                if (checkVoteInput) {
-                    checkVoteInput.checked = true;
-                }
-            });
-        }
-    });
+        // Add click handler for Vote button to open vote panel
+        const voteLabels = navLinksContainer.querySelectorAll('label[for="checkVote"]');
+        voteLabels.forEach(label => {
+            const anchor = label.querySelector('a');
+            if (anchor) {
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const checkVoteInput = document.getElementById('checkVote');
+                    if (checkVoteInput) {
+                        checkVoteInput.checked = true;
+                    }
+                });
+            }
+        });
+    }
 
     // Vote panel title (Salvation / High Five)
     const voteTitleEl = document.querySelector('.un_voteTitle');
@@ -345,10 +347,12 @@ const updateGlobalContent = (language, selectedServer = null) => {
     const userLinksContainer = document.querySelector('.un_navUser');
     const defaultLoginHref = (lang[language].nav.userLinks.find(l => l.text === 'Login' || l.text === 'Zaloguj się') || {}).href || '/login';
     const loginHref = effectiveServer && effectiveServer.loginUrl ? effectiveServer.loginUrl : defaultLoginHref;
-    userLinksContainer.innerHTML = lang[language].nav.userLinks.map(link => {
-        const href = (link.text === 'Login' || link.text === 'Zaloguj się') ? loginHref : link.href;
-        return `<li><a href="${href}">${link.icon}${link.text}</a></li>`;
-    }).join('');
+    if (userLinksContainer) {
+        userLinksContainer.innerHTML = lang[language].nav.userLinks.map(link => {
+            const href = (link.text === 'Login' || link.text === 'Zaloguj się') ? loginHref : link.href;
+            return `<li><a href="${href}">${link.icon}${link.text}</a></li>`;
+        }).join('');
+    }
 
 
     const stepsTitle = document.querySelector('.un_startSteps h1');
