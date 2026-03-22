@@ -176,4 +176,30 @@
         
        
     }
+
+    .un_wikiLayout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .un_wikiSidebar {
+        position: relative;
+        top: auto;
+    }
+
+    .un_wikiArticleList {
+        max-height: 16rem;
+    }
+
+    .un_wikiPageTitle {
+        font-size: 2.25rem;
+    }
+
+    .un_wikiArticle {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .un_wikiArticleTitle {
+        font-size: 1.65rem;
+    }
 }

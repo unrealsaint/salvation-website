@@ -6,6 +6,7 @@ const lang = {
             links: [
                 { text: 'Main', href: 'index.html' },
                 { text: 'Features', href: 'features.html' },
+                { text: 'Wiki', href: 'wiki.html', serverOnly: '1' },
                 { text: 'Discord', href: 'https://discord.gg/UmbYqegXv7' },
                 { text: 'Download', for: 'checkFiles' },
                 { text: 'Vote', for: 'checkVote', serverOnly: '1' },
@@ -141,6 +142,7 @@ const lang = {
             links: [
                 { text: 'Główna', href: 'index.html' },
                 { text: 'Funkcje', href: 'features.html' },
+                { text: 'Wiki', href: 'wiki.html', serverOnly: '1' },
                 { text: 'Discord', href: 'https://discord.gg/UmbYqegXv7' },
                 { text: 'Pobierz', for: 'checkFiles' },
                 { text: 'Głosuj', for: 'checkVote', serverOnly: '1' },

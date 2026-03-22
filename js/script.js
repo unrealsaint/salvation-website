@@ -251,6 +251,9 @@ const switchLanguage = (language) => {
         if (typeof initializeFeaturesPage === 'function') {
             setTimeout(() => initializeFeaturesPage(), 50);
         }
+        if (typeof initializeWikiPage === 'function') {
+            setTimeout(() => initializeWikiPage(), 50);
+        }
     }
 };
 
@@ -280,7 +283,7 @@ const updateGlobalContent = (language, selectedServer = null) => {
     const effectiveServer = selectedServer || findServerById(getStoredServer());
     const isRegisterLink = (link) => link.text === 'Register' || link.text === 'Zarejestruj się';
     const linksWithoutLabels = lang[language].nav.links
-        .filter(link => !link.for)
+        .filter(link => !link.for && (!link.serverOnly || (effectiveServer && effectiveServer.id === link.serverOnly)))
         .map(link => {
             const href = (isRegisterLink(link) && effectiveServer && effectiveServer.registerUrl) ? effectiveServer.registerUrl : link.href;
             return `
@@ -538,6 +541,9 @@ if (selectElement) {
         // Trigger features page update if on features page
         if (typeof initializeFeaturesPage === 'function') {
             setTimeout(() => initializeFeaturesPage(), 50);
+        }
+        if (typeof initializeWikiPage === 'function') {
+            setTimeout(() => initializeWikiPage(), 50);
         }
     });
 }
