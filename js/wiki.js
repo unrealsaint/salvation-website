@@ -13,6 +13,8 @@ const wikiUi = {
         wrongServerText: 'Switch to High Five in the world selector above, or open the main page to choose this world.',
         wrongServerLink: 'Go to main page',
         articleHint: 'Knowledge base',
+        addedLabel: 'Added',
+        updatedLabel: 'Updated',
     },
     pl: {
         pageTitle: 'Wiki High Five Salvation',
@@ -24,6 +26,8 @@ const wikiUi = {
         wrongServerText: 'Wybierz High Five na liście światów powyżej albo wróć na stronę główną.',
         wrongServerLink: 'Strona główna',
         articleHint: 'Baza wiedzy',
+        addedLabel: 'Dodano',
+        updatedLabel: 'Aktualizacja',
     },
 };
 
@@ -34,6 +38,17 @@ const wikiCategories = [
     { id: 'client', label: { en: 'Client & tech', pl: 'Klient i technikalia' } },
     { id: 'community', label: { en: 'Community', pl: 'Społeczność' } },
 ];
+
+const wikiArticleMetaById = {
+    'instance-entry-guide': { added: '2026-03-24', updated: '2026-03-24' },
+    'steel-citadel-hellbound': { added: '2026-03-20', updated: '2026-03-24' },
+    welcome: { added: '2026-03-01', updated: '2026-03-24' },
+    rates: { added: '2026-03-01', updated: '2026-03-24' },
+    economy: { added: '2026-03-01', updated: '2026-03-24' },
+    'pvp-pve': { added: '2026-03-01', updated: '2026-03-24' },
+    'client-install': { added: '2026-03-01', updated: '2026-03-24' },
+    'discord-support': { added: '2026-03-01', updated: '2026-03-24' },
+};
 
 const wikiArticles = [
     {
@@ -59,44 +74,6 @@ const wikiArticles = [
                     <p>Ta wiki zbiera szczegółowe artykuły o <strong>Oasis High Five Salvation</strong>: oficjalne stawki, instalacja klienta, ekonomia i pomoc.</p>
                     <p>Korzystaj z panelu bocznego według tematu albo wpisz frazę w wyszukiwarce. Adresy artykułów używają hasha (np. <code>wiki.html#rates</code>), więc możesz zapisać lub wysłać link.</p>
                     <p>Treści dotyczą wyłącznie świata High Five. O zmianach w grze dowiesz się najczęściej najpierw na Discordzie.</p>
-                </div>`,
-        },
-    },
-    {
-        id: 'first-day',
-        categoryId: 'start',
-        title: {
-            en: 'Your first sessions',
-            pl: 'Pierwsze sesje',
-        },
-        excerpt: {
-            en: 'Account, client, and a sensible order of goals for new players.',
-            pl: 'Konto, klient i sensowna kolejność celów dla nowych graczy.',
-        },
-        body: {
-            en: `
-                <div class="un_featuresPageDetailSection">
-                    <h3>Before you log in</h3>
-                    <ul>
-                        <li><strong>Register</strong> through the account panel linked from the site header.</li>
-                        <li><strong>Download</strong> the Salvation client from the Download panel (full size is listed there).</li>
-                        <li>Join <strong>Discord</strong> for patch notes, events, and support.</li>
-                    </ul>
-                    <h3>After character creation</h3>
-                    <p>Focus on tutorial quests and main equipment first. Party with others when zones get crowded—Salvation UI makes grouping smoother, but Lineage II is still fastest when you cooperate.</p>
-                    <p>Check the <a href="features.html">Features</a> page for a full list of world-specific settings beyond the short summary here.</p>
-                </div>`,
-            pl: `
-                <div class="un_featuresPageDetailSection">
-                    <h3>Zanim wejdziesz do gry</h3>
-                    <ul>
-                        <li><strong>Zarejestruj się</strong> w panelu konta z linku w nagłówku strony.</li>
-                        <li><strong>Pobierz</strong> klienta Salvation z panelu Pobierz (rozmiar jest podany przy pliku).</li>
-                        <li>Wejdź na <strong>Discord</strong> – patch notes, eventy, wsparcie.</li>
-                    </ul>
-                    <h3>Po stworzeniu postaci</h3>
-                    <p>Najpierw questy tutorialowe i podstawowy ekwipunek. Grupuj się, gdy strefy się zapełniają – UI Salvation ułatwia party, ale gra i tak najszybciej idzie wspólnie.</p>
-                    <p>Pełną listę ustawień świata znajdziesz na stronie <a href="features.html">Funkcje</a>.</p>
                 </div>`,
         },
     },
@@ -147,30 +124,6 @@ const wikiArticles = [
                         </table>
                     </div>
                     <p>Limity podklas, buffów i pozostałe zasady opisuje strona Funkcje dla tego świata.</p>
-                </div>`,
-        },
-    },
-    {
-        id: 'rules-overview',
-        categoryId: 'server',
-        title: {
-            en: 'Fair play & expectations',
-            pl: 'Uczciwa gra i zasady',
-        },
-        excerpt: {
-            en: 'Bots, RMT, multi-boxing policy pointers—always confirm on Discord.',
-            pl: 'Boty, RMT, multibox – sprawdź aktualne zasady na Discordzie.',
-        },
-        body: {
-            en: `
-                <div class="un_featuresPageDetailSection">
-                    <p>Oasis aims for a fair environment: competitive PvP without pay-to-win clan perks (see Features). Exact enforcement—what is allowed for dual boxing, automation, trading real money—is defined by <strong>staff rules</strong> posted on Discord and the account site.</p>
-                    <p>This article is a reminder to read the latest rules before you invest time in a playstyle that might conflict with policy.</p>
-                </div>`,
-            pl: `
-                <div class="un_featuresPageDetailSection">
-                    <p>Oasis stawia na uczciwą rozgrywkę: PvP bez płatnych przewag klanowych (patrz Funkcje). Szczegóły – dual box, automatyzacja, RMT – są w <strong>regulaminie</strong> na Discordzie i stronie konta.</p>
-                    <p>Przed długą grą warto przeczytać aktualne zasady, żeby uniknąć konfliktu z polityką administracji.</p>
                 </div>`,
         },
     },
@@ -273,36 +226,6 @@ const wikiArticles = [
         },
     },
     {
-        id: 'performance',
-        categoryId: 'client',
-        title: {
-            en: 'Performance & crashes',
-            pl: 'Wydajność i crashe',
-        },
-        excerpt: {
-            en: 'FPS, drivers, and what to include when reporting technical issues.',
-            pl: 'FPS, sterowniki i zgłaszanie problemów technicznych.',
-        },
-        body: {
-            en: `
-                <div class="un_featuresPageDetailSection">
-                    <ul>
-                        <li>Update GPU drivers and install the latest Visual C++ runtimes from Microsoft if the client fails to start.</li>
-                        <li>Disable overlays you do not need; some injection tools conflict with protected clients.</li>
-                        <li>If the game closes with an error, grab <strong>screenshot + log path</strong> mentioned in the launcher or Discord pinned guide before opening a ticket.</li>
-                    </ul>
-                </div>`,
-            pl: `
-                <div class="un_featuresPageDetailSection">
-                    <ul>
-                        <li>Zaktualizuj sterowniki GPU i biblioteki Visual C++ z Microsoftu, jeśli klient nie startuje.</li>
-                        <li>Wyłącz zbędne nakładki; część narzędzi koliduje z chronionym klientem.</li>
-                        <li>Przy crashu zrób zrzut ekranu i zanotuj ścieżkę logów (launcher / pin na Discordzie) przed zgłoszeniem.</li>
-                    </ul>
-                </div>`,
-        },
-    },
-    {
         id: 'discord-support',
         categoryId: 'community',
         title: {
@@ -336,13 +259,11 @@ const wikiArticles = [
     },
 ];
 
-if (typeof window !== 'undefined' && window.WIKI_HELLBOUND_ARTICLE) {
-    const hb = window.WIKI_HELLBOUND_ARTICLE;
-    const pvpIdx = wikiArticles.findIndex((a) => a.id === 'pvp-pve');
-    if (pvpIdx !== -1) {
-        wikiArticles.splice(pvpIdx + 1, 0, hb);
-    } else {
-        wikiArticles.push(hb);
+if (typeof window !== 'undefined') {
+    const externalArticles = [window.WIKI_HELLBOUND_ARTICLE, window.WIKI_INSTANCE_ENTRY_ARTICLE].filter(Boolean);
+    // Keep newest loaded external articles at the top of the list.
+    if (externalArticles.length) {
+        wikiArticles.unshift(...externalArticles.slice().reverse());
     }
 }
 
@@ -382,6 +303,21 @@ function categoryLabel(id, lang) {
 
 function findArticle(id) {
     return wikiArticles.find((a) => a.id === id);
+}
+
+function getArticleMeta(article) {
+    if (!article) return null;
+    return article.meta || wikiArticleMetaById[article.id] || null;
+}
+
+function getArticleMetaText(article, lang) {
+    const meta = getArticleMeta(article);
+    if (!meta) return '';
+    const ui = wikiUi[lang] || wikiUi.en;
+    const parts = [];
+    if (meta.added) parts.push(`${ui.addedLabel}: ${meta.added}`);
+    if (meta.updated) parts.push(`${ui.updatedLabel}: ${meta.updated}`);
+    return parts.join(' · ');
 }
 
 function filteredArticles() {
@@ -489,6 +425,55 @@ function renderArticleList() {
     });
 }
 
+function recentArticles(limit = 5) {
+    return wikiArticles.slice(0, Math.max(1, limit));
+}
+
+function showRecentWelcome(pushHash) {
+    wikiState.articleId = null;
+    const lang = wikiState.lang;
+    const meta = document.querySelector('.un_wikiArticleMeta');
+    const titleEl = document.querySelector('.un_wikiArticleTitle');
+    const bodyEl = document.querySelector('.un_wikiArticleBody');
+
+    const isPl = lang === 'pl';
+    const title = isPl ? 'Witamy w wiki' : 'Welcome to the wiki';
+    const intro = isPl
+        ? 'Zaczynasz od najnowszych dodanych artykulow. Kliknij pozycje ponizej, aby od razu przejsc do tresci.'
+        : 'Start with the most recently added articles. Click any item below to open it immediately.';
+
+    const items = recentArticles(6)
+        .map((a) => {
+            const articleTitle = a.title[lang] || a.title.en;
+            const excerpt = a.excerpt[lang] || a.excerpt.en;
+            const metaText = getArticleMetaText(a, lang);
+            const dateLine = metaText ? `<span class="un_wikiRecentBtnDate">${metaText}</span>` : '';
+            return `<li><button type="button" class="un_wikiRecentBtn" data-id="${a.id}"><span class="un_wikiRecentBtnTitle">${articleTitle}</span><span class="un_wikiRecentBtnExcerpt">${excerpt}</span>${dateLine}</button></li>`;
+        })
+        .join('');
+
+    if (meta) meta.textContent = `${wikiUi[lang].articleHint} · ${isPl ? 'Najnowsze artykuly' : 'Recent articles'}`;
+    if (titleEl) titleEl.textContent = title;
+    if (bodyEl) {
+        bodyEl.innerHTML = `<div class="un_featuresPageDetailSection un_wikiRecentPanel"><p>${intro}</p><ul class="un_wikiRecentList">${items}</ul></div>`;
+        bodyEl.querySelectorAll('.un_wikiRecentBtn').forEach((btn) => {
+            btn.addEventListener('click', () => showArticle(btn.dataset.id, true));
+        });
+    }
+
+    if (pushHash) {
+        try {
+            window.history.replaceState(null, '', window.location.pathname + window.location.search);
+        } catch (e) {
+            /* ignore */
+        }
+    }
+
+    document.querySelectorAll('.un_wikiArticleLink').forEach((b) => {
+        b.classList.remove('is-active');
+    });
+}
+
 function showArticle(id, pushHash) {
     const art = findArticle(id);
     if (!art) return;
@@ -499,7 +484,8 @@ function showArticle(id, pushHash) {
     const titleEl = document.querySelector('.un_wikiArticleTitle');
     const bodyEl = document.querySelector('.un_wikiArticleBody');
 
-    if (meta) meta.textContent = `${wikiUi[lang].articleHint} · ${categoryLabel(art.categoryId, lang)}`;
+    const details = getArticleMetaText(art, lang);
+    if (meta) meta.textContent = `${wikiUi[lang].articleHint} · ${categoryLabel(art.categoryId, lang)}${details ? ` · ${details}` : ''}`;
     if (titleEl) titleEl.textContent = art.title[lang] || art.title.en;
     if (bodyEl) bodyEl.innerHTML = art.body[lang] || art.body.en;
 
@@ -512,14 +498,14 @@ function showArticle(id, pushHash) {
 
 function resolveArticleFromHash() {
     let raw = window.location.hash.replace(/^#/, '');
-    if (!raw) return wikiArticles[0].id;
+    if (!raw) return null;
     try {
         raw = decodeURIComponent(raw);
     } catch (e) {
         /* keep raw */
     }
     if (findArticle(raw)) return raw;
-    return wikiArticles[0].id;
+    return null;
 }
 
 function bindWikiSearch() {
@@ -578,8 +564,12 @@ function initializeWikiPage() {
         const fromHash = resolveArticleFromHash();
         wikiState.articleId = fromHash;
         renderArticleList();
-        showArticle(fromHash, false);
-        setHashArticle(fromHash);
+        if (fromHash) {
+            showArticle(fromHash, false);
+            setHashArticle(fromHash);
+        } else {
+            showRecentWelcome(false);
+        }
     } catch (err) {
         if (typeof console !== 'undefined' && console.error) {
             console.error('Wiki init error', err);
@@ -594,9 +584,13 @@ window.addEventListener('hashchange', () => {
     const serverId = getStoredServerId();
     if (serverId !== WIKI_SERVER_ID) return;
     const id = resolveArticleFromHash();
-    wikiState.articleId = id;
     renderArticleList();
-    showArticle(id, false);
+    if (id) {
+        wikiState.articleId = id;
+        showArticle(id, false);
+    } else {
+        showRecentWelcome(false);
+    }
 });
 
 document.addEventListener('DOMContentLoaded', () => {

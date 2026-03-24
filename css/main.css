@@ -1278,6 +1278,63 @@ body.wiki-page::after {
   background: rgba(0, 0, 0, 0.35);
   color: rgba(255, 255, 255, 0.85);
 }
+.un_wikiRecentPanel {
+  margin: 0;
+}
+.un_wikiRecentList {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.un_wikiRecentList li {
+  margin: 0;
+  padding: 0;
+}
+.un_wikiRecentList li::before {
+  content: none;
+}
+.un_wikiRecentBtn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0.7rem 0.85rem;
+  border-radius: 0.35rem;
+  border: 0.05rem solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.86);
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.un_wikiRecentBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.un_wikiRecentBtnTitle {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: #fff;
+}
+.un_wikiRecentBtnExcerpt {
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.66);
+}
+.un_wikiRecentBtnDate {
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.48);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
 .un_enchantRates {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

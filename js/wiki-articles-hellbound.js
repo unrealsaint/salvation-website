@@ -10,6 +10,10 @@ window.WIKI_HELLBOUND_ARTICLE = {
         en: 'Trust stages, Urban Area, Key of the Evil Eye, gate keys, Tower of Infinitum, Beleth — Oasis High Five Salvation player guide.',
         pl: 'Stadia zaufania, Urban Area, Key of the Evil Eye, klucze do bram, Tower of Infinitum, Beleth — poradnik Oasis High Five Salvation.',
     },
+    meta: {
+        added: '2026-03-20',
+        updated: '2026-03-24',
+    },
     body: {
         en: `
                 <div class="un_featuresPageDetailSection">
