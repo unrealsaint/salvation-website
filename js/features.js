@@ -460,7 +460,7 @@ function initializeFeaturesPage() {
 
                         <div class="un_featuresPageDetailSection">
                             <h3><img src="images/l2icons/vit.png" alt="" class="un_featuresCategoryIcon"> Vitality</h3>
-                            <p>On. Levels 0–4: bonus XP = 1.5x / 2x / 2.5x / 3x on top of 5x server. Full vitality (level 4) = up to 15x XP when farming.</p>
+                            <p>On. Levels 0–4: bonus XP = 1.25x / 1.5x / 1.75x / 2x on top of 5x server (+0.25x per level). Full vitality (level 4) = up to 10x XP when farming.</p>
                             <ul>
                                 <li><strong>Recovery:</strong> 2x in peace zones, 4x on reconnect</li>
                                 <li><strong>Raid kill</strong> gives bonus points</li>
@@ -598,6 +598,32 @@ function initializeFeaturesPage() {
                         </div>
 
                         <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/raid.png" alt="" class="un_featuresCategoryIcon"> Epic Boss Spawn Guide (Players)</h3>
+                            <p>All times are <strong>server time</strong>. Epic bosses use <strong>fixed spawn windows</strong> (not random all-day).</p>
+                            <h4>Daily Epics</h4>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><th>Boss</th><th>Window / Respawn</th></tr>
+                                    <tr><td>Core</td><td>20:00 - 20:15 / Every 1 day</td></tr>
+                                    <tr><td>Queen Ant</td><td>20:30 - 20:45 / Every 1 day</td></tr>
+                                    <tr><td>Orfen</td><td>21:00 - 21:15 / Every 1 day</td></tr>
+                                </table>
+                            </div>
+                            <h4>Weekend Epics</h4>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><th>Boss</th><th>Window / Respawn</th></tr>
+                                    <tr><td>Baium (Friday)</td><td>20:00 - 20:30 / Every 7 days</td></tr>
+                                    <tr><td>Antharas (Saturday)</td><td>20:00 - 21:00 / Every 14 days</td></tr>
+                                    <tr><td>Valakas (Sunday)</td><td>20:10 - 21:00 / Every 14 days</td></tr>
+                                </table>
+                            </div>
+                            <ul>
+                                <li><strong>How spawn/respawn works:</strong> each boss can appear only inside its listed time window.</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
                             <h3><img src="images/l2icons/other.png" alt="" class="un_featuresCategoryIcon"> Other</h3>
                             <ul>
                                 <li><strong>No day-based rates</strong> (same every day)</li>
@@ -698,7 +724,7 @@ function initializeFeaturesPage() {
 
                         <div class="un_featuresPageDetailSection">
                             <h3><img src="images/l2icons/vit.png" alt="" class="un_featuresCategoryIcon"> Vitality</h3>
-                            <p>Włączone. Poziomy 0–4: bonus XP = 1.5x / 2x / 2.5x / 3x nałożony na 5x serwera. Pełne vitality (poziom 4) = do 15x XP przy farmieniu.</p>
+                            <p>Włączone. Poziomy 0–4: bonus XP = 1.25x / 1.5x / 1.75x / 2x nałożony na 5x serwera (+0.25x na poziom). Pełne vitality (poziom 4) = do 10x XP przy farmieniu.</p>
                             <ul>
                                 <li><strong>Regeneracja:</strong> 2x w strefach pokoju, 4x przy ponownym połączeniu</li>
                                 <li><strong>Zabójstwo raida</strong> daje bonusowe punkty</li>
@@ -832,6 +858,32 @@ function initializeFeaturesPage() {
                                 <li>Seal stones: modyfikator 1.3x</li>
                                 <li><strong>Buffer premium:</strong> buffy 180 min (3h). 24 sloty buffów, dłuższy czas umiejętności (np. 60 min)</li>
                                 <li>Z premium: 6.5x XP (5x × 1.3)</li>
+                            </ul>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/raid.png" alt="" class="un_featuresCategoryIcon"> Poradnik spawnu Epic Bossow (gracze)</h3>
+                            <p>Wszystkie godziny sa w <strong>czasie serwera</strong>. Epic bossy maja teraz <strong>stale okna spawnu</strong> (nie losowo przez caly dzien).</p>
+                            <h4>Epiki dzienne</h4>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><th>Boss</th><th>Okno / Respawn</th></tr>
+                                    <tr><td>Core</td><td>20:00 - 20:15 / Co 1 dzien</td></tr>
+                                    <tr><td>Queen Ant</td><td>20:30 - 20:45 / Co 1 dzien</td></tr>
+                                    <tr><td>Orfen</td><td>21:00 - 21:15 / Co 1 dzien</td></tr>
+                                </table>
+                            </div>
+                            <h4>Epiki weekendowe</h4>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><th>Boss</th><th>Okno / Respawn</th></tr>
+                                    <tr><td>Baium (Piatek)</td><td>20:00 - 20:30 / Co 7 dni</td></tr>
+                                    <tr><td>Antharas (Sobota)</td><td>20:00 - 21:00 / Co 14 dni</td></tr>
+                                    <tr><td>Valakas (Niedziela)</td><td>20:10 - 21:00 / Co 14 dni</td></tr>
+                                </table>
+                            </div>
+                            <ul>
+                                <li><strong>Jak dziala spawn/respawn:</strong> kazdy boss moze pojawic sie tylko w swoim podanym oknie czasowym.</li>
                             </ul>
                         </div>
 
