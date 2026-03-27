@@ -286,6 +286,7 @@ if (typeof window !== 'undefined') {
         window.WIKI_EPIC_BOSS_SPAWN_ARTICLE,
         window.WIKI_DRAGON_SLAYER_BLESSING_ARTICLE,
         window.WIKI_OLYMPIAD_GAMES_ARTICLE,
+        window.WIKI_SUBCLASSES_CERTIFICATIONS_ARTICLE,
     ].filter(Boolean);
     // Keep newest loaded external articles at the top of the list.
     if (externalArticles.length) {

@@ -1,0 +1,153 @@
+name: Notify Discord on Wiki Article Changes
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "js/wiki-articles-*.js"
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Collect changed article files
+        id: files
+        shell: bash
+        run: |
+          BEFORE="${{ github.event.before }}"
+          AFTER="${{ github.sha }}"
+
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            ADDED_FILES=$(git ls-files 'js/wiki-articles-*.js')
+            MODIFIED_FILES=""
+          else
+            ADDED_FILES=$(git diff --name-status "$BEFORE" "$AFTER" | awk '$1=="A" && $2 ~ /^js\/wiki-articles-.*\.js$/ {print $2}')
+            MODIFIED_FILES=$(git diff --name-status "$BEFORE" "$AFTER" | awk '$1=="M" && $2 ~ /^js\/wiki-articles-.*\.js$/ {print $2}')
+          fi
+
+          {
+            echo "added_files<<EOF"
+            echo "$ADDED_FILES"
+            echo "EOF"
+            echo "modified_files<<EOF"
+            echo "$MODIFIED_FILES"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Send Discord embeds
+        if: ${{ steps.files.outputs.added_files != '' || steps.files.outputs.modified_files != '' }}
+        uses: actions/github-script@v7
+        env:
+          ADDED_FILES: ${{ steps.files.outputs.added_files }}
+          MODIFIED_FILES: ${{ steps.files.outputs.modified_files }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID }}
+          SITE_URL: ${{ vars.SITE_URL }}
+        with:
+          script: |
+            const core = require('@actions/core');
+            const fs = require('fs');
+
+            const token = process.env.DISCORD_BOT_TOKEN;
+            const channelId = process.env.DISCORD_CHANNEL_ID;
+            const siteUrlRaw = process.env.SITE_URL || '';
+            const siteUrl = siteUrlRaw.replace(/\/$/, '');
+            const parseList = (value) => (value || '')
+              .split('\n')
+              .map((x) => x.trim())
+              .filter(Boolean);
+            const addedFiles = parseList(process.env.ADDED_FILES);
+            const modifiedFiles = parseList(process.env.MODIFIED_FILES);
+
+            if (!token || !channelId) {
+              core.setFailed('Missing DISCORD_BOT_TOKEN or DISCORD_CHANNEL_ID secret.');
+              return;
+            }
+            if (!siteUrl) {
+              core.setFailed('Missing SITE_URL repository variable.');
+              return;
+            }
+            if (!addedFiles.length && !modifiedFiles.length) {
+              core.info('No wiki article file changes detected.');
+              return;
+            }
+
+            const readField = (source, fieldName) => {
+              const pattern = new RegExp(`${fieldName}\\s*:\\s*\\{[\\s\\S]*?en\\s*:\\s*['"\`]([^'"\`]+)['"\`]`, 'm');
+              const match = source.match(pattern);
+              return match ? match[1].trim() : '';
+            };
+
+            const readId = (source) => {
+              const match = source.match(/id\s*:\s*['"`]([^'"`]+)['"`]/m);
+              return match ? match[1].trim() : '';
+            };
+
+            const sendEmbedForFile = async (file, eventType) => {
+              if (!fs.existsSync(file)) {
+                core.warning(`Skipped missing file: ${file}`);
+                return;
+              }
+
+              const source = fs.readFileSync(file, 'utf8');
+              const id = readId(source);
+              const title = readField(source, 'title');
+              const excerpt = readField(source, 'excerpt');
+
+              if (!id || !title) {
+                core.warning(`Skipped file with missing id/title: ${file}`);
+                return;
+              }
+
+              const articleUrl = `${siteUrl}/wiki.html#${encodeURIComponent(id)}`;
+              const isAdded = eventType === 'added';
+              const payload = {
+                embeds: [
+                  {
+                    title: `${isAdded ? 'New' : 'Updated'} wiki article: ${title}`,
+                    description: excerpt || `A wiki article was ${isAdded ? 'added' : 'updated'}.`,
+                    url: articleUrl,
+                    color: isAdded ? 5814783 : 16098851,
+                    fields: [
+                      { name: 'Event', value: isAdded ? 'Added' : 'Updated', inline: true },
+                      { name: 'Article ID', value: `\`${id}\``, inline: true },
+                      { name: 'Link', value: articleUrl, inline: false }
+                    ],
+                    timestamp: new Date().toISOString()
+                  }
+                ]
+              };
+
+              const response = await fetch(`https://discord.com/api/v10/channels/${channelId}/messages`, {
+                method: 'POST',
+                headers: {
+                  Authorization: `Bot ${token}`,
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+              });
+
+              if (!response.ok) {
+                const body = await response.text();
+                core.warning(`Failed sending message for ${file}: ${response.status} ${body}`);
+                return;
+              }
+
+              core.info(`Discord notification sent for ${eventType} file ${file}`);
+            };
+
+            for (const file of addedFiles) {
+              await sendEmbedForFile(file, 'added');
+            }
+            for (const file of modifiedFiles) {
+              await sendEmbedForFile(file, 'modified');
+            }

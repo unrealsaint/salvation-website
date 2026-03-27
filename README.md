@@ -41,6 +41,21 @@ This project can be easily deployed on Vercel:
 3. Drag and drop this folder or connect via Git
 4. Vercel will automatically configure and deploy
 
+## Discord notifications for wiki articles
+
+This repository includes a GitHub Actions workflow at `.github/workflows/wiki-discord-notify.yml`.
+It sends a Discord embed when a file matching `js/wiki-articles-*.js` is added or edited on `main`.
+
+Required GitHub settings:
+
+1. Add repository secrets:
+   - `DISCORD_BOT_TOKEN` (Discord bot token)
+   - `DISCORD_CHANNEL_ID` (target channel ID)
+2. Add repository variable:
+   - `SITE_URL` (for example `https://your-vercel-domain.vercel.app` or your production domain)
+
+The workflow extracts `id`, English `title`, and English `excerpt` from each changed article file and posts a direct link in the format `SITE_URL/wiki.html#<article-id>`.
+
 ## Project Structure
 
 ```
