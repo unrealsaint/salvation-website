@@ -17,7 +17,7 @@ window.WIKI_HELLBOUND_ARTICLE = {
     body: {
         en: `
                 <div class="un_featuresPageDetailSection">
-                    <h3>Steel Citadel &amp; Hellbound — Player Guide</h3>
+                    <h3>Steel Citadel &amp; Hellbound — Guide</h3>
                     <p>On <strong>Oasis High Five Salvation</strong>, <strong>Key of the Evil Eye</strong> and <strong>Gate Keys</strong> (Blood / Destruction / Darkness) are <strong>100%</strong> from the mobs listed in Phase E.</p>
                 </div>
                 <div class="un_featuresPageDetailSection">
