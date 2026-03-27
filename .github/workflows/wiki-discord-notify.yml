@@ -133,6 +133,8 @@ jobs:
                   headers={
                       "Authorization": f"Bot {token}",
                       "Content-Type": "application/json",
+                      "Accept": "application/json",
+                      "User-Agent": "salvation-wiki-notifier/1.0 (+https://github.com/unrealsaint/salvation-website)",
                   },
                   method="POST",
               )
