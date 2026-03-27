@@ -190,39 +190,57 @@ const wikiArticles = [
         id: 'client-install',
         categoryId: 'client',
         title: {
-            en: 'Salvation client installation',
-            pl: 'Instalacja klienta Salvation',
+            en: 'How to download and connect',
+            pl: 'Jak pobrac klienta i polaczyc sie',
         },
         excerpt: {
-            en: 'Disk space, antivirus false positives, and first launch tips.',
-            pl: 'Miejsce na dysku, antywirus i pierwsze uruchomienie.',
+            en: 'World switch, download links, launcher setup, and account login.',
+            pl: 'Przelacznik swiata, linki pobierania, launcher i logowanie.',
         },
         body: {
             en: `
                 <div class="un_featuresPageDetailSection">
-                    <h3>Download</h3>
-                    <p>Open the <strong>Download</strong> item in the navigation bar, choose the listed mirror, and verify you have enough free disk space (the panel shows the archive size).</p>
-                    <h3>Installation</h3>
+                    <h3>1) Select the correct world first</h3>
+                    <p>Use the <strong>server world switch</strong> in the <strong>top-left corner</strong> of the website and select <strong>High Five</strong>. This wiki and the Salvation H5 client files are for the High Five world.</p>
+                    <p><img src="images/worldselect.png" alt="World selector set to High Five" style="max-width: 100%; height: auto; border-radius: 8px;" /></p>
+                    <h3>2) Download client files + launcher</h3>
+                    <p>After selecting <strong>High Five</strong>, you can start download in two ways:</p>
                     <ul>
-                        <li>Extract or run the installer to a short path without special characters if you hit Windows path limits.</li>
-                        <li>If Windows Defender or another AV quarantines a file, confirm the hash with staff on Discord before overriding—never disable security blindly.</li>
-                        <li>Launch as administrator only if the updater requests it.</li>
+                        <li>Click <strong>Download</strong> in the top navigation bar, or</li>
+                        <li>Click <strong>Download</strong> on the title page.</li>
                     </ul>
-                    <h3>Connection</h3>
-                    <p>Use the server list or real IP/port provided in the project announcement. Wrong chronicle clients cannot connect to High Five Salvation.</p>
+                    <p>Both options provide the client files with launcher from <strong>Google Drive</strong>.</p>
+                    <p><img src="images/downloadh5.png" alt="High Five Salvation client download panel with Google Drive option" style="max-width: 100%; height: auto; border-radius: 8px;" /></p>
+                    <h3>3) Install and launch</h3>
+                    <ul>
+                        <li>Extract the downloaded files to your preferred folder.</li>
+                        <li>Run the launcher and let it finish updates before starting the game.</li>
+                        <li>If your antivirus blocks a file, verify with staff support first.</li>
+                    </ul>
+                    <h3>4) Accounts and login</h3>
+                    <p><strong>Accounts are created automatically</strong> on first login in game. If you prefer, you can also create an account manually in the User Control Panel: <a href="https://account.oasis-world.eu/ucp/" target="_blank" rel="noopener noreferrer">https://account.oasis-world.eu/ucp/</a>.</p>
                 </div>`,
             pl: `
                 <div class="un_featuresPageDetailSection">
-                    <h3>Pobieranie</h3>
-                    <p>Otwórz <strong>Pobierz</strong> w menu, wybierz mirror i upewnij się, że masz wolne miejsce (rozmiar jest w panelu).</p>
-                    <h3>Instalacja</h3>
+                    <h3>1) Najpierw wybierz poprawny swiat</h3>
+                    <p>Na stronie uzyj <strong>przelacznika swiata serwera</strong> w <strong>lewym gornym rogu</strong> i wybierz <strong>High Five</strong>. Ta wiki oraz pliki klienta Salvation H5 dotycza tylko tego swiata.</p>
+                    <p><img src="images/worldselect.png" alt="Przelacznik swiata ustawiony na High Five" style="max-width: 100%; height: auto; border-radius: 8px;" /></p>
+                    <h3>2) Pobierz pliki klienta i launcher</h3>
+                    <p>Po wybraniu <strong>High Five</strong> pobieranie uruchomisz na dwa sposoby:</p>
                     <ul>
-                        <li>Rozpakuj / zainstaluj w krótkiej ścieżce bez dziwnych znaków, jeśli Windows ma limit długości.</li>
-                        <li>Gdy antywirus kwarantannuje plik, potwierdź z administracją na Discordzie – nie wyłączaj ochrony „na ślepo”.</li>
-                        <li>Uruchamiaj jako administrator tylko gdy updater tego wymaga.</li>
+                        <li>Kliknij <strong>Download</strong> w gornym pasku nawigacji, albo</li>
+                        <li>Kliknij <strong>Download</strong> na stronie tytulowej.</li>
                     </ul>
-                    <h3>Połączenie</h3>
-                    <p>Użyj listy serwerów lub IP/portu z ogłoszenia. Inny chronicle nie połączy się z High Five Salvation.</p>
+                    <p>Obie opcje prowadza do plikow klienta i launchera z <strong>Google Drive</strong>.</p>
+                    <p><img src="images/downloadh5.png" alt="Panel pobierania klienta High Five Salvation z opcja Google Drive" style="max-width: 100%; height: auto; border-radius: 8px;" /></p>
+                    <h3>3) Instalacja i start</h3>
+                    <ul>
+                        <li>Rozpakuj pobrane pliki do wybranego folderu.</li>
+                        <li>Uruchom launcher i poczekaj az zakonczy aktualizacje.</li>
+                        <li>Jesli antywirus zablokuje plik, najpierw potwierdz to ze wsparciem administracji.</li>
+                    </ul>
+                    <h3>4) Konta i logowanie</h3>
+                    <p><strong>Konta sa tworzone automatycznie</strong> przy pierwszym logowaniu do gry. Jesli wolisz, konto mozesz zalozyc recznie w panelu UCP: <a href="https://account.oasis-world.eu/ucp/" target="_blank" rel="noopener noreferrer">https://account.oasis-world.eu/ucp/</a>.</p>
                 </div>`,
         },
     },
