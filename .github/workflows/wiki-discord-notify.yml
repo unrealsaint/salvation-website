@@ -3,9 +3,11 @@ name: Notify Discord on Wiki Article Changes
 on:
   push:
     branches:
+      - master
       - main
     paths:
       - "js/wiki-articles-*.js"
+  workflow_dispatch:
 
 permissions:
   contents: read
