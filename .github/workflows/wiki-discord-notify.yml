@@ -64,6 +64,8 @@ jobs:
           import urllib.parse
           from datetime import datetime, timezone
 
+          EMBED_ICON_URL = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/39da6277-d7e8-4885-9cd8-12328bbe53a9/dgccekt-2af3f045-9119-4371-99e8-2c337a8484c8.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi8zOWRhNjI3Ny1kN2U4LTQ4ODUtOWNkOC0xMjMyOGJiZTUzYTkvZGdjY2VrdC0yYWYzZjA0NS05MTE5LTQzNzEtOTllOC0yYzMzN2E4NDg0YzgucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.An5_Zd3nCgx3QlDyD8aE9zezzMj5J0tSInTQcEIRRPc"
+
           token = os.getenv("DISCORD_BOT_TOKEN", "").strip()
           channel_id = os.getenv("DISCORD_CHANNEL_ID", "").strip()
           site_url = os.getenv("SITE_URL", "").strip().rstrip("/")
@@ -109,19 +111,35 @@ jobs:
 
               article_url = f"{site_url}/wiki.html#{urllib.parse.quote(article_id, safe='')}"
               is_added = event_type == "added"
+              fallback_text = f"A wiki article was {'added' if is_added else 'updated'}."
 
               payload = {
                   "embeds": [
                       {
-                          "title": f"{'New' if is_added else 'Updated'} wiki article: {title}",
-                          "description": excerpt or f"A wiki article was {'added' if is_added else 'updated'}.",
+                          "author": {
+                              "name": "Oasis Wiki Announcements",
+                              "icon_url": EMBED_ICON_URL,
+                          },
+                          "title": f"{'📚 New Wiki Article' if is_added else '🛠️ Wiki Article Updated'}",
+                          "description": (
+                              f"**{title}**\n"
+                              f"{excerpt or fallback_text}\n\n"
+                              f"🔗 [Open article]({article_url})"
+                          ),
                           "url": article_url,
                           "color": 5814783 if is_added else 16098851,
+                          "thumbnail": {
+                              "url": EMBED_ICON_URL,
+                          },
                           "fields": [
-                              {"name": "Event", "value": "Added" if is_added else "Updated", "inline": True},
-                              {"name": "Article ID", "value": f"`{article_id}`", "inline": True},
-                              {"name": "Link", "value": article_url, "inline": False},
+                              {"name": "Type", "value": "New article" if is_added else "Article update", "inline": True},
+                              {"name": "Entry ID", "value": f"`{article_id}`", "inline": True},
+                              {"name": "Direct Link", "value": f"[Click to view]({article_url})", "inline": False},
                           ],
+                          "footer": {
+                              "text": "Oasis World Wiki",
+                              "icon_url": EMBED_ICON_URL,
+                          },
                           "timestamp": datetime.now(timezone.utc).isoformat(),
                       }
                   ]
