@@ -279,7 +279,12 @@ const wikiArticles = [
 ];
 
 if (typeof window !== 'undefined') {
-    const externalArticles = [window.WIKI_HELLBOUND_ARTICLE, window.WIKI_INSTANCE_ENTRY_ARTICLE, window.WIKI_EPIC_BOSS_SPAWN_ARTICLE].filter(Boolean);
+    const externalArticles = [
+        window.WIKI_HELLBOUND_ARTICLE,
+        window.WIKI_INSTANCE_ENTRY_ARTICLE,
+        window.WIKI_EPIC_BOSS_SPAWN_ARTICLE,
+        window.WIKI_DRAGON_SLAYER_BLESSING_ARTICLE,
+    ].filter(Boolean);
     // Keep newest loaded external articles at the top of the list.
     if (externalArticles.length) {
         wikiArticles.unshift(...externalArticles.slice().reverse());
