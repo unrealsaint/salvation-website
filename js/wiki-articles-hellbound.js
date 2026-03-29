@@ -12,7 +12,7 @@ window.WIKI_HELLBOUND_ARTICLE = {
     },
     meta: {
         added: '2026-03-20',
-        updated: '2026-03-24',
+        updated: '2026-03-29',
     },
     body: {
         en: `
