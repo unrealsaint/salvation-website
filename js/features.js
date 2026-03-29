@@ -625,6 +625,17 @@ function initializeFeaturesPage() {
                         </div>
 
                         <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/pvp.png" alt="" class="un_featuresCategoryIcon"> Olympiad</h3>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><td>Season length</td><td><strong>2 weeks</strong></td></tr>
+                                    <tr><td>Schedule</td><td><strong>Mon, Wed &amp; Fri</strong> · <strong>18:00–21:00</strong> (server time)</td></tr>
+                                    <tr><td>Max enchant</td><td><strong>+6</strong></td></tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
                             <h3><img src="images/l2icons/other.png" alt="" class="un_featuresCategoryIcon"> Other</h3>
                             <ul>
                                 <li><strong>No day-based rates</strong> (same every day)</li>
@@ -632,7 +643,6 @@ function initializeFeaturesPage() {
                                 <li><strong>Raid/Epic respawn:</strong> standard (no global speed-up)</li>
                                 <li><strong>Shop:</strong> 1x (normal prices)</li>
                                 <li><strong>Innocent PvP drop:</strong> 0%</li>
-                                <li><strong>Olympiad:</strong> on, standard</li>
                             </ul>
                         </div>
                     </div>
@@ -890,6 +900,17 @@ function initializeFeaturesPage() {
                         </div>
 
                         <div class="un_featuresPageDetailSection">
+                            <h3><img src="images/l2icons/pvp.png" alt="" class="un_featuresCategoryIcon"> Olimpiada</h3>
+                            <div class="un_ratesTable">
+                                <table>
+                                    <tr><td>Dlugosc sezonu</td><td><strong>2 tygodnie</strong></td></tr>
+                                    <tr><td>Harmonogram</td><td><strong>Pn / Sr / Pt</strong> · <strong>18:00–21:00</strong> (czas serwera)</td></tr>
+                                    <tr><td>Max enchant</td><td><strong>+6</strong></td></tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="un_featuresPageDetailSection">
                             <h3><img src="images/l2icons/other.png" alt="" class="un_featuresCategoryIcon"> Inne</h3>
                             <ul>
                                 <li><strong>Brak stawek zależnych od dnia</strong> (takie same każdego dnia)</li>
@@ -897,7 +918,6 @@ function initializeFeaturesPage() {
                                 <li><strong>Respawn raid/epic:</strong> standard (bez globalnego przyspieszenia)</li>
                                 <li><strong>Sklep:</strong> 1x (normalne ceny)</li>
                                 <li><strong>Drop PvP niewinnego:</strong> 0%</li>
-                                <li><strong>Olimpiada:</strong> włączona, standard</li>
                             </ul>
                         </div>
                     </div>
