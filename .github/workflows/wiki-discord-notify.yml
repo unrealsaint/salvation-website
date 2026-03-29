@@ -19,56 +19,127 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # Need full history so github.event.before exists locally (multi-commit pushes,
-          # rebases, or shallow fetch-depth:2 caused git diff → exit 128 "bad object").
-          fetch-depth: 0
+          # Shallow is enough: push range comes from GitHub Compare API, not local git history.
+          fetch-depth: 1
 
       - name: Collect changed article files
         id: files
-        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_FULL: ${{ github.repository }}
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
         run: |
-          set -euo pipefail
-          BEFORE="${{ github.event.before }}"
-          AFTER="${{ github.sha }}"
-          ARTICLE_GLOB='js/wiki-articles-*.js'
+          python3 << 'PY'
+          import json
+          import os
+          import subprocess
+          import urllib.error
+          import urllib.request
 
-          collect_from_diff() {
-            local base="$1"
-            local head="$2"
-            ADDED_FILES=$(git diff --name-status "$base" "$head" | awk '$1=="A" && $2 ~ /^js\/wiki-articles-.*\.js$/ {print $2}')
-            MODIFIED_FILES=$(git diff --name-status "$base" "$head" | awk '$1=="M" && $2 ~ /^js\/wiki-articles-.*\.js$/ {print $2}')
-          }
+          def is_article(path: str) -> bool:
+              return path.startswith("js/wiki-articles-") and path.endswith(".js")
 
-          # Manual runs have no push range; diff only the latest commit (avoid spamming every article).
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            if git rev-parse --verify "${AFTER}~1^{commit}" >/dev/null 2>&1; then
-              collect_from_diff "${AFTER}~1" "$AFTER"
-            else
-              ADDED_FILES=""
-              MODIFIED_FILES=""
-            fi
-          elif [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
-            ADDED_FILES=$(git ls-files "$ARTICLE_GLOB")
-            MODIFIED_FILES=""
-          elif git rev-parse --verify "$BEFORE^{commit}" >/dev/null 2>&1; then
-            collect_from_diff "$BEFORE" "$AFTER"
-          elif git rev-parse --verify "${AFTER}~1^{commit}" >/dev/null 2>&1; then
-            echo "::warning::Push base SHA not in clone; falling back to last commit only."
-            collect_from_diff "${AFTER}~1" "$AFTER"
-          else
-            echo "::warning::Could not diff against push base; listing all article files."
-            ADDED_FILES=$(git ls-files "$ARTICLE_GLOB")
-            MODIFIED_FILES=""
-          fi
+          def write_output(added: list[str], modified: list[str]) -> None:
+              out = os.environ["GITHUB_OUTPUT"]
+              with open(out, "a", encoding="utf-8") as f:
+                  f.write("added_files<<EOF\n")
+                  f.write("\n".join(added) + ("\n" if added else ""))
+                  f.write("EOF\n")
+                  f.write("modified_files<<EOF\n")
+                  f.write("\n".join(modified) + ("\n" if modified else ""))
+                  f.write("EOF\n")
 
-          {
-            echo "added_files<<EOF"
-            echo "$ADDED_FILES"
-            echo "EOF"
-            echo "modified_files<<EOF"
-            echo "$MODIFIED_FILES"
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
+          def compare_via_api(before: str, after: str) -> tuple[list[str], list[str]]:
+              repo = os.environ["REPO_FULL"]
+              token = os.environ["GH_TOKEN"]
+              url = f"https://api.github.com/repos/{repo}/compare/{before}...{after}"
+              req = urllib.request.Request(
+                  url,
+                  headers={
+                      "Authorization": f"Bearer {token}",
+                      "Accept": "application/vnd.github+json",
+                      "X-GitHub-Api-Version": "2022-11-28",
+                  },
+              )
+              try:
+                  with urllib.request.urlopen(req) as resp:
+                      data = json.loads(resp.read().decode("utf-8"))
+              except urllib.error.HTTPError as e:
+                  body = e.read().decode("utf-8", errors="replace")
+                  print(f"::warning::GitHub compare API failed ({e.code}): {body[:500]}")
+                  return [], []
+
+              added, modified = [], []
+              for f in data.get("files") or []:
+                  path = f.get("filename") or ""
+                  if not is_article(path):
+                      continue
+                  st = (f.get("status") or "").lower()
+                  if st == "added":
+                      added.append(path)
+                  elif st == "modified":
+                      modified.append(path)
+              return added, modified
+
+          def parent_sha_via_api(sha: str) -> str | None:
+              repo = os.environ["REPO_FULL"]
+              token = os.environ["GH_TOKEN"]
+              url = f"https://api.github.com/repos/{repo}/commits/{sha}"
+              req = urllib.request.Request(
+                  url,
+                  headers={
+                      "Authorization": f"Bearer {token}",
+                      "Accept": "application/vnd.github+json",
+                      "X-GitHub-Api-Version": "2022-11-28",
+                  },
+              )
+              try:
+                  with urllib.request.urlopen(req) as resp:
+                      data = json.loads(resp.read().decode("utf-8"))
+              except urllib.error.HTTPError as e:
+                  body = e.read().decode("utf-8", errors="replace")
+                  print(f"::warning::GitHub commits API failed ({e.code}): {body[:500]}")
+                  return None
+              parents = data.get("parents") or []
+              if not parents:
+                  return None
+              return (parents[0].get("sha") or "").strip() or None
+
+          def all_tracked_articles() -> list[str]:
+              r = subprocess.run(
+                  ["git", "ls-files", "js/wiki-articles-*.js"],
+                  capture_output=True,
+                  text=True,
+                  cwd=".",
+              )
+              if r.returncode != 0:
+                  return []
+              return [p for p in r.stdout.splitlines() if p.strip()]
+
+          event = os.environ.get("EVENT_NAME", "")
+          before = (os.environ.get("BEFORE_SHA") or "").strip()
+          after = (os.environ.get("AFTER_SHA") or "").strip()
+          zero = "0" * 40
+
+          added: list[str] = []
+          modified: list[str] = []
+
+          if event == "workflow_dispatch":
+              parent = parent_sha_via_api(after)
+              if parent:
+                  added, modified = compare_via_api(parent, after)
+              else:
+                  added, modified = [], []
+          elif not before or before == zero:
+              added = all_tracked_articles()
+              modified = []
+          else:
+              added, modified = compare_via_api(before, after)
+
+          write_output(added, modified)
+          PY
 
       - name: Send Discord embeds
         if: ${{ steps.files.outputs.added_files != '' || steps.files.outputs.modified_files != '' }}
