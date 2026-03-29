@@ -1028,6 +1028,23 @@ body.features-page::after {
   color: rgba(255, 255, 255, 0.9);
   font-weight: normal;
 }
+.un_featuresPageDetailSection ol {
+  margin: 0 0 1.5rem 0;
+  padding-left: 1.5rem;
+}
+.un_featuresPageDetailSection ol li {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  margin: 0.8rem 0;
+  font-size: 1rem;
+}
+.un_featuresPageDetailSection ol li::marker {
+  color: rgba(255, 255, 255, 0.55);
+}
+.un_featuresPageDetailSection ol li strong {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: normal;
+}
 body.wiki-page::after {
   display: none !important;
 }
@@ -1379,11 +1396,14 @@ body.wiki-page::after {
 .un_ratesTable table {
   width: 100%;
   max-width: 100%;
-  table-layout: fixed;
   border-collapse: collapse;
   background: rgba(38, 38, 38, 0.4);
   border-radius: 0.4rem;
   overflow: hidden;
+}
+/* Only true 2-column tables: fixed 65/35 split. Wider tables (e.g. quest grids) use auto layout. */
+.un_ratesTable table:has(tbody > tr:first-child > *:nth-child(2):last-child) {
+  table-layout: fixed;
 }
 .un_ratesTable table th,
 .un_ratesTable table td {
@@ -1394,12 +1414,12 @@ body.wiki-page::after {
   overflow-wrap: break-word;
   word-break: break-word;
 }
-.un_ratesTable table td:first-child,
-.un_ratesTable table th:first-child {
+.un_ratesTable table:has(tbody > tr:first-child > *:nth-child(2):last-child) td:first-child,
+.un_ratesTable table:has(tbody > tr:first-child > *:nth-child(2):last-child) th:first-child {
   width: 65%;
 }
-.un_ratesTable table td:last-child,
-.un_ratesTable table th:last-child {
+.un_ratesTable table:has(tbody > tr:first-child > *:nth-child(2):last-child) td:last-child,
+.un_ratesTable table:has(tbody > tr:first-child > *:nth-child(2):last-child) th:last-child {
   width: 35%;
 }
 .un_ratesTable table th {

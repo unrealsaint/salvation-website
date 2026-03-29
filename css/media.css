@@ -157,10 +157,12 @@
     padding: 0.75rem 0.75rem;
     font-size: 0.95rem;
   }
-  .un_ratesTable table td:first-child {
+  .un_ratesTable table:has(tbody > tr:first-child > *:nth-child(2):last-child) td:first-child,
+  .un_ratesTable table:has(tbody > tr:first-child > *:nth-child(2):last-child) th:first-child {
     width: 60%;
   }
-  .un_ratesTable table td:last-child {
+  .un_ratesTable table:has(tbody > tr:first-child > *:nth-child(2):last-child) td:last-child,
+  .un_ratesTable table:has(tbody > tr:first-child > *:nth-child(2):last-child) th:last-child {
     width: 40%;
   }
   .un_wikiLayout {
