@@ -599,27 +599,28 @@ function initializeFeaturesPage() {
 
                         <div class="un_featuresPageDetailSection">
                             <h3><img src="images/l2icons/raid.png" alt="" class="un_featuresCategoryIcon"> Epic Boss Spawn Guide (Players)</h3>
-                            <p>All times are <strong>server time</strong>. Epic bosses use <strong>fixed spawn windows</strong> (not random all-day).</p>
-                            <h4>Daily Epics</h4>
+                            <p>All times are <strong>server time</strong>. Epic bosses use <strong>fixed days and clock times</strong> (not random all-day).</p>
+                            <h4>Tuesday &amp; Thursday</h4>
                             <div class="un_ratesTable">
                                 <table>
-                                    <tr><th>Boss</th><th>Window / Respawn</th></tr>
-                                    <tr><td>Core</td><td>20:00 - 20:15 / Every 1 day</td></tr>
-                                    <tr><td>Queen Ant</td><td>20:30 - 20:45 / Every 1 day</td></tr>
-                                    <tr><td>Orfen</td><td>21:00 - 21:15 / Every 1 day</td></tr>
+                                    <tr><th>Boss</th><th>Day &amp; time</th></tr>
+                                    <tr><td>Queen Ant</td><td>Tue &amp; Thu 20:00</td></tr>
+                                    <tr><td>Core</td><td>Tue &amp; Thu 21:00</td></tr>
+                                    <tr><td>Orfen</td><td>Tue &amp; Thu 21:00</td></tr>
                                 </table>
                             </div>
-                            <h4>Weekend Epics</h4>
+                            <h4>Saturday</h4>
                             <div class="un_ratesTable">
                                 <table>
-                                    <tr><th>Boss</th><th>Window / Respawn</th></tr>
-                                    <tr><td>Baium (Friday)</td><td>20:00 - 20:30 / Every 7 days</td></tr>
-                                    <tr><td>Antharas (Saturday)</td><td>20:00 - 21:00 / Every 14 days</td></tr>
-                                    <tr><td>Valakas (Sunday)</td><td>20:10 - 21:00 / Every 14 days</td></tr>
+                                    <tr><th>Boss</th><th>Day &amp; time</th></tr>
+                                    <tr><td>Baium</td><td>Saturday 19:00</td></tr>
+                                    <tr><td>Antharas</td><td>Saturday 20:00 (rotates weekly with Valakas)</td></tr>
+                                    <tr><td>Valakas</td><td>Saturday 20:00 (rotates weekly with Antharas)</td></tr>
                                 </table>
                             </div>
                             <ul>
-                                <li><strong>How spawn/respawn works:</strong> each boss can appear only inside its listed time window.</li>
+                                <li><strong>Antharas / Valakas:</strong> only one dragon at Saturday 20:00 each week, alternating.</li>
+                                <li><strong>How spawn works:</strong> bosses appear on the listed days at the listed times.</li>
                             </ul>
                         </div>
 
@@ -863,27 +864,28 @@ function initializeFeaturesPage() {
 
                         <div class="un_featuresPageDetailSection">
                             <h3><img src="images/l2icons/raid.png" alt="" class="un_featuresCategoryIcon"> Poradnik spawnu Epic Bossow (gracze)</h3>
-                            <p>Wszystkie godziny sa w <strong>czasie serwera</strong>. Epic bossy maja teraz <strong>stale okna spawnu</strong> (nie losowo przez caly dzien).</p>
-                            <h4>Epiki dzienne</h4>
+                            <p>Wszystkie godziny sa w <strong>czasie serwera</strong>. Epic bossy maja <strong>stale dni i godziny</strong> (nie losowo przez caly dzien).</p>
+                            <h4>Wtorek i czwartek</h4>
                             <div class="un_ratesTable">
                                 <table>
-                                    <tr><th>Boss</th><th>Okno / Respawn</th></tr>
-                                    <tr><td>Core</td><td>20:00 - 20:15 / Co 1 dzien</td></tr>
-                                    <tr><td>Queen Ant</td><td>20:30 - 20:45 / Co 1 dzien</td></tr>
-                                    <tr><td>Orfen</td><td>21:00 - 21:15 / Co 1 dzien</td></tr>
+                                    <tr><th>Boss</th><th>Dzien i godzina</th></tr>
+                                    <tr><td>Queen Ant</td><td>Wt i czw 20:00</td></tr>
+                                    <tr><td>Core</td><td>Wt i czw 21:00</td></tr>
+                                    <tr><td>Orfen</td><td>Wt i czw 21:00</td></tr>
                                 </table>
                             </div>
-                            <h4>Epiki weekendowe</h4>
+                            <h4>Sobota</h4>
                             <div class="un_ratesTable">
                                 <table>
-                                    <tr><th>Boss</th><th>Okno / Respawn</th></tr>
-                                    <tr><td>Baium (Piatek)</td><td>20:00 - 20:30 / Co 7 dni</td></tr>
-                                    <tr><td>Antharas (Sobota)</td><td>20:00 - 21:00 / Co 14 dni</td></tr>
-                                    <tr><td>Valakas (Niedziela)</td><td>20:10 - 21:00 / Co 14 dni</td></tr>
+                                    <tr><th>Boss</th><th>Dzien i godzina</th></tr>
+                                    <tr><td>Baium</td><td>Sobota 19:00</td></tr>
+                                    <tr><td>Antharas</td><td>Sobota 20:00 (na przemian co tydzien z Valakasem)</td></tr>
+                                    <tr><td>Valakas</td><td>Sobota 20:00 (na przemian co tydzien z Antharasem)</td></tr>
                                 </table>
                             </div>
                             <ul>
-                                <li><strong>Jak dziala spawn/respawn:</strong> kazdy boss moze pojawic sie tylko w swoim podanym oknie czasowym.</li>
+                                <li><strong>Antharas / Valakas:</strong> tylko jeden smok w sobote o 20:00 w danym tygodniu, na przemian.</li>
+                                <li><strong>Jak dziala spawn:</strong> bossy pojawiaja sie w wymienione dni o podanych godzinach.</li>
                             </ul>
                         </div>
 
