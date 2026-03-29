@@ -19,21 +19,46 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          # Need full history so github.event.before exists locally (multi-commit pushes,
+          # rebases, or shallow fetch-depth:2 caused git diff → exit 128 "bad object").
+          fetch-depth: 0
 
       - name: Collect changed article files
         id: files
         shell: bash
         run: |
+          set -euo pipefail
           BEFORE="${{ github.event.before }}"
           AFTER="${{ github.sha }}"
+          ARTICLE_GLOB='js/wiki-articles-*.js'
 
-          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
-            ADDED_FILES=$(git ls-files 'js/wiki-articles-*.js')
+          collect_from_diff() {
+            local base="$1"
+            local head="$2"
+            ADDED_FILES=$(git diff --name-status "$base" "$head" | awk '$1=="A" && $2 ~ /^js\/wiki-articles-.*\.js$/ {print $2}')
+            MODIFIED_FILES=$(git diff --name-status "$base" "$head" | awk '$1=="M" && $2 ~ /^js\/wiki-articles-.*\.js$/ {print $2}')
+          }
+
+          # Manual runs have no push range; diff only the latest commit (avoid spamming every article).
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if git rev-parse --verify "${AFTER}~1^{commit}" >/dev/null 2>&1; then
+              collect_from_diff "${AFTER}~1" "$AFTER"
+            else
+              ADDED_FILES=""
+              MODIFIED_FILES=""
+            fi
+          elif [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            ADDED_FILES=$(git ls-files "$ARTICLE_GLOB")
             MODIFIED_FILES=""
+          elif git rev-parse --verify "$BEFORE^{commit}" >/dev/null 2>&1; then
+            collect_from_diff "$BEFORE" "$AFTER"
+          elif git rev-parse --verify "${AFTER}~1^{commit}" >/dev/null 2>&1; then
+            echo "::warning::Push base SHA not in clone; falling back to last commit only."
+            collect_from_diff "${AFTER}~1" "$AFTER"
           else
-            ADDED_FILES=$(git diff --name-status "$BEFORE" "$AFTER" | awk '$1=="A" && $2 ~ /^js\/wiki-articles-.*\.js$/ {print $2}')
-            MODIFIED_FILES=$(git diff --name-status "$BEFORE" "$AFTER" | awk '$1=="M" && $2 ~ /^js\/wiki-articles-.*\.js$/ {print $2}')
+            echo "::warning::Could not diff against push base; listing all article files."
+            ADDED_FILES=$(git ls-files "$ARTICLE_GLOB")
+            MODIFIED_FILES=""
           fi
 
           {
