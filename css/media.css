@@ -149,6 +149,40 @@
   .un_featuresList-row {
     width: 100%;
   }
+  .un_streamers {
+    padding: 6rem 0;
+  }
+  .un_streamerCard {
+    max-width: 100%;
+  }
+  .un_streamersGrid::before,
+  .un_streamersGrid::after {
+    width: 2.4rem;
+  }
+  .un_streamersSlider .swiper-slide,
+  .un_streamersSlider .swiper-slide-prev,
+  .un_streamersSlider .swiper-slide-next {
+    transform: translateY(0.25rem) scale(0.92) rotateY(0deg);
+    opacity: 0.82;
+  }
+  .un_streamersSlider .swiper-slide-active {
+    transform: translateY(0) scale(1) rotateY(0deg);
+    opacity: 1;
+  }
+  .un_streamerFrame {
+    aspect-ratio: 16/9;
+  }
+  .un_streamersNavBtn {
+    width: 2.3rem;
+    height: 2.3rem;
+    top: 40%;
+  }
+  .un_streamersNavPrev {
+    left: -0.1rem;
+  }
+  .un_streamersNavNext {
+    right: -0.1rem;
+  }
   .un_featuresPageDetailSection {
     padding: 1.5rem 1.25rem;
   }

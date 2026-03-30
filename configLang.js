@@ -24,7 +24,7 @@ const lang = {
 
         countdown: {
             label: 'Server launch',
-            subline: 'Oasis Salvation High-Five will open on April 1st 19:00 UTC',
+            subline: 'Oasis Salvation High-Five will open on April 1st 19:00 CEST',
             days: 'Days',
             hours: 'Hours',
             minutes: 'Minutes',
@@ -161,7 +161,7 @@ const lang = {
 
         countdown: {
             label: 'Start serwera',
-            subline: 'Oasis Salvation High-Five uruchomi się 1 kwietnia o 19:00 UTC',
+            subline: 'Oasis Salvation High-Five uruchomi się 1 kwietnia o 19:00 CEST',
             days: 'Dni',
             hours: 'Godz.',
             minutes: 'Min',

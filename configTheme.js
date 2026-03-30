@@ -90,11 +90,11 @@ const theme = [
                 },
 
                 subtitle: {
-                    en: 'Trailer Coming Soon',
-                    pl: 'Zwiastun wkrótce',
+                    en: 'Watch the official trailer',
+                    pl: 'Obejrzyj oficjalny zwiastun',
                 },
 
-                src: 'https://www.youtube.com/@OasisLineageII',
+                src: 'https://youtu.be/01IhM_d2yL4',
                 thumb: 'images/bg/theme/bg2.jpg'
             },
 
@@ -155,6 +155,47 @@ const theme = [
                     img: 'images/features/aden/5.jpg'
                 }
             ],
+        },
+
+        streamers: {
+            title: {
+                en: 'Oasis Live Streamers',
+                pl: 'Streamerzy Oasis na zywo'
+            },
+            subtitle: {
+                en: 'Watch friendly creators playing content from Oasis High Five Salvation.',
+                pl: 'Zobacz przyjaznych tworcow, ktorzy streamuja content z Oasis High Five Salvation.'
+            },
+            watchLabel: {
+                en: 'Open channel',
+                pl: 'Otworz kanal'
+            },
+            channels: [
+                {
+                    name: 'NadirTV94 (Twitch)',
+                    platform: 'Twitch',
+                    url: 'https://www.twitch.tv/nadirtv94',
+                    twitchChannel: 'nadirtv94'
+                },
+                {
+                    name: 'Alannon12 (Twitch)',
+                    platform: 'Twitch',
+                    url: 'https://www.twitch.tv/alannon12',
+                    twitchChannel: 'alannon12'
+                },
+                {
+                    name: 'Avenn_wn (Twitch)',
+                    platform: 'Twitch',
+                    url: 'https://www.twitch.tv/avenn_wn',
+                    twitchChannel: 'avenn_wn'
+                },
+                {
+                    name: 'Sradom360 (Twitch)',
+                    platform: 'Twitch',
+                    url: 'https://www.twitch.tv/sradom360',
+                    twitchChannel: 'sradom360'
+                }
+            ]
         },
 
         files: {
@@ -290,11 +331,11 @@ const theme = [
                 },
 
                 subtitle: {
-                    en: 'Trailer Coming Soon',
-                    pl: 'Zwiastun wkrótce',
+                    en: 'Watch the official trailer',
+                    pl: 'Obejrzyj oficjalny zwiastun',
                 },
 
-                src: 'https://www.youtube.com/@OasisLineageII',
+                src: 'https://youtu.be/01IhM_d2yL4',
                 thumb: 'images/bg/theme/bg2.jpg'
             },
 
@@ -355,6 +396,22 @@ const theme = [
                     img: 'images/features/awakening/5.jpg'
                 }
             ],
+        },
+
+        streamers: {
+            title: {
+                en: 'Interlude+ Live Streamers',
+                pl: 'Streamerzy Interlude+ na zywo'
+            },
+            subtitle: {
+                en: 'Community channels showcasing Interlude+ adventures.',
+                pl: 'Kanaly spolecznosci pokazujace przygody na Interlude+.'
+            },
+            watchLabel: {
+                en: 'Open channel',
+                pl: 'Otworz kanal'
+            },
+            channels: []
         },
 
         files: {

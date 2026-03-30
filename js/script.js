@@ -6,8 +6,8 @@ const languageSelectElement = document.getElementById('languageSwitcher');
 
 const availableLanguages = ['en', 'pl'];
 
-// Countdown to High Five Salvation server release: April 1st 19:00 UTC
-const RELEASE_DATE = new Date(Date.UTC(2026, 3, 1, 19, 0, 0, 0)); // month is 0-based
+// Countdown to High Five Salvation server release: April 1st 19:00 CEST (= 17:00 UTC; Europe uses DST)
+const RELEASE_DATE = new Date(Date.UTC(2026, 3, 1, 17, 0, 0, 0)); // month is 0-based
 
 let countdownInterval = null;
 
@@ -103,6 +103,80 @@ const applyTheme = (theme) => {
 
 
 let swiperRates;
+let streamersSwiper;
+
+const setStreamersSectionPosition = (hasLiveStreamer) => {
+    const streamersSection = document.querySelector('.un_streamers');
+    if (!streamersSection) return;
+
+    const headerSection = document.querySelector('.un_header');
+    const featuresSection = document.querySelector('.un_features');
+    if (!headerSection || !featuresSection) return;
+
+    const targetAnchor = hasLiveStreamer ? headerSection : featuresSection;
+    if (targetAnchor.nextElementSibling !== streamersSection) {
+        targetAnchor.insertAdjacentElement('afterend', streamersSection);
+    }
+};
+
+const getStreamerEmbedUrl = (channel) => {
+    if (!channel) return '';
+    if (channel.platform === 'Twitch' && channel.twitchChannel) {
+        const currentHost = window.location.hostname || 'localhost';
+        const parentHosts = Array.from(new Set(
+            [currentHost, 'localhost', '127.0.0.1', 'oasis-world.eu', 'www.oasis-world.eu'].filter(Boolean)
+        ));
+        const parentParams = parentHosts.map(host => `parent=${encodeURIComponent(host)}`).join('&');
+        return `https://player.twitch.tv/?channel=${encodeURIComponent(channel.twitchChannel)}&${parentParams}`;
+    }
+    return channel.embedUrl || '';
+};
+
+const focusLiveStreamer = async (channels) => {
+    if (!streamersSwiper || !Array.isArray(channels) || !channels.length) return;
+    const twitchChannels = channels
+        .filter(ch => ch && ch.platform === 'Twitch' && ch.twitchChannel)
+        .map(ch => String(ch.twitchChannel).trim().toLowerCase())
+        .filter(Boolean);
+
+    if (!twitchChannels.length) {
+        setStreamersSectionPosition(false);
+        return;
+    }
+
+    try {
+        const response = await fetch('/api/twitch-live', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ channels: twitchChannels }),
+        });
+        if (!response.ok) return;
+        const payload = await response.json();
+        const live = Array.isArray(payload.live) ? new Set(payload.live.map(v => String(v).toLowerCase())) : null;
+        if (!live || !live.size) {
+            setStreamersSectionPosition(false);
+            return;
+        }
+
+        setStreamersSectionPosition(true);
+
+        const liveIndex = channels.findIndex(channel =>
+            channel &&
+            channel.platform === 'Twitch' &&
+            channel.twitchChannel &&
+            live.has(String(channel.twitchChannel).toLowerCase())
+        );
+
+        if (liveIndex >= 0) {
+            streamersSwiper.slideToLoop(liveIndex, 650);
+        }
+    } catch (error) {
+        // Silent fallback: keep default centered slide when API is unavailable.
+        setStreamersSectionPosition(false);
+    }
+};
 
 const initializeSwiper = () => {
     if (swiperRates) {
@@ -124,6 +198,36 @@ const initializeSwiper = () => {
             769: {
                 slidesPerView: 3,
             },
+        },
+    });
+};
+
+const initializeStreamersSwiper = () => {
+    const streamersSliderEl = document.querySelector('.un_streamersSlider');
+    if (!streamersSliderEl) return;
+
+    if (streamersSwiper) {
+        streamersSwiper.destroy(true, true);
+    }
+
+    const totalSlides = streamersSliderEl.querySelectorAll('.swiper-slide').length;
+    streamersSwiper = new Swiper('.un_streamersSlider', {
+        loop: totalSlides > 1,
+        speed: 550,
+        centeredSlides: true,
+        spaceBetween: 0,
+        slidesPerView: 1.15,
+        breakpoints: {
+            900: {
+                slidesPerView: 1.75,
+            },
+            1200: {
+                slidesPerView: 2.15,
+            },
+        },
+        navigation: {
+            nextEl: '.un_streamersNavNext',
+            prevEl: '.un_streamersNavPrev',
         },
     });
 };
@@ -177,6 +281,52 @@ const updateContent = (server, language) => {
                 </div>
             </li>
         `).join('');
+    }
+
+    const streamersTitle = document.querySelector('.un_streamersTitle');
+    const streamersGrid = document.querySelector('.un_streamersGrid');
+    if (streamersTitle && streamersGrid) {
+        const streamersConfig = server.streamers;
+        if (streamersConfig && Array.isArray(streamersConfig.channels) && streamersConfig.channels.length) {
+            streamersTitle.innerHTML = `
+                <h2>${streamersConfig.title[language]}</h2>
+                <p>${streamersConfig.subtitle[language]}</p>
+            `;
+            streamersGrid.innerHTML = `
+                <div class="un_streamersSlider">
+                    <div class="swiper-wrapper">
+                        ${streamersConfig.channels.map(channel => `
+                            <article class="un_streamerCard swiper-slide">
+                                <iframe
+                                    class="un_streamerFrame"
+                                    src="${getStreamerEmbedUrl(channel)}"
+                                    title="${channel.name}"
+                                    loading="lazy"
+                                    allowfullscreen
+                                    allow="autoplay; encrypted-media; picture-in-picture">
+                                </iframe>
+                                <div class="un_streamerMeta">
+                                    <h3>${channel.name}</h3>
+                                    <p>${channel.platform}</p>
+                                    <a href="${channel.url}" target="_blank" rel="noopener noreferrer">${streamersConfig.watchLabel[language]}</a>
+                                </div>
+                            </article>
+                        `).join('')}
+                    </div>
+                </div>
+                <button class="un_streamersNavBtn un_streamersNavPrev" aria-label="Previous streamer"></button>
+                <button class="un_streamersNavBtn un_streamersNavNext" aria-label="Next streamer"></button>
+            `;
+            initializeStreamersSwiper();
+            focusLiveStreamer(streamersConfig.channels);
+        } else {
+            streamersTitle.innerHTML = '';
+            streamersGrid.innerHTML = '';
+            if (streamersSwiper) {
+                streamersSwiper.destroy(true, true);
+                streamersSwiper = null;
+            }
+        }
     }
 
     // Only update rates if header exists (not on features page)
