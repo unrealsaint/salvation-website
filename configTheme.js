@@ -194,6 +194,12 @@ const theme = [
                     platform: 'Twitch',
                     url: 'https://www.twitch.tv/sradom360',
                     twitchChannel: 'sradom360'
+                },
+                {
+                    name: 'Fiikuziik (Twitch)',
+                    platform: 'Twitch',
+                    url: 'https://www.twitch.tv/fiikuziik',
+                    twitchChannel: 'fiikuziik'
                 }
             ]
         },
