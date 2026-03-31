@@ -5,6 +5,7 @@
     {"src": "**", "use": "@vercel/static"}
   ],
   "routes": [
+    {"src": "/api/twitch-live", "dest": "/api/twitch-live.js"},
     {"src": "/api/(.*)", "dest": "/api/$1"},
     {"src": "/", "dest": "/index.html"},
     {"src": "/features", "dest": "/features.html"},
