@@ -1,8 +1,8 @@
 :root {
   --theme_1-bg: center 0, center 0;
-  --theme_1-icon: hue-rotate(280deg);
-  --theme_1-keyIcon: hue-rotate(290deg);
-  --theme_1-btn: blur(2rem) hue-rotate(255deg) brightness(130%) contrast(100%);
+  --theme_1-icon: hue-rotate(340deg) saturate(112%) brightness(86%);
+  --theme_1-keyIcon: hue-rotate(334deg) saturate(122%) brightness(82%);
+  --theme_1-btn: blur(2rem) hue-rotate(322deg) saturate(125%) brightness(72%) contrast(108%);
   --theme_1-logo: invert(100%) hue-rotate(120deg) brightness(100%) grayscale(70%);
   --theme_2-bg: center 0;
   --theme_2-icon: hue-rotate(190deg) brightness(180%);
@@ -32,6 +32,9 @@ body.theme_1::after {
 }
 .theme_1 .un_headerKey-btn label span::before {
   filter: var(--theme_1-btn);
+}
+.theme_1 .un_headerKey-btn label div {
+  background-color: rgb(88, 20, 26);
 }
 .theme_1 .un_headerKey-list ul li span:nth-child(1)::before {
   filter: var(--theme_1-keyIcon);

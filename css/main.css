@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column-reverse;
 }
+
 .un_select-selected {
   color: rgb(234, 234, 234);
   padding-top: 1.8rem;
@@ -12,9 +13,11 @@
   position: relative;
   z-index: 3;
 }
+
 .un_select-selected:hover::before {
   opacity: 0.8;
 }
+
 .un_select-selected::before {
   content: ">";
   right: -1.6rem;
@@ -28,6 +31,7 @@
   position: absolute;
   transition: opacity 0.3s;
 }
+
 .un_select-options {
   left: 0;
   display: flex;
@@ -43,17 +47,20 @@
   overflow: hidden;
   border: 0.05rem solid rgba(255, 255, 255, 0.1);
 }
+
 .un_select-options.show {
   top: 5rem;
   opacity: 1;
   pointer-events: all;
 }
-.un_select-options.show ~ .un_select-selected::before {
+
+.un_select-options.show~.un_select-selected::before {
   opacity: 1;
   transform: rotate(-90deg);
   bottom: 1.05rem;
   right: -1.3rem;
 }
+
 .un_select-thumb {
   width: 3.5rem;
   height: 3.5rem;
@@ -62,11 +69,13 @@
   border-radius: 0.4rem;
   overflow: hidden;
 }
+
 .un_select-thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .un_select-text {
   display: flex;
   flex-direction: column;
@@ -79,12 +88,15 @@
   width: 10rem;
   gap: 0.2rem;
 }
+
 .un_select-text span:nth-child(2) {
   opacity: 0.5;
 }
+
 .un_select-option:not(:last-child) {
   border-bottom: 0.05rem solid rgba(255, 255, 255, 0.05);
 }
+
 .un_select-option {
   text-align: center;
   cursor: pointer;
@@ -96,6 +108,7 @@
   background-color: rgba(255, 255, 255, 0);
   transition: 0.3s;
 }
+
 .un_select-option:hover {
   background-color: rgba(255, 255, 255, 0.05);
 }
@@ -113,6 +126,7 @@
   padding: 10rem 0 5rem 0;
   text-align: center;
 }
+
 .un_footer::before {
   content: "";
   position: absolute;
@@ -124,11 +138,13 @@
   filter: grayscale(100%);
   background: url(../images/bg/featuresBg.jpg) top/cover no-repeat;
 }
+
 .un_footerCopyright {
   margin: 5rem 0 0 0;
   position: relative;
   z-index: 1;
 }
+
 .un_footerCopyright ul {
   display: flex;
   margin: 0;
@@ -137,45 +153,55 @@
   list-style-type: none;
   gap: 2.5rem;
 }
+
 .un_footerCopyright ul li a {
   color: rgb(234, 234, 234);
   text-decoration: none;
   opacity: 0.5;
   transition: 0.3s;
 }
+
 .un_footerCopyright ul li a:hover {
   opacity: 1;
 }
+
 .un_footerCopyright p {
   color: gray;
   text-align: center;
   opacity: 0.5;
 }
+
 .un_footerCopyright-logo {
   width: fit-content;
   margin: 0 auto;
   padding: 2rem 0 0 0;
 }
+
 .un_footerCopyright-logo a {
   display: flex;
   opacity: 0.2;
   transition: 0.3s;
 }
+
 .un_footerCopyright-logo a:hover {
   opacity: 0.6;
 }
+
 .un_footerCopyright-logo a img {
   width: 10rem;
   filter: invert(100%);
 }
+
 .un_footerSocial {
   position: relative;
   z-index: 1;
 }
+
 .un_footerSocial h1 {
   margin: 0 0 3rem 0;
   font-size: 2.8rem;
 }
+
 .un_footerSocial ul {
   display: flex;
   list-style: none;
@@ -185,6 +211,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .un_footerSocial ul li a {
   display: flex;
   width: 5rem;
@@ -195,18 +222,22 @@
   border: 0.15rem solid rgba(255, 255, 255, 0.1);
   transition: 0.3s;
 }
+
 .un_footerSocial ul li a:hover {
   border-color: rgba(255, 255, 255, 0.5);
 }
+
 .un_footerSocial ul li a:hover svg {
   opacity: 1;
 }
+
 .un_footerSocial ul li a svg {
   width: 2rem;
   height: 2rem;
   transition: 0.3s;
   opacity: 0.5;
 }
+
 .un_footerSocial ul li a svg path {
   fill: white;
 }
@@ -223,6 +254,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .un_startTitle {
   display: flex;
   align-items: center;
@@ -230,6 +262,7 @@
   width: 100%;
   margin: 0 0 6rem 0;
 }
+
 .un_start::before {
   content: "";
   position: absolute;
@@ -239,16 +272,19 @@
   top: 0;
   left: 0;
 }
+
 .un_start h1 {
   font-size: 3rem;
   text-align: center;
   margin: 0;
   filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.8)) brightness(150%);
 }
+
 .un_start .un_container {
   height: 100%;
   padding: 10rem 0 7rem 0;
 }
+
 .un_startChar {
   position: absolute;
   height: fit-content;
@@ -259,12 +295,14 @@
   justify-content: center;
   align-items: flex-end;
 }
+
 .un_startSteps {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
+
 .un_startSteps ul {
   display: flex;
   list-style: none;
@@ -273,26 +311,33 @@
   width: 45%;
   padding: 0;
 }
+
 .un_startSteps ul li:last-child div:nth-child(1)::before {
   display: none;
 }
+
 .un_startSteps ul li:last-child div:nth-child(2) {
   padding: 0.5rem 0 0 0;
 }
+
 .un_startSteps ul li {
   display: flex;
   gap: 2rem;
 }
+
 .un_startSteps ul li div:nth-child(2) {
   padding: 0.5rem 0 4.5rem 0;
 }
+
 .un_startSteps ul li div:nth-child(2) h2 {
   margin: 0;
 }
+
 .un_startSteps ul li div:nth-child(2) p {
   color: gray;
   margin: 0.5rem 0 3rem 0;
 }
+
 .un_startSteps ul li div:nth-child(2) a {
   padding: 0.8rem 2rem;
   border-radius: 0.4rem;
@@ -301,15 +346,18 @@
   border: 0.15rem solid rgba(255, 255, 255, 0.2);
   transition: 0.3s;
 }
+
 .un_startSteps ul li div:nth-child(2) a:hover {
   border-color: rgba(255, 255, 255, 0.7);
 }
+
 .un_startSteps ul li div:nth-child(1) {
   color: gray;
   position: relative;
   display: flex;
   justify-content: center;
 }
+
 .un_startSteps ul li div:nth-child(1)::before {
   content: "";
   position: absolute;
@@ -318,6 +366,7 @@
   width: 0.15rem;
   background-color: rgba(255, 255, 255, 0.1);
 }
+
 .un_startSteps ul li div:nth-child(1) span {
   width: 3rem;
   height: 3rem;
@@ -342,6 +391,7 @@
   margin-top: -4rem;
   z-index: 2;
 }
+
 .un_features::before {
   content: "";
   position: absolute;
@@ -355,6 +405,7 @@
   filter: grayscale(100%);
   background: url(../images/bg/featuresBg.jpg) top/cover no-repeat;
 }
+
 .un_features::after {
   content: "";
   position: absolute;
@@ -369,6 +420,7 @@
   filter: grayscale(100%);
   background: url(../images/bg/featuresBg.jpg) top/cover no-repeat;
 }
+
 .un_featuresList {
   width: 100%;
   margin: 3rem 0 0 0;
@@ -376,14 +428,17 @@
   display: flex;
   gap: 3rem;
 }
+
 .un_featuresList-row {
   position: relative;
   width: 50%;
 }
+
 .un_featuresList-row h2 {
   text-align: center;
   margin: 0 0 3rem 0;
 }
+
 .un_featuresList-row ul {
   padding: 0;
   margin: 0;
@@ -391,6 +446,7 @@
   gap: 3rem;
   flex-wrap: wrap;
 }
+
 .un_featuresList-row ul li {
   display: flex;
   flex-direction: column;
@@ -406,14 +462,17 @@
   border: 0.05rem solid rgba(255, 255, 255, 0.05);
   padding-top: 12rem;
 }
+
 .un_featuresList-row ul li h3 {
   margin: 0;
   font-size: 1.5rem;
 }
+
 .un_featuresList-row ul li p {
   margin: 0.5rem 0 0 0;
   color: gray;
 }
+
 .un_featuresList-row ul li img {
   width: 100%;
   height: 80%;
@@ -423,6 +482,7 @@
   top: 0;
   left: 0;
 }
+
 .un_featuresList-video {
   display: flex;
   width: 50%;
@@ -435,14 +495,17 @@
   overflow: hidden;
   justify-content: center;
 }
+
 .un_featuresList-video div:nth-child(1) {
   width: 100%;
   height: 25rem;
 }
+
 .un_featuresList-video div:nth-child(1):hover a img {
   transform: scale(1.1);
   opacity: 1;
 }
+
 .un_featuresList-video div:nth-child(1) a {
   position: relative;
   display: flex;
@@ -452,6 +515,7 @@
   height: 100%;
   overflow: hidden;
 }
+
 .un_featuresList-video div:nth-child(1) a span {
   position: absolute;
   display: flex;
@@ -463,6 +527,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
+
 .un_featuresList-video div:nth-child(1) a span::before {
   content: "";
   position: absolute;
@@ -472,6 +537,7 @@
   clip-path: polygon(0 0, 0% 100%, 100% 50%);
   transform: translateX(0.07rem);
 }
+
 .un_featuresList-video div:nth-child(1) a img {
   width: 100%;
   height: 100%;
@@ -479,6 +545,7 @@
   object-fit: cover;
   opacity: 0.6;
 }
+
 .un_featuresList-video div:nth-child(2) {
   width: 100%;
   display: flex;
@@ -488,14 +555,17 @@
   text-align: center;
   padding: 3rem;
 }
+
 .un_featuresList-video div:nth-child(2) h1 {
   margin: 0 0 1rem 0;
   font-size: 2.5rem;
 }
+
 .un_featuresList-video div:nth-child(2) p {
   margin: 0;
   color: gray;
 }
+
 .un_featuresTitle {
   display: flex;
   flex-direction: column;
@@ -503,11 +573,13 @@
   align-items: center;
   position: relative;
 }
+
 .un_featuresTitle h1 {
   font-size: 3rem;
   margin: 0 0 1rem 0;
   filter: drop-shadow(0 0 0 transparent);
 }
+
 .un_featuresTitle p {
   color: gray;
 }
@@ -518,6 +590,7 @@
   background: linear-gradient(rgb(26, 26, 26), rgb(19, 19, 19));
   z-index: 2;
 }
+
 .un_streamers::before {
   content: "";
   position: absolute;
@@ -527,26 +600,32 @@
   filter: grayscale(100%);
   pointer-events: none;
 }
+
 .un_streamers .un_container {
   position: relative;
   z-index: 1;
 }
+
 .un_streamersTitle {
   text-align: center;
   max-width: 52rem;
   margin: 0 auto 2.5rem auto;
 }
+
 .un_streamersTitle h2 {
   margin: 0 0 0.8rem 0;
   font-size: 2.4rem;
 }
+
 .un_streamersTitle p {
   margin: 0;
   color: rgba(255, 255, 255, 0.62);
 }
+
 .un_streamersGrid {
   position: relative;
 }
+
 .un_streamerCard {
   border-radius: 0.45rem;
   overflow: hidden;
@@ -555,6 +634,7 @@
   max-width: 66rem;
   margin: 0 auto;
 }
+
 .un_streamerFrame {
   width: 100%;
   aspect-ratio: 16/8.2;
@@ -562,17 +642,21 @@
   display: block;
   background: #000;
 }
+
 .un_streamerMeta {
   padding: 1rem 1.2rem 1.2rem 1.2rem;
 }
+
 .un_streamerMeta h3 {
   margin: 0;
   font-size: 1.15rem;
 }
+
 .un_streamerMeta p {
   margin: 0.45rem 0 0 0;
   color: rgba(255, 255, 255, 0.58);
 }
+
 .un_streamerMeta a {
   display: inline-block;
   margin-top: 0.9rem;
@@ -583,15 +667,18 @@
   padding: 0.42rem 0.85rem;
   transition: 0.2s;
 }
+
 .un_streamerMeta a:hover {
   border-color: rgba(255, 255, 255, 0.65);
 }
+
 .un_streamersSlider {
   overflow: hidden;
   border-radius: 0.45rem;
   perspective: 1400px;
   padding: 1rem 0;
 }
+
 .un_streamersGrid::before,
 .un_streamersGrid::after {
   content: "";
@@ -602,17 +689,21 @@
   z-index: 2;
   pointer-events: none;
 }
+
 .un_streamersGrid::before {
   left: 0;
   background: linear-gradient(90deg, rgba(24, 24, 24, 0.98) 0%, rgba(24, 24, 24, 0) 100%);
 }
+
 .un_streamersGrid::after {
   right: 0;
   background: linear-gradient(270deg, rgba(24, 24, 24, 0.98) 0%, rgba(24, 24, 24, 0) 100%);
 }
+
 .un_streamersSlider .swiper-wrapper {
   align-items: stretch;
 }
+
 .un_streamersSlider .swiper-slide {
   opacity: 0.45;
   transform: translateY(1.1rem) scale(0.78) rotateY(16deg);
@@ -620,20 +711,24 @@
   filter: saturate(75%);
   transition: transform 0.45s ease, opacity 0.45s ease, filter 0.45s ease;
 }
+
 .un_streamersSlider .swiper-slide-active {
   opacity: 1;
   transform: translateY(0) scale(1) rotateY(0deg);
   filter: saturate(100%);
   z-index: 2;
 }
+
 .un_streamersSlider .swiper-slide-prev {
   opacity: 0.72;
   transform: translateY(0.45rem) scale(0.86) rotateY(14deg);
 }
+
 .un_streamersSlider .swiper-slide-next {
   opacity: 0.72;
   transform: translateY(0.45rem) scale(0.86) rotateY(-14deg);
 }
+
 .un_streamersNavBtn {
   position: absolute;
   top: 46%;
@@ -651,16 +746,20 @@
   z-index: 3;
   transition: all 0.25s;
 }
+
 .un_streamersNavBtn:hover {
   background: rgba(0, 0, 0, 0.6);
   border-color: rgba(255, 255, 255, 0.75);
 }
+
 .un_streamersNavPrev {
   left: -3.4rem;
 }
+
 .un_streamersNavNext {
   right: -3.4rem;
 }
+
 .un_streamersNavBtn::before {
   content: "";
   width: 0.65rem;
@@ -668,10 +767,12 @@
   border-top: 0.12rem solid currentColor;
   border-right: 0.12rem solid currentColor;
 }
+
 .un_streamersNavPrev::before {
   transform: rotate(-135deg);
   margin-left: 0.2rem;
 }
+
 .un_streamersNavNext::before {
   transform: rotate(45deg);
   margin-right: 0.2rem;
@@ -683,17 +784,21 @@
   height: 104vh;
   padding: 0 0 5rem 0;
 }
+
 .un_header .un_container {
   height: 100%;
 }
+
 .un_headerTitle {
   width: 100%;
 }
+
 .un_countdown {
   width: 100%;
   margin: 0 auto 2.5rem auto;
   text-align: center;
 }
+
 .un_countdownLabel {
   font-family: "Prasia";
   color: rgba(255, 255, 255, 0.85);
@@ -702,11 +807,13 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }
+
 .un_countdownSubline {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6);
   margin: 0 0 1rem 0;
 }
+
 .un_countdownUnits {
   display: flex;
   align-items: center;
@@ -714,6 +821,7 @@
   flex-wrap: wrap;
   gap: 0.4rem 0.6rem;
 }
+
 .un_countdownUnit {
   display: flex;
   flex-direction: column;
@@ -725,6 +833,7 @@
   border-radius: 0.4rem;
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
 }
+
 .un_countdownValue {
   font-family: "Prasia";
   font-size: 1.8rem;
@@ -733,6 +842,7 @@
   min-width: 2ch;
   display: inline-block;
 }
+
 .un_countdownUnitLabel {
   font-size: 0.7rem;
   color: rgba(255, 255, 255, 0.55);
@@ -740,6 +850,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
 .un_countdownSep {
   font-family: "Prasia";
   font-size: 1.5rem;
@@ -747,22 +858,27 @@
   align-self: center;
   margin: 0 0.1rem;
 }
+
 .theme_1 .un_countdownUnit {
-  border-color: rgba(180, 140, 255, 0.35);
-  background: rgba(40, 20, 60, 0.4);
+  border-color: rgba(190, 62, 76, 0.45);
+  background: rgba(54, 12, 18, 0.48);
 }
+
 .theme_1 .un_countdownValue {
-  color: rgba(230, 210, 255, 1);
+  color: rgba(255, 205, 211, 1);
 }
+
 .theme_1 .un_countdownSep {
-  color: rgba(180, 140, 255, 0.6);
+  color: rgba(205, 86, 96, 0.72);
 }
+
 .un_headerKey {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   width: 100%;
 }
+
 .un_headerKey-btn label {
   width: 25rem;
   height: 4.8rem;
@@ -779,10 +895,12 @@
   margin: 0rem 0 3rem 0;
   transition: 0.3s;
 }
+
 .un_headerKey-btn label:hover {
   transform: scale(1.05);
   filter: brightness(130%);
 }
+
 .un_headerKey-btn label::before {
   content: "";
   position: absolute;
@@ -793,6 +911,7 @@
   z-index: 1;
   pointer-events: none;
 }
+
 .un_headerKey-btn label::after {
   content: "";
   position: absolute;
@@ -804,6 +923,7 @@
   opacity: 0;
   transform: rotate(180deg);
 }
+
 .un_headerKey-btn label div {
   border-radius: 0.4rem;
   width: 100%;
@@ -815,6 +935,7 @@
   padding: 0.1rem 0.2rem;
   background-color: rgb(214, 172, 47);
 }
+
 .un_headerKey-btn label div span {
   border: 0.05rem solid rgba(255, 255, 255, 0.277);
   width: 100%;
@@ -827,6 +948,7 @@
   position: relative;
   background-color: black;
 }
+
 .un_headerKey-btn label div span::before {
   content: "";
   position: absolute;
@@ -838,6 +960,7 @@
   z-index: -1;
   opacity: 0.8;
 }
+
 .un_headerKey .keyBtn {
   color: rgba(233, 233, 233, 0.5);
   width: 2.5rem;
@@ -852,33 +975,42 @@
   transform: translateY(0.2rem);
   transition: 0.3s;
 }
+
 .un_headerKey .keyBtn:hover {
   border-color: rgba(255, 255, 255, 0.6);
   background-color: rgba(0, 0, 0, 0.4);
   color: rgba(255, 255, 255, 0.7);
 }
+
 .un_headerKey .keyBtn::after {
   font-size: 1rem;
 }
+
 .un_headerKey .keyBtn svg {
   width: 1rem;
   height: 1rem;
 }
+
 .un_headerKey .keyBtn svg path {
   fill: rgba(233, 233, 233, 0.5);
 }
+
 .un_headerKey-prev {
   left: 1.5rem;
 }
+
 .un_headerKey-prev::after {
   transform: translateX(-0.08rem);
 }
+
 .un_headerKey-next {
   right: 1.5rem;
 }
+
 .un_headerKey-next::after {
   transform: translateX(0.08rem);
 }
+
 .un_headerKey-list {
   position: relative;
   padding: 0 4rem;
@@ -886,9 +1018,11 @@
   margin: 0 auto;
   overflow: hidden;
 }
+
 .un_headerKey-listSlider {
   overflow: hidden;
 }
+
 .un_headerKey-list::before {
   content: "";
   position: absolute;
@@ -899,6 +1033,7 @@
   top: 2.4rem;
   opacity: 0.2;
 }
+
 .un_headerKey-list::after {
   content: "";
   position: absolute;
@@ -909,18 +1044,22 @@
   top: 2.4rem;
   opacity: 0.2;
 }
+
 .un_headerKey-list ul {
   padding: 0;
   margin: 0;
   position: relative;
 }
+
 .un_headerKey-list ul .swiper-slide {
   transition: opacity 0.2s;
   opacity: 0;
 }
+
 .un_headerKey-list ul .swiper-slide-visible {
   opacity: 1;
 }
+
 .un_headerKey-list ul li {
   display: flex;
   align-items: center;
@@ -933,12 +1072,15 @@
   font-size: 1.1rem;
   line-height: 1.4rem;
 }
+
 .un_headerKey-list ul li span:nth-child(2) {
   max-width: 60%;
 }
+
 .un_headerKey-list ul li span:nth-child(2) strong {
   color: rgba(255, 255, 255, 0.7);
 }
+
 .un_headerKey-list ul li span:nth-child(1) {
   display: flex;
   width: 3rem;
@@ -948,6 +1090,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .un_headerKey-list ul li span:nth-child(1)::before {
   content: "";
   background: url(../images/icons/iconBg.png) top/contain no-repeat;
@@ -957,6 +1100,7 @@
   top: 0;
   left: 0;
 }
+
 .un_headerKey-list ul li span:nth-child(1)::after {
   content: "";
   background: url(../images/icons/iconBorder.png) top/contain no-repeat;
@@ -967,18 +1111,22 @@
   left: 0;
   z-index: 1;
 }
+
 .un_headerKey-list ul li span:nth-child(1) img {
   position: relative;
   z-index: 2;
   width: 0.8rem;
 }
+
 .un_headerLogo {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  transform: translateY(-10rem);
 }
+
 .un_headerLogo img {
   margin: 0 auto;
   width: 30rem;
@@ -986,10 +1134,12 @@
   height: auto;
   display: block;
 }
+
 .un_headerLogo .un_headerLogo-oasis {
-  width: 26rem;
+  width: 40.8rem;
   max-width: 100%;
 }
+
 .un_headerWrapper {
   height: 100%;
   justify-content: flex-end;
@@ -999,12 +1149,14 @@
   width: 100%;
   margin: 0 auto;
 }
+
 .un_headerWrapper h1 {
   font-size: 2.5rem;
   margin: 0 auto 1rem auto;
   text-align: center;
   width: 70%;
 }
+
 .un_headerWrapper p {
   color: rgba(255, 255, 255, 0.6);
   font-size: 1.1rem;
@@ -1012,9 +1164,11 @@
   margin: 0 auto 3rem auto;
   text-align: center;
 }
+
 body.features-page::after {
   display: none !important;
 }
+
 .un_featuresPage {
   padding: 12rem 0 8rem 0;
   position: relative;
@@ -1024,10 +1178,12 @@ body.features-page::after {
   overflow: hidden;
   z-index: 1;
 }
+
 .un_featuresPage .un_container {
   position: relative;
   z-index: 10;
 }
+
 .un_featuresPage::before {
   content: '';
   position: fixed;
@@ -1041,6 +1197,7 @@ body.features-page::after {
   z-index: -1;
   filter: grayscale(50%);
 }
+
 .un_featuresPage::after {
   content: '';
   position: fixed;
@@ -1051,12 +1208,14 @@ body.features-page::after {
   background: linear-gradient(rgba(31, 31, 31, 0.7), rgba(21, 21, 21, 0.9));
   z-index: -1;
 }
+
 .un_featuresPageHeader {
   text-align: center;
   margin-bottom: 5rem;
   position: relative;
   z-index: 10;
 }
+
 .un_featuresPageLogo {
   display: block;
   margin: 0 auto 1.5rem;
@@ -1064,6 +1223,7 @@ body.features-page::after {
   height: auto;
   object-fit: contain;
 }
+
 .un_featuresPageTitle {
   font-size: 4rem;
   margin: 0 0 1.5rem 0;
@@ -1071,6 +1231,7 @@ body.features-page::after {
   position: relative;
   z-index: 10;
 }
+
 .un_featuresPageSubtitle {
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.3rem;
@@ -1078,6 +1239,7 @@ body.features-page::after {
   position: relative;
   z-index: 10;
 }
+
 .un_featuresPageContent {
   margin-top: 6rem;
   position: relative;
@@ -1085,6 +1247,7 @@ body.features-page::after {
   overflow-x: hidden;
   min-width: 0;
 }
+
 .un_featuresPageSection {
   background: rgba(38, 38, 38, 0.6);
   border-radius: 0.5rem;
@@ -1093,17 +1256,20 @@ body.features-page::after {
   position: relative;
   z-index: 10;
 }
+
 .un_featuresPageSectionTitle {
   font-size: 2.5rem;
   margin: 0 0 3rem 0;
   text-align: center;
 }
+
 .un_featuresPageBenefits {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2.5rem;
   margin-top: 2rem;
 }
+
 .un_featuresPageBenefit {
   background: rgba(29, 29, 29, 0.8);
   padding: 2.5rem;
@@ -1111,27 +1277,32 @@ body.features-page::after {
   border: 0.05rem solid rgba(255, 255, 255, 0.05);
   transition: transform 0.3s, border-color 0.3s;
 }
+
 .un_featuresPageBenefit:hover {
   transform: translateY(-5px);
   border-color: rgba(255, 255, 255, 0.2);
 }
+
 .un_featuresPageBenefit h3 {
   font-size: 1.8rem;
   margin: 0 0 1rem 0;
   color: white;
 }
+
 .un_featuresPageBenefit p {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
   margin: 0;
   font-size: 1rem;
 }
+
 .un_featuresPageDetailed {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   min-width: 0;
 }
+
 .un_featuresPageDetailSection {
   background: rgba(29, 29, 29, 0.6);
   padding: 3rem;
@@ -1142,6 +1313,7 @@ body.features-page::after {
   min-width: 0;
   overflow-x: hidden;
 }
+
 .un_featuresPageDetailSection h3 {
   font-size: 2rem;
   margin: 0 0 1.5rem 0;
@@ -1152,28 +1324,33 @@ body.features-page::after {
   align-items: center;
   gap: 0.75rem;
 }
+
 .un_featuresPageDetailSection h3 .un_featuresCategoryIcon {
   width: 2rem;
   height: 2rem;
   object-fit: contain;
   flex-shrink: 0;
 }
+
 .un_featuresPageDetailSection h4 {
   font-size: 1.5rem;
   margin: 1.5rem 0 1rem 0;
   color: rgba(255, 255, 255, 0.9);
 }
+
 .un_featuresPageDetailSection p {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.8;
   margin: 0 0 1.5rem 0;
   font-size: 1.1rem;
 }
+
 .un_featuresPageDetailSection ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .un_featuresPageDetailSection ul li {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.8;
@@ -1182,6 +1359,7 @@ body.features-page::after {
   position: relative;
   font-size: 1rem;
 }
+
 .un_featuresPageDetailSection ul li::before {
   content: "•";
   position: absolute;
@@ -1189,30 +1367,37 @@ body.features-page::after {
   color: rgba(255, 255, 255, 0.5);
   font-size: 1.2rem;
 }
+
 .un_featuresPageDetailSection ul li strong {
   color: rgba(255, 255, 255, 0.9);
   font-weight: normal;
 }
+
 .un_featuresPageDetailSection ol {
   margin: 0 0 1.5rem 0;
   padding-left: 1.5rem;
 }
+
 .un_featuresPageDetailSection ol li {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.8;
   margin: 0.8rem 0;
   font-size: 1rem;
 }
+
 .un_featuresPageDetailSection ol li::marker {
   color: rgba(255, 255, 255, 0.55);
 }
+
 .un_featuresPageDetailSection ol li strong {
   color: rgba(255, 255, 255, 0.9);
   font-weight: normal;
 }
+
 body.wiki-page::after {
   display: none !important;
 }
+
 .un_wikiPage {
   padding: 10rem 0 6rem 0;
   position: relative;
@@ -1221,10 +1406,12 @@ body.wiki-page::after {
   margin-top: 4rem;
   z-index: 1;
 }
+
 .un_wikiPage .un_container {
   position: relative;
   z-index: 10;
 }
+
 .un_wikiPage::before {
   content: "";
   position: fixed;
@@ -1238,6 +1425,7 @@ body.wiki-page::after {
   filter: grayscale(40%);
   pointer-events: none;
 }
+
 .un_wikiPage::after {
   content: "";
   position: fixed;
@@ -1249,20 +1437,24 @@ body.wiki-page::after {
   z-index: -1;
   pointer-events: none;
 }
+
 .un_wikiPageHeader {
   text-align: center;
   margin-bottom: 3rem;
 }
+
 .un_wikiPageLogo {
   width: 6rem;
   height: auto;
   margin-bottom: 1.25rem;
   opacity: 0.95;
 }
+
 .un_wikiPageTitle {
   font-size: 3.2rem;
   margin: 0 0 0.75rem 0;
 }
+
 .un_wikiPageSubtitle {
   color: rgba(255, 255, 255, 0.65);
   font-size: 1.15rem;
@@ -1270,6 +1462,7 @@ body.wiki-page::after {
   max-width: 40rem;
   line-height: 1.5;
 }
+
 .un_wikiWrongServer {
   background: rgba(38, 38, 38, 0.75);
   border: 0.05rem solid rgba(255, 255, 255, 0.12);
@@ -1278,20 +1471,24 @@ body.wiki-page::after {
   margin-bottom: 3rem;
   text-align: center;
 }
+
 .un_wikiWrongServerInner {
   max-width: 32rem;
   margin: 0 auto;
 }
+
 .un_wikiWrongServerTitle {
   font-size: 1.75rem;
   margin: 0 0 1rem 0;
   color: white;
 }
+
 .un_wikiWrongServerText {
   color: rgba(255, 255, 255, 0.72);
   line-height: 1.65;
   margin: 0 0 1.5rem 0;
 }
+
 .un_wikiWrongServerLink {
   display: inline-block;
   padding: 0.65rem 1.5rem;
@@ -1301,15 +1498,18 @@ body.wiki-page::after {
   text-decoration: none;
   transition: background 0.25s;
 }
+
 .un_wikiWrongServerLink:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
 .un_wikiLayout {
   display: grid;
   grid-template-columns: minmax(15rem, 19rem) minmax(0, 1fr);
   gap: 2.5rem;
   align-items: start;
 }
+
 .un_wikiSidebar {
   position: sticky;
   top: 5.5rem;
@@ -1317,17 +1517,20 @@ body.wiki-page::after {
   flex-direction: column;
   gap: 1.25rem;
 }
+
 .un_wikiSearchWrap {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
+
 .un_wikiSearchLabel {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: rgba(255, 255, 255, 0.45);
 }
+
 .un_wikiSearch {
   width: 100%;
   padding: 0.65rem 0.85rem;
@@ -1339,17 +1542,21 @@ body.wiki-page::after {
   outline: none;
   transition: border-color 0.2s;
 }
+
 .un_wikiSearch:focus {
   border-color: rgba(255, 255, 255, 0.35);
 }
+
 .un_wikiSearch::placeholder {
   color: rgba(255, 255, 255, 0.35);
 }
+
 .un_wikiCategoryNav {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
 }
+
 .un_wikiCatBtn {
   text-align: left;
   padding: 0.55rem 0.75rem;
@@ -1361,15 +1568,18 @@ body.wiki-page::after {
   cursor: pointer;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
+
 .un_wikiCatBtn:hover {
   color: white;
   background: rgba(50, 54, 62, 0.75);
 }
+
 .un_wikiCatBtn.is-active {
   color: white;
   border-color: rgba(255, 255, 255, 0.18);
   background: rgba(55, 60, 72, 0.85);
 }
+
 .un_wikiArticleList {
   list-style: none;
   margin: 0;
@@ -1382,9 +1592,11 @@ body.wiki-page::after {
   border-top: 0.05rem solid rgba(255, 255, 255, 0.08);
   padding-top: 1rem;
 }
+
 .un_wikiArticleList li {
   margin: 0;
 }
+
 .un_wikiArticleLink {
   width: 100%;
   display: flex;
@@ -1400,38 +1612,46 @@ body.wiki-page::after {
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
+
 .un_wikiArticleLink:hover {
   background: rgba(255, 255, 255, 0.06);
   color: white;
 }
+
 .un_wikiArticleLink.is-active {
   background: rgba(255, 255, 255, 0.1);
   color: white;
 }
+
 .un_wikiArticleLinkTitle {
   font-size: 0.92rem;
   line-height: 1.35;
 }
+
 .un_wikiArticleLinkCat {
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: rgba(255, 255, 255, 0.38);
 }
+
 .un_wikiMain {
   min-width: 0;
 }
+
 .un_wikiArticle {
   background: rgba(32, 35, 40, 0.55);
   border: 0.05rem solid rgba(255, 255, 255, 0.1);
   border-radius: 0.5rem;
   padding: 2.5rem 2.75rem;
 }
+
 .un_wikiArticleHeader {
   margin-bottom: 2rem;
   padding-bottom: 1.25rem;
   border-bottom: 0.05rem solid rgba(255, 255, 255, 0.1);
 }
+
 .un_wikiArticleMeta {
   margin: 0 0 0.5rem 0;
   font-size: 0.78rem;
@@ -1439,20 +1659,24 @@ body.wiki-page::after {
   letter-spacing: 0.07em;
   color: rgba(255, 255, 255, 0.4);
 }
+
 .un_wikiArticleTitle {
   margin: 0;
   font-size: 2.1rem;
   color: white;
   line-height: 1.2;
 }
+
 .un_wikiArticleBody a {
   color: rgba(180, 210, 255, 0.95);
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
+
 .un_wikiArticleBody a:hover {
   color: white;
 }
+
 .un_wikiArticleBody code {
   font-size: 0.88em;
   padding: 0.15em 0.4em;
@@ -1460,9 +1684,11 @@ body.wiki-page::after {
   background: rgba(0, 0, 0, 0.35);
   color: rgba(255, 255, 255, 0.85);
 }
+
 .un_wikiRecentPanel {
   margin: 0;
 }
+
 .un_wikiRecentList {
   list-style: none;
   margin: 1rem 0 0;
@@ -1471,13 +1697,16 @@ body.wiki-page::after {
   flex-direction: column;
   gap: 0.55rem;
 }
+
 .un_wikiRecentList li {
   margin: 0;
   padding: 0;
 }
+
 .un_wikiRecentList li::before {
   content: none;
 }
+
 .un_wikiRecentBtn {
   width: 100%;
   display: flex;
@@ -1494,21 +1723,25 @@ body.wiki-page::after {
   cursor: pointer;
   transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
+
 .un_wikiRecentBtn:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
+
 .un_wikiRecentBtnTitle {
   font-size: 0.95rem;
   line-height: 1.35;
   color: #fff;
 }
+
 .un_wikiRecentBtnExcerpt {
   font-size: 0.82rem;
   line-height: 1.35;
   color: rgba(255, 255, 255, 0.66);
 }
+
 .un_wikiRecentBtnDate {
   margin-top: 0.15rem;
   font-size: 0.72rem;
@@ -1517,29 +1750,34 @@ body.wiki-page::after {
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
+
 .un_enchantRates {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
-.un_enchantRates > div {
+
+.un_enchantRates>div {
   background: rgba(38, 38, 38, 0.6);
   padding: 2rem;
   border-radius: 0.4rem;
   border: 0.05rem solid rgba(255, 255, 255, 0.05);
 }
-.un_enchantRates > div h4 {
+
+.un_enchantRates>div h4 {
   font-size: 1.3rem;
   margin: 0 0 1rem 0;
   color: white;
 }
-.un_enchantRates > div ul {
+
+.un_enchantRates>div ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.un_enchantRates > div ul li {
+
+.un_enchantRates>div ul li {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
   margin: 0.5rem 0;
@@ -1547,17 +1785,20 @@ body.wiki-page::after {
   position: relative;
   font-size: 0.95rem;
 }
-.un_enchantRates > div ul li::before {
+
+.un_enchantRates>div ul li::before {
   content: "→";
   position: absolute;
   left: 0;
   color: rgba(255, 255, 255, 0.4);
 }
+
 .un_ratesTable {
   margin-top: 1.5rem;
   max-width: 100%;
   min-width: 0;
 }
+
 .un_ratesTable table {
   width: 100%;
   max-width: 100%;
@@ -1566,10 +1807,12 @@ body.wiki-page::after {
   border-radius: 0.4rem;
   overflow: hidden;
 }
+
 /* Only true 2-column tables: fixed 65/35 split. Wider tables (e.g. quest grids) use auto layout. */
 .un_ratesTable table:has(tbody > tr:first-child > *:nth-child(2):last-child) {
   table-layout: fixed;
 }
+
 .un_ratesTable table th,
 .un_ratesTable table td {
   padding: 1rem 1.5rem;
@@ -1579,31 +1822,40 @@ body.wiki-page::after {
   overflow-wrap: break-word;
   word-break: break-word;
 }
+
 .un_ratesTable table:has(tbody > tr:first-child > *:nth-child(2):last-child) td:first-child,
 .un_ratesTable table:has(tbody > tr:first-child > *:nth-child(2):last-child) th:first-child {
   width: 65%;
 }
+
 .un_ratesTable table:has(tbody > tr:first-child > *:nth-child(2):last-child) td:last-child,
 .un_ratesTable table:has(tbody > tr:first-child > *:nth-child(2):last-child) th:last-child {
   width: 35%;
 }
+
 .un_ratesTable table th {
   background: rgba(29, 29, 29, 0.8);
   color: white;
   font-weight: normal;
   font-size: 1.1rem;
 }
+
 .un_ratesTable table td {
   color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;
 }
+
 .un_ratesTable table td strong {
   color: white;
   font-weight: normal;
 }
+
 .un_ratesTable table tr:last-child td {
   border-bottom: none;
 }
+
 .un_ratesTable table tr:hover {
   background: rgba(255, 255, 255, 0.05);
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
