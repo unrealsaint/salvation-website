@@ -501,11 +501,14 @@ function initializeFeaturesPage() {
 
                         <div class="un_featuresPageDetailSection">
                             <h3><img src="images/l2icons/subclass.png" alt="" class="un_featuresCategoryIcon"> Subclasses & Certificates</h3>
-                            <p>Subclasses let you explore different playstyles on the same character. Each subclass on Oasis Salvation can be leveled all the way to <strong>85</strong>.</p>
+                            <p>Subclasses let you build multiple playstyles on one character, and each subclass on Oasis Salvation can be leveled to <strong>85</strong>.</p>
                             <ul>
-                                <li>You keep all certificates and skills earned from a subclass even if you later change or delete that subclass (standard High Five behavior).</li>
-                                <li>As your subclass levels, you receive Subclass Certificates at milestone levels (e.g. 65 / 70 / 75 / 80) which can be exchanged at the proper NPC for special skills.</li>
-                                <li>Certificates can only be obtained and applied up to level 80; from 80–85 you still gain stats and skill power, but no extra certificates.</li>
+                                <li>Core retail-like subclass legality is enforced server-side (illegal combinations are blocked).</li>
+                                <li>Examples of enforced restrictions include Elf/Dark Elf split rules, Overlord restrictions, craft-line restrictions, and Kamael-related subclass limits.</li>
+                                <li>Subclass Certificates are gained at milestone levels (typically <strong>65 / 70 / 75 / 80</strong>) and exchanged at the proper NPC for cert skills.</li>
+                                <li>Oasis uses a broad certification pool model, but selected cert skills are intentionally blocked for balance by class/race rules.</li>
+                                <li>You keep cert skills already learned from subclass progression even if you later change or delete that subclass (High Five behavior).</li>
+                                <li>Certificates are obtained/applied up to level 80; from 80–85 you still gain subclass progression power, but no extra cert milestones.</li>
                             </ul>
                         </div>
 
