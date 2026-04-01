@@ -521,69 +521,94 @@ function initializeFeaturesPage() {
                                 <li><strong>Blessed scroll:</strong> no safe level, can go to 0 on fail.</li>
                                 <li><strong>Crafting:</strong> standard (no time-based or bonus XP/SP)</li>
                             </ul>
-                            <p><strong>Armor Enchant Rates (Regular Armor Pieces)</strong><br>Helmet, Chest, Legs, Boots, Gloves, Shields, Accessories (necklaces, earrings, rings, belts, etc.)</p>
+                            <p><strong>Armor Enchant Rates (Player-Facing Attempts)</strong><br>Regular Armor Pieces: Helmet, Chest, Legs, Boots, Gloves, Shields, Accessories (necklaces, earrings, rings, belts, etc.)</p>
                             <div class="un_ratesTable">
                                 <table>
-                                    <tr><th>Enchant Level</th><th>Success Rate</th></tr>
-                                    <tr><td>0–2</td><td>100%</td></tr>
-                                    <tr><td>3</td><td>66.67%</td></tr>
-                                    <tr><td>4</td><td>33.34%</td></tr>
-                                    <tr><td>5</td><td>25% (announced)</td></tr>
-                                    <tr><td>6</td><td>20%</td></tr>
-                                    <tr><td>7</td><td>16.67%</td></tr>
-                                    <tr><td>8</td><td>14.29%</td></tr>
-                                    <tr><td>9</td><td>12.5%</td></tr>
-                                    <tr><td>10</td><td>11.12%</td></tr>
-                                    <tr><td>11</td><td>10.0%</td></tr>
-                                    <tr><td>12</td><td>9.10%</td></tr>
-                                    <tr><td>13</td><td>8.34%</td></tr>
-                                    <tr><td>14</td><td>7.70%</td></tr>
-                                    <tr><td>15</td><td>7.15%</td></tr>
-                                    <tr><td>16</td><td>6.67%</td></tr>
+                                    <tr><th>Attempt (from -&gt; to)</th><th>Success Rate</th></tr>
+                                    <tr><td>+0 -&gt; +1</td><td>100%</td></tr>
+                                    <tr><td>+1 -&gt; +2</td><td>100%</td></tr>
+                                    <tr><td>+2 -&gt; +3</td><td>100%</td></tr>
+                                    <tr><td>+3 -&gt; +4</td><td>66.67%</td></tr>
+                                    <tr><td>+4 -&gt; +5</td><td>33.34%</td></tr>
+                                    <tr><td>+5 -&gt; +6</td><td>25% (announced)</td></tr>
+                                    <tr><td>+6 -&gt; +7</td><td>20%</td></tr>
+                                    <tr><td>+7 -&gt; +8</td><td>16.67%</td></tr>
+                                    <tr><td>+8 -&gt; +9</td><td>14.29%</td></tr>
+                                    <tr><td>+9 -&gt; +10</td><td>12.5%</td></tr>
+                                    <tr><td>+10 -&gt; +11</td><td>11.12%</td></tr>
+                                    <tr><td>+11 -&gt; +12</td><td>10.0%</td></tr>
+                                    <tr><td>+12 -&gt; +13</td><td>9.10%</td></tr>
+                                    <tr><td>+13 -&gt; +14</td><td>8.34%</td></tr>
+                                    <tr><td>+14 -&gt; +15</td><td>7.70%</td></tr>
+                                    <tr><td>+15 -&gt; +16</td><td>7.15%</td></tr>
                                 </table>
                             </div>
+                            <p><strong>Safe summary:</strong> up to +3 is 100%.</p>
                             <p><strong>Full Armor Enchant Rates (Full Armor Sets)</strong></p>
                             <div class="un_ratesTable">
                                 <table>
-                                    <tr><th>Enchant Level</th><th>Success Rate</th></tr>
-                                    <tr><td>0–3</td><td>100%</td></tr>
-                                    <tr><td>4</td><td>66.67%</td></tr>
-                                    <tr><td>5</td><td>33.34% (announced)</td></tr>
-                                    <tr><td>6</td><td>25%</td></tr>
-                                    <tr><td>7</td><td>20%</td></tr>
-                                    <tr><td>8</td><td>16.67%</td></tr>
-                                    <tr><td>9</td><td>14.29%</td></tr>
-                                    <tr><td>10</td><td>12.5%</td></tr>
-                                    <tr><td>11</td><td>11.12%</td></tr>
-                                    <tr><td>12</td><td>10.0%</td></tr>
-                                    <tr><td>13</td><td>9.10%</td></tr>
-                                    <tr><td>14</td><td>8.34%</td></tr>
-                                    <tr><td>15</td><td>7.70%</td></tr>
-                                    <tr><td>16</td><td>6.67%</td></tr>
+                                    <tr><th>Attempt (from -&gt; to)</th><th>Success Rate</th></tr>
+                                    <tr><td>+0 -&gt; +1</td><td>100%</td></tr>
+                                    <tr><td>+1 -&gt; +2</td><td>100%</td></tr>
+                                    <tr><td>+2 -&gt; +3</td><td>100%</td></tr>
+                                    <tr><td>+3 -&gt; +4</td><td>100%</td></tr>
+                                    <tr><td>+4 -&gt; +5</td><td>66.67%</td></tr>
+                                    <tr><td>+5 -&gt; +6</td><td>33.34% (announced)</td></tr>
+                                    <tr><td>+6 -&gt; +7</td><td>25%</td></tr>
+                                    <tr><td>+7 -&gt; +8</td><td>20%</td></tr>
+                                    <tr><td>+8 -&gt; +9</td><td>16.67%</td></tr>
+                                    <tr><td>+9 -&gt; +10</td><td>14.29%</td></tr>
+                                    <tr><td>+10 -&gt; +11</td><td>12.5%</td></tr>
+                                    <tr><td>+11 -&gt; +12</td><td>11.12%</td></tr>
+                                    <tr><td>+12 -&gt; +13</td><td>10.0%</td></tr>
+                                    <tr><td>+13 -&gt; +14</td><td>9.10%</td></tr>
+                                    <tr><td>+14 -&gt; +15</td><td>8.34%</td></tr>
+                                    <tr><td>+15 -&gt; +16</td><td>7.70%</td></tr>
                                 </table>
                             </div>
+                            <p><strong>Safe summary:</strong> up to +4 is 100%.</p>
                             <p><strong>Fighter Weapon Enchant Rates (Physical Weapons)</strong></p>
                             <div class="un_ratesTable">
                                 <table>
-                                    <tr><th>Enchant Level</th><th>Success Rate</th></tr>
-                                    <tr><td>0–2</td><td>100%</td></tr>
-                                    <tr><td>3–5</td><td>70%</td></tr>
-                                    <tr><td>6</td><td>70% (announced)</td></tr>
-                                    <tr><td>7–13</td><td>70%</td></tr>
-                                    <tr><td>14</td><td>70% (announced)</td></tr>
-                                    <tr><td>15–16</td><td>35%</td></tr>
+                                    <tr><th>Attempt (from -&gt; to)</th><th>Success Rate</th></tr>
+                                    <tr><td>+0 -&gt; +1</td><td>100%</td></tr>
+                                    <tr><td>+1 -&gt; +2</td><td>100%</td></tr>
+                                    <tr><td>+2 -&gt; +3</td><td>100%</td></tr>
+                                    <tr><td>+3 -&gt; +4</td><td>70%</td></tr>
+                                    <tr><td>+4 -&gt; +5</td><td>70%</td></tr>
+                                    <tr><td>+5 -&gt; +6</td><td>70%</td></tr>
+                                    <tr><td>+6 -&gt; +7</td><td>70% (announced)</td></tr>
+                                    <tr><td>+7 -&gt; +8</td><td>70%</td></tr>
+                                    <tr><td>+8 -&gt; +9</td><td>70%</td></tr>
+                                    <tr><td>+9 -&gt; +10</td><td>70%</td></tr>
+                                    <tr><td>+10 -&gt; +11</td><td>70%</td></tr>
+                                    <tr><td>+11 -&gt; +12</td><td>70%</td></tr>
+                                    <tr><td>+12 -&gt; +13</td><td>70%</td></tr>
+                                    <tr><td>+13 -&gt; +14</td><td>70%</td></tr>
+                                    <tr><td>+14 -&gt; +15</td><td>70% (announced)</td></tr>
+                                    <tr><td>+15 -&gt; +16</td><td>35%</td></tr>
                                 </table>
                             </div>
                             <p><strong>Mage Weapon Enchant Rates (Magic Weapons)</strong></p>
                             <div class="un_ratesTable">
                                 <table>
-                                    <tr><th>Enchant Level</th><th>Success Rate</th></tr>
-                                    <tr><td>0–2</td><td>100%</td></tr>
-                                    <tr><td>3–5</td><td>40%</td></tr>
-                                    <tr><td>6</td><td>40% (announced)</td></tr>
-                                    <tr><td>7–13</td><td>40%</td></tr>
-                                    <tr><td>14</td><td>40% (announced)</td></tr>
-                                    <tr><td>15–16</td><td>20%</td></tr>
+                                    <tr><th>Attempt (from -&gt; to)</th><th>Success Rate</th></tr>
+                                    <tr><td>+0 -&gt; +1</td><td>100%</td></tr>
+                                    <tr><td>+1 -&gt; +2</td><td>100%</td></tr>
+                                    <tr><td>+2 -&gt; +3</td><td>100%</td></tr>
+                                    <tr><td>+3 -&gt; +4</td><td>40%</td></tr>
+                                    <tr><td>+4 -&gt; +5</td><td>40%</td></tr>
+                                    <tr><td>+5 -&gt; +6</td><td>40%</td></tr>
+                                    <tr><td>+6 -&gt; +7</td><td>40% (announced)</td></tr>
+                                    <tr><td>+7 -&gt; +8</td><td>40%</td></tr>
+                                    <tr><td>+8 -&gt; +9</td><td>40%</td></tr>
+                                    <tr><td>+9 -&gt; +10</td><td>40%</td></tr>
+                                    <tr><td>+10 -&gt; +11</td><td>40%</td></tr>
+                                    <tr><td>+11 -&gt; +12</td><td>40%</td></tr>
+                                    <tr><td>+12 -&gt; +13</td><td>40%</td></tr>
+                                    <tr><td>+13 -&gt; +14</td><td>40%</td></tr>
+                                    <tr><td>+14 -&gt; +15</td><td>40% (announced)</td></tr>
+                                    <tr><td>+15 -&gt; +16</td><td>20%</td></tr>
                                 </table>
                             </div>
                         </div>
@@ -796,69 +821,94 @@ function initializeFeaturesPage() {
                                 <li><strong>Blessed scroll:</strong> brak bezpiecznego poziomu, przy failu może zejść do 0.</li>
                                 <li><strong>Crafting:</strong> standard (bez bonusu czasowego ani XP/SP)</li>
                             </ul>
-                            <p><strong>Stawki enchantu pancerza (zwykłe części)</strong><br>Hełm, napierśnik, nogawice, buty, rękawice, tarcze, akcesoria (naszyjniki, kolczyki, pierścienie, pasy itd.)</p>
+                            <p><strong>Stawki enchantu pancerza (próby gracza)</strong><br>Zwykłe części: Hełm, napierśnik, nogawice, buty, rękawice, tarcze, akcesoria (naszyjniki, kolczyki, pierścienie, pasy itd.)</p>
                             <div class="un_ratesTable">
                                 <table>
-                                    <tr><th>Poziom enchantu</th><th>Szansa sukcesu</th></tr>
-                                    <tr><td>0–2</td><td>100%</td></tr>
-                                    <tr><td>3</td><td>66.67%</td></tr>
-                                    <tr><td>4</td><td>33.34%</td></tr>
-                                    <tr><td>5</td><td>25% (ogłoszone)</td></tr>
-                                    <tr><td>6</td><td>20%</td></tr>
-                                    <tr><td>7</td><td>16.67%</td></tr>
-                                    <tr><td>8</td><td>14.29%</td></tr>
-                                    <tr><td>9</td><td>12.5%</td></tr>
-                                    <tr><td>10</td><td>11.12%</td></tr>
-                                    <tr><td>11</td><td>10.0%</td></tr>
-                                    <tr><td>12</td><td>9.10%</td></tr>
-                                    <tr><td>13</td><td>8.34%</td></tr>
-                                    <tr><td>14</td><td>7.70%</td></tr>
-                                    <tr><td>15</td><td>7.15%</td></tr>
-                                    <tr><td>16</td><td>6.67%</td></tr>
+                                    <tr><th>Próba (z -&gt; na)</th><th>Szansa sukcesu</th></tr>
+                                    <tr><td>+0 -&gt; +1</td><td>100%</td></tr>
+                                    <tr><td>+1 -&gt; +2</td><td>100%</td></tr>
+                                    <tr><td>+2 -&gt; +3</td><td>100%</td></tr>
+                                    <tr><td>+3 -&gt; +4</td><td>66.67%</td></tr>
+                                    <tr><td>+4 -&gt; +5</td><td>33.34%</td></tr>
+                                    <tr><td>+5 -&gt; +6</td><td>25% (ogłoszone)</td></tr>
+                                    <tr><td>+6 -&gt; +7</td><td>20%</td></tr>
+                                    <tr><td>+7 -&gt; +8</td><td>16.67%</td></tr>
+                                    <tr><td>+8 -&gt; +9</td><td>14.29%</td></tr>
+                                    <tr><td>+9 -&gt; +10</td><td>12.5%</td></tr>
+                                    <tr><td>+10 -&gt; +11</td><td>11.12%</td></tr>
+                                    <tr><td>+11 -&gt; +12</td><td>10.0%</td></tr>
+                                    <tr><td>+12 -&gt; +13</td><td>9.10%</td></tr>
+                                    <tr><td>+13 -&gt; +14</td><td>8.34%</td></tr>
+                                    <tr><td>+14 -&gt; +15</td><td>7.70%</td></tr>
+                                    <tr><td>+15 -&gt; +16</td><td>7.15%</td></tr>
                                 </table>
                             </div>
+                            <p><strong>Podsumowanie safe:</strong> do +3 jest 100%.</p>
                             <p><strong>Stawki enchantu pełnego pancerza (komplety)</strong></p>
                             <div class="un_ratesTable">
                                 <table>
-                                    <tr><th>Poziom enchantu</th><th>Szansa sukcesu</th></tr>
-                                    <tr><td>0–3</td><td>100%</td></tr>
-                                    <tr><td>4</td><td>66.67%</td></tr>
-                                    <tr><td>5</td><td>33.34% (ogłoszone)</td></tr>
-                                    <tr><td>6</td><td>25%</td></tr>
-                                    <tr><td>7</td><td>20%</td></tr>
-                                    <tr><td>8</td><td>16.67%</td></tr>
-                                    <tr><td>9</td><td>14.29%</td></tr>
-                                    <tr><td>10</td><td>12.5%</td></tr>
-                                    <tr><td>11</td><td>11.12%</td></tr>
-                                    <tr><td>12</td><td>10.0%</td></tr>
-                                    <tr><td>13</td><td>9.10%</td></tr>
-                                    <tr><td>14</td><td>8.34%</td></tr>
-                                    <tr><td>15</td><td>7.70%</td></tr>
-                                    <tr><td>16</td><td>6.67%</td></tr>
+                                    <tr><th>Próba (z -&gt; na)</th><th>Szansa sukcesu</th></tr>
+                                    <tr><td>+0 -&gt; +1</td><td>100%</td></tr>
+                                    <tr><td>+1 -&gt; +2</td><td>100%</td></tr>
+                                    <tr><td>+2 -&gt; +3</td><td>100%</td></tr>
+                                    <tr><td>+3 -&gt; +4</td><td>100%</td></tr>
+                                    <tr><td>+4 -&gt; +5</td><td>66.67%</td></tr>
+                                    <tr><td>+5 -&gt; +6</td><td>33.34% (ogłoszone)</td></tr>
+                                    <tr><td>+6 -&gt; +7</td><td>25%</td></tr>
+                                    <tr><td>+7 -&gt; +8</td><td>20%</td></tr>
+                                    <tr><td>+8 -&gt; +9</td><td>16.67%</td></tr>
+                                    <tr><td>+9 -&gt; +10</td><td>14.29%</td></tr>
+                                    <tr><td>+10 -&gt; +11</td><td>12.5%</td></tr>
+                                    <tr><td>+11 -&gt; +12</td><td>11.12%</td></tr>
+                                    <tr><td>+12 -&gt; +13</td><td>10.0%</td></tr>
+                                    <tr><td>+13 -&gt; +14</td><td>9.10%</td></tr>
+                                    <tr><td>+14 -&gt; +15</td><td>8.34%</td></tr>
+                                    <tr><td>+15 -&gt; +16</td><td>7.70%</td></tr>
                                 </table>
                             </div>
+                            <p><strong>Podsumowanie safe:</strong> do +4 jest 100%.</p>
                             <p><strong>Stawki enchantu broni fizycznej</strong></p>
                             <div class="un_ratesTable">
                                 <table>
-                                    <tr><th>Poziom enchantu</th><th>Szansa sukcesu</th></tr>
-                                    <tr><td>0–2</td><td>100%</td></tr>
-                                    <tr><td>3–5</td><td>70%</td></tr>
-                                    <tr><td>6</td><td>70% (ogłoszone)</td></tr>
-                                    <tr><td>7–13</td><td>70%</td></tr>
-                                    <tr><td>14</td><td>70% (ogłoszone)</td></tr>
-                                    <tr><td>15–16</td><td>35%</td></tr>
+                                    <tr><th>Próba (z -&gt; na)</th><th>Szansa sukcesu</th></tr>
+                                    <tr><td>+0 -&gt; +1</td><td>100%</td></tr>
+                                    <tr><td>+1 -&gt; +2</td><td>100%</td></tr>
+                                    <tr><td>+2 -&gt; +3</td><td>100%</td></tr>
+                                    <tr><td>+3 -&gt; +4</td><td>70%</td></tr>
+                                    <tr><td>+4 -&gt; +5</td><td>70%</td></tr>
+                                    <tr><td>+5 -&gt; +6</td><td>70%</td></tr>
+                                    <tr><td>+6 -&gt; +7</td><td>70% (ogłoszone)</td></tr>
+                                    <tr><td>+7 -&gt; +8</td><td>70%</td></tr>
+                                    <tr><td>+8 -&gt; +9</td><td>70%</td></tr>
+                                    <tr><td>+9 -&gt; +10</td><td>70%</td></tr>
+                                    <tr><td>+10 -&gt; +11</td><td>70%</td></tr>
+                                    <tr><td>+11 -&gt; +12</td><td>70%</td></tr>
+                                    <tr><td>+12 -&gt; +13</td><td>70%</td></tr>
+                                    <tr><td>+13 -&gt; +14</td><td>70%</td></tr>
+                                    <tr><td>+14 -&gt; +15</td><td>70% (ogłoszone)</td></tr>
+                                    <tr><td>+15 -&gt; +16</td><td>35%</td></tr>
                                 </table>
                             </div>
                             <p><strong>Stawki enchantu broni magicznej</strong></p>
                             <div class="un_ratesTable">
                                 <table>
-                                    <tr><th>Poziom enchantu</th><th>Szansa sukcesu</th></tr>
-                                    <tr><td>0–2</td><td>100%</td></tr>
-                                    <tr><td>3–5</td><td>40%</td></tr>
-                                    <tr><td>6</td><td>40% (ogłoszone)</td></tr>
-                                    <tr><td>7–13</td><td>40%</td></tr>
-                                    <tr><td>14</td><td>40% (ogłoszone)</td></tr>
-                                    <tr><td>15–16</td><td>20%</td></tr>
+                                    <tr><th>Próba (z -&gt; na)</th><th>Szansa sukcesu</th></tr>
+                                    <tr><td>+0 -&gt; +1</td><td>100%</td></tr>
+                                    <tr><td>+1 -&gt; +2</td><td>100%</td></tr>
+                                    <tr><td>+2 -&gt; +3</td><td>100%</td></tr>
+                                    <tr><td>+3 -&gt; +4</td><td>40%</td></tr>
+                                    <tr><td>+4 -&gt; +5</td><td>40%</td></tr>
+                                    <tr><td>+5 -&gt; +6</td><td>40%</td></tr>
+                                    <tr><td>+6 -&gt; +7</td><td>40% (ogłoszone)</td></tr>
+                                    <tr><td>+7 -&gt; +8</td><td>40%</td></tr>
+                                    <tr><td>+8 -&gt; +9</td><td>40%</td></tr>
+                                    <tr><td>+9 -&gt; +10</td><td>40%</td></tr>
+                                    <tr><td>+10 -&gt; +11</td><td>40%</td></tr>
+                                    <tr><td>+11 -&gt; +12</td><td>40%</td></tr>
+                                    <tr><td>+12 -&gt; +13</td><td>40%</td></tr>
+                                    <tr><td>+13 -&gt; +14</td><td>40%</td></tr>
+                                    <tr><td>+14 -&gt; +15</td><td>40% (ogłoszone)</td></tr>
+                                    <tr><td>+15 -&gt; +16</td><td>20%</td></tr>
                                 </table>
                             </div>
                         </div>
