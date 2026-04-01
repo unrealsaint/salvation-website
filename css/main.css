@@ -798,85 +798,6 @@
   width: 100%;
 }
 
-.un_countdown {
-  width: 100%;
-  margin: 0 auto 2.5rem auto;
-  text-align: center;
-}
-
-.un_countdownLabel {
-  font-family: "Prasia";
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1rem;
-  margin: 0 0 0.35rem 0;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-.un_countdownSubline {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
-  margin: 0 0 1rem 0;
-}
-
-.un_countdownUnits {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.4rem 0.6rem;
-}
-
-.un_countdownUnit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 4rem;
-  padding: 0.75rem 0.9rem;
-  background: rgba(0, 0, 0, 0.35);
-  border: 0.05rem solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.4rem;
-  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
-}
-
-.un_countdownValue {
-  font-family: "Prasia";
-  font-size: 1.8rem;
-  color: #fff;
-  line-height: 1.2;
-  min-width: 2ch;
-  display: inline-block;
-}
-
-.un_countdownUnitLabel {
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.55);
-  margin-top: 0.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.un_countdownSep {
-  font-family: "Prasia";
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.4);
-  align-self: center;
-  margin: 0 0.1rem;
-}
-
-.theme_1 .un_countdownUnit {
-  border-color: rgba(190, 62, 76, 0.45);
-  background: rgba(54, 12, 18, 0.48);
-}
-
-.theme_1 .un_countdownValue {
-  color: rgba(255, 205, 211, 1);
-}
-
-.theme_1 .un_countdownSep {
-  color: rgba(205, 86, 96, 0.72);
-}
-
 .un_headerKey {
   display: flex;
   align-items: center;
@@ -1129,7 +1050,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  transform: translateY(-10rem);
+  transform: translateY(-1rem);
 }
 
 .un_headerLogo img {

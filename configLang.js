@@ -22,15 +22,6 @@ const lang = {
             pageTitle: 'Vote for us'
         },
 
-        countdown: {
-            label: 'Server launch',
-            subline: 'Oasis Salvation High-Five will open on April 1st 19:00 CEST',
-            days: 'Days',
-            hours: 'Hours',
-            minutes: 'Minutes',
-            seconds: 'Seconds'
-        },
-
         howToStart: {
             title: "Let's Start the Gameplay!",
             steps: [
@@ -157,15 +148,6 @@ const lang = {
 
         vote: {
             pageTitle: 'Głosuj za nami'
-        },
-
-        countdown: {
-            label: 'Start serwera',
-            subline: 'Oasis Salvation High-Five uruchomi się 1 kwietnia o 19:00 CEST',
-            days: 'Dni',
-            hours: 'Godz.',
-            minutes: 'Min',
-            seconds: 'Sek'
         },
 
         howToStart: {
