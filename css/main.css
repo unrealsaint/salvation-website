@@ -589,6 +589,11 @@
   position: relative;
   background: linear-gradient(rgb(26, 26, 26), rgb(19, 19, 19));
   z-index: 2;
+  mask: url(../images/page_mask.png), url(../images/page_maskBg.jpg) 100% 100%;
+  mask-size: 100% 5rem, 100% 100%;
+  mask-position: 50% 0, 0 4.8rem;
+  mask-repeat: no-repeat;
+  margin-top: -4rem;
 }
 
 .un_streamers::before {
