@@ -489,7 +489,7 @@ function initializeFeaturesPage() {
                             <h3><img src="images/l2icons/char_progression.png" alt="" class="un_featuresCategoryIcon"> Character & Progression</h3>
                             <ul>
                                 <li><strong>Max level:</strong> 85</li>
-                                <li><strong>Subclasses:</strong> 3 max, from 40 to 85. Cost: 100 Coin of Luck (or subclass quest)</li>
+                                <li><strong>Subclasses:</strong> 3 max, from 40 to 85. Cost: 4000 Coin of Luck (or subclass quest)</li>
                                 <li><strong>Weight:</strong> 8x</li>
                                 <li><strong>Respawn:</strong> 65% HP, 0% CP/MP</li>
                                 <li><strong>Auto-learn skills:</strong> On (to 85)</li>
@@ -792,7 +792,7 @@ function initializeFeaturesPage() {
                             <h3><img src="images/l2icons/char_progression.png" alt="" class="un_featuresCategoryIcon"> Postać i progresja</h3>
                             <ul>
                                 <li><strong>Maks. poziom:</strong> 85</li>
-                                <li><strong>Subclassy:</strong> 3 max, od 40 do 85. Koszt: 100 Coin of Luck (lub quest subclass)</li>
+                                <li><strong>Subclassy:</strong> 3 max, od 40 do 85. Koszt: 4000 Coin of Luck (lub quest subclass)</li>
                                 <li><strong>Waga:</strong> 8x</li>
                                 <li><strong>Respawn:</strong> 65% HP, 0% CP/MP</li>
                                 <li><strong>Auto-learn umiejętności:</strong> Włączone (do 85)</li>
