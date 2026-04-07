@@ -1,4 +1,52 @@
 // Features page specific script for High Five Salvation
+
+/** Collapsible feature panels: collapsed by default; first h3 in each section toggles. */
+function initFeaturesPageFoldablePanels(container) {
+    if (!container) return;
+    container.querySelectorAll('.un_featuresPageDetailSection').forEach((section) => {
+        const h3 = section.querySelector('h3');
+        if (!h3) return;
+
+        const body = document.createElement('div');
+        body.className = 'un_featuresPanelBody';
+        const inner = document.createElement('div');
+        inner.className = 'un_featuresPanelBodyInner';
+        let node = h3.nextSibling;
+        while (node) {
+            const next = node.nextSibling;
+            inner.appendChild(node);
+            node = next;
+        }
+        body.appendChild(inner);
+        section.appendChild(body);
+
+        section.classList.add('un_featuresPanel', 'un_featuresPanel--collapsed');
+        h3.classList.add('un_featuresPanelHeader');
+        h3.setAttribute('tabindex', '0');
+        h3.setAttribute('role', 'button');
+        h3.setAttribute('aria-expanded', 'false');
+
+        const syncAria = () => {
+            const open = !section.classList.contains('un_featuresPanel--collapsed');
+            h3.setAttribute('aria-expanded', open ? 'true' : 'false');
+        };
+
+        const toggle = (e) => {
+            e.preventDefault();
+            section.classList.toggle('un_featuresPanel--collapsed');
+            syncAria();
+        };
+
+        h3.addEventListener('click', toggle);
+        h3.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggle(e);
+            }
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Wait for script.js to initialize first
     setTimeout(() => {
@@ -368,6 +416,7 @@ function initializeFeaturesPage() {
 
             sectionTitle.textContent = interludePlusFeatures[currentLanguage]?.title || interludePlusFeatures['en'].title;
             sectionContent.innerHTML = interludePlusFeatures[currentLanguage]?.content || interludePlusFeatures['en'].content;
+            initFeaturesPageFoldablePanels(sectionContent);
             return;
         }
 
@@ -384,8 +433,16 @@ function initializeFeaturesPage() {
                                     <tr><td>XP</td><td><strong>5x</strong></td></tr>
                                     <tr><td>SP</td><td><strong>5x</strong></td></tr>
                                     <tr><td>Party XP/SP</td><td><strong>1.2x</strong></td></tr>
+                                    <tr><td>Drop Adena</td><td><strong>3.0</strong></td></tr>
+                                    <tr><td>Drop Items</td><td><strong>5.0</strong></td></tr>
+                                    <tr><td>Drop Spoil</td><td><strong>5.0</strong></td></tr>
+                                    <tr><td>Raid Boss</td><td><strong>3.0</strong></td></tr>
+                                    <tr><td>Epic Boss</td><td><strong>1.0</strong></td></tr>
+                                    <tr><td>Spoil Chance</td><td><strong>5.0</strong></td></tr>
+                                    <tr><td>Multi-box (boxes / windows)</td><td><strong>2</strong> max</td></tr>
                                 </table>
                             </div>
+                            <p class="un_coreRatesMultiboxNote"><strong>Oasis Salvation H5</strong> is limited to <strong>two</strong> concurrent client windows (boxes) per PC.</p>
                         </div>
 
                         <div class="un_featuresPageDetailSection">
@@ -687,8 +744,16 @@ function initializeFeaturesPage() {
                                     <tr><td>XP</td><td><strong>5x</strong></td></tr>
                                     <tr><td>SP</td><td><strong>5x</strong></td></tr>
                                     <tr><td>Party XP/SP</td><td><strong>1.2x</strong></td></tr>
+                                    <tr><td>Drop adeny</td><td><strong>3.0</strong></td></tr>
+                                    <tr><td>Drop przedmiotów</td><td><strong>5.0</strong></td></tr>
+                                    <tr><td>Drop spoil</td><td><strong>5.0</strong></td></tr>
+                                    <tr><td>Raid boss</td><td><strong>3.0</strong></td></tr>
+                                    <tr><td>Epic boss</td><td><strong>1.0</strong></td></tr>
+                                    <tr><td>Szansa spoil</td><td><strong>5.0</strong></td></tr>
+                                    <tr><td>Multibox (okna / boksy)</td><td><strong>2</strong> max</td></tr>
                                 </table>
                             </div>
+                            <p class="un_coreRatesMultiboxNote">Na <strong>Oasis Salvation H5</strong> dozwolone są maksymalnie <strong>dwa</strong> równoczesne okna klienta (boksy) na jednym PC.</p>
                         </div>
 
                         <div class="un_featuresPageDetailSection">
@@ -980,6 +1045,7 @@ function initializeFeaturesPage() {
 
         sectionTitle.textContent = detailedFeatures[currentLanguage]?.title || detailedFeatures['en'].title;
         sectionContent.innerHTML = detailedFeatures[currentLanguage]?.content || detailedFeatures['en'].content;
+        initFeaturesPageFoldablePanels(sectionContent);
     }
 
     // Language change is handled by script.js, but we'll reload to update features content

@@ -204,14 +204,14 @@ const wikiArticles = [
                     <h3>1) Select the correct world first</h3>
                     <p>Use the <strong>server world switch</strong> in the <strong>top-left corner</strong> of the website and select <strong>High Five</strong>. This wiki and the Salvation H5 client files are for the High Five world.</p>
                     <p><img src="images/worldselect.png" alt="World selector set to High Five" style="max-width: 100%; height: auto; border-radius: 8px;" /></p>
-                    <h3>2) Download client files + launcher</h3>
+                    <h3>2) Download the launcher</h3>
                     <p>After selecting <strong>High Five</strong>, you can start download in two ways:</p>
                     <ul>
                         <li>Click <strong>Download</strong> in the top navigation bar, or</li>
                         <li>Click <strong>Download</strong> on the title page.</li>
                     </ul>
-                    <p>Both options provide the client files with launcher from <strong>Google Drive</strong>.</p>
-                    <p><img src="images/downloadh5.png" alt="High Five Salvation client download panel with Google Drive option" style="max-width: 100%; height: auto; border-radius: 8px;" /></p>
+                    <p>Both options provide the launcher from <strong>Mega</strong> (4.4 MB).</p>
+                    <p><img src="images/downloadh5.png" alt="High Five Salvation download panel with Mega launcher option" style="max-width: 100%; height: auto; border-radius: 8px;" /></p>
                     <h3>3) Install and launch</h3>
                     <ul>
                         <li>Extract the downloaded files to your preferred folder.</li>
@@ -226,14 +226,14 @@ const wikiArticles = [
                     <h3>1) Najpierw wybierz poprawny swiat</h3>
                     <p>Na stronie uzyj <strong>przelacznika swiata serwera</strong> w <strong>lewym gornym rogu</strong> i wybierz <strong>High Five</strong>. Ta wiki oraz pliki klienta Salvation H5 dotycza tylko tego swiata.</p>
                     <p><img src="images/worldselect.png" alt="Przelacznik swiata ustawiony na High Five" style="max-width: 100%; height: auto; border-radius: 8px;" /></p>
-                    <h3>2) Pobierz pliki klienta i launcher</h3>
+                    <h3>2) Pobierz launcher</h3>
                     <p>Po wybraniu <strong>High Five</strong> pobieranie uruchomisz na dwa sposoby:</p>
                     <ul>
                         <li>Kliknij <strong>Download</strong> w gornym pasku nawigacji, albo</li>
                         <li>Kliknij <strong>Download</strong> na stronie tytulowej.</li>
                     </ul>
-                    <p>Obie opcje prowadza do plikow klienta i launchera z <strong>Google Drive</strong>.</p>
-                    <p><img src="images/downloadh5.png" alt="Panel pobierania klienta High Five Salvation z opcja Google Drive" style="max-width: 100%; height: auto; border-radius: 8px;" /></p>
+                    <p>Obie opcje prowadza do launchera na <strong>Mega</strong> (4.4 MB).</p>
+                    <p><img src="images/downloadh5.png" alt="Panel pobierania launchera High Five Salvation z opcja Mega" style="max-width: 100%; height: auto; border-radius: 8px;" /></p>
                     <h3>3) Instalacja i start</h3>
                     <ul>
                         <li>Rozpakuj pobrane pliki do wybranego folderu.</li>

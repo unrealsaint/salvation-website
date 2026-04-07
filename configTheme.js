@@ -206,17 +206,17 @@ const theme = [
 
         files: {
             en: {
-                title: 'High Five Salvation Client Files',
+                title: 'High Five Salvation Launcher',
                 mobile: 'This game is not available for mobile devices.',
                 fileType: [
                     {
-                        title: 'Download the Client',
-                        fileSize: '10.52 GB',
+                        title: 'Download Launcher',
+                        fileSize: '4.4 MB',
                         download: 'Download',
                         options: [
                             {
-                                title: 'Google Drive',
-                                url: 'https://drive.google.com/file/d/1bSUs5c60QXf03RoD3hckOVDGw1qX2V9G/view?usp=sharing'
+                                title: 'Mega',
+                                url: 'https://mega.nz/file/62IlnCxS#UzBNbrMvIgDb0X9rwW0TXVSxkXGv6N_0ZcfXN0E-zt0'
                             },
                         ]
                     }
@@ -228,17 +228,17 @@ const theme = [
                 }
             },
             pl: {
-                title: 'High Five Salvation Pliki Clienta i Systemu',
+                title: 'Launcher High Five Salvation',
                 mobile: 'Ta gra nie jest dostępna na urządzenia mobilne.',
                 fileType: [
                     {
-                        title: 'Pobierz klienta',
-                        fileSize: '10.52 GB',
+                        title: 'Pobierz launcher',
+                        fileSize: '4.4 MB',
                         download: 'Pobierz',
                         options: [
                             {
-                                title: 'Google Drive',
-                                url: 'https://drive.google.com/file/d/1bSUs5c60QXf03RoD3hckOVDGw1qX2V9G/view?usp=sharing'
+                                title: 'Mega',
+                                url: 'https://mega.nz/file/62IlnCxS#UzBNbrMvIgDb0X9rwW0TXVSxkXGv6N_0ZcfXN0E-zt0'
                             },
                         ]
                     }
