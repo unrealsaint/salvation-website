@@ -546,26 +546,23 @@ function initializeFeaturesPage() {
                             <h3><img src="images/l2icons/char_progression.png" alt="" class="un_featuresCategoryIcon"> Character & Progression</h3>
                             <ul>
                                 <li><strong>Max level:</strong> 85</li>
-                                <li><strong>Subclasses:</strong> 3 max, from 40 to 85. Cost: 4000 Coin of Luck (or subclass quest)</li>
+                                <li><strong>Subclasses:</strong> 3 max, from 40 to 85. Subclass quest skip: 4000 Coin of Luck (or complete the quest)</li>
                                 <li><strong>Weight:</strong> 8x</li>
                                 <li><strong>Respawn:</strong> 65% HP, 0% CP/MP</li>
-                                <li><strong>Auto-learn skills:</strong> On (to 85)</li>
+                                <li><strong>Auto-learn skills:</strong> On (to 85), excluding Forgotten Scrolls</li>
                                 <li><strong>Buff slots:</strong> 20 (24 with premium)</li>
-                                <li><strong>Inventory:</strong> 100 base (150 Dwarf), expand to 300. Warehouse 100 (120 Dwarf), expand to 200</li>
+                                <li><strong>Inventory:</strong> 150 base (200 Dwarf), expand to 300. Warehouse 100 (120 Dwarf), expand to 200</li>
                                 <li><strong>Private store:</strong> 3 sell / 4 buy (4/5 Dwarf), expandable</li>
                             </ul>
                         </div>
 
                         <div class="un_featuresPageDetailSection">
                             <h3><img src="images/l2icons/subclass.png" alt="" class="un_featuresCategoryIcon"> Subclasses & Certificates</h3>
-                            <p>Subclasses let you build multiple playstyles on one character, and each subclass on Oasis Salvation can be leveled to <strong>85</strong>.</p>
+                            <p>Subclasses let you build multiple playstyles on one character, and each subclass on Oasis Salvation can be leveled to <strong>85</strong>. Certificate skills can be learned on your <strong>main class</strong> and on <strong>all subclasses</strong>.</p>
                             <ul>
-                                <li>Core retail-like subclass legality is enforced server-side (illegal combinations are blocked).</li>
-                                <li>Examples of enforced restrictions include Elf/Dark Elf split rules, Overlord restrictions, craft-line restrictions, and Kamael-related subclass limits.</li>
-                                <li>Subclass Certificates are gained at milestone levels (typically <strong>65 / 70 / 75 / 80</strong>) and exchanged at the proper NPC for cert skills.</li>
-                                <li>Oasis uses a broad certification pool model, but selected cert skills are intentionally blocked for balance by class/race rules.</li>
-                                <li>You keep cert skills already learned from subclass progression even if you later change or delete that subclass (High Five behavior).</li>
-                                <li>Certificates are obtained/applied up to level 80; from 80–85 you still gain subclass progression power, but no extra cert milestones.</li>
+                                <li>There is no Ivory Tower <strong>Avant-Garde</strong> NPC. A <strong>custom NPC in Giran Square</strong> handles certifications and lets you add masteries freely for <strong>100,000 adena</strong> each.</li>
+                                <li><strong>All certification skills</strong> are available <strong>except Ultimate Defense (UD) certificates</strong> for <strong>tank classes</strong> and <strong>Kamael</strong>.</li>
+                                <li><strong>No certification books</strong> are required. From <strong>level 80+</strong> with <strong>third class</strong>, every allowed cert can be learned <strong>with adena</strong> through this NPC.</li>
                             </ul>
                         </div>
 
@@ -857,23 +854,23 @@ function initializeFeaturesPage() {
                             <h3><img src="images/l2icons/char_progression.png" alt="" class="un_featuresCategoryIcon"> Postać i progresja</h3>
                             <ul>
                                 <li><strong>Maks. poziom:</strong> 85</li>
-                                <li><strong>Subclassy:</strong> 3 max, od 40 do 85. Koszt: 4000 Coin of Luck (lub quest subclass)</li>
+                                <li><strong>Subclassy:</strong> 3 max, od 40 do 85. Pominięcie questa subclass: 4000 Coin of Luck (lub ukończenie questa)</li>
                                 <li><strong>Waga:</strong> 8x</li>
                                 <li><strong>Respawn:</strong> 65% HP, 0% CP/MP</li>
-                                <li><strong>Auto-learn umiejętności:</strong> Włączone (do 85)</li>
+                                <li><strong>Auto-learn umiejętności:</strong> Włączone (do 85), bez Forgotten Scrolls</li>
                                 <li><strong>Sloty buffów:</strong> 20 (24 z premium)</li>
-                                <li><strong>Ekwipunek:</strong> 100 bazowo (150 Krasnolud), rozszerzalny do 300. Magazyn 100 (120 Krasnolud), do 200</li>
+                                <li><strong>Ekwipunek:</strong> 150 bazowo (200 Krasnolud), rozszerzalny do 300. Magazyn 100 (120 Krasnolud), do 200</li>
                                 <li><strong>Prywatny sklep:</strong> 3 sprzedaż / 4 kupno (4/5 Krasnolud), rozszerzalne</li>
                             </ul>
                         </div>
 
                         <div class="un_featuresPageDetailSection">
                             <h3><img src="images/l2icons/subclass.png" alt="" class="un_featuresCategoryIcon"> Subclassy i certyfikaty</h3>
-                            <p>Subclassy pozwalają grać różnymi stylami na tej samej postaci. Każdą subclassę na Oasis Salvation możesz wbić aż do <strong>85 poziomu</strong>.</p>
+                            <p>Subclassy pozwalają grać różnymi stylami na tej samej postaci. Każdą subclassę na Oasis Salvation możesz wbić do <strong>85 poziomu</strong>. Umiejętności certów możesz uczyć się na <strong>klasie głównej</strong> i na <strong>wszystkich subclassach</strong>.</p>
                             <ul>
-                                <li>Zachowujesz wszystkie certyfikaty i umiejętności zdobyte z danej subclassy, nawet jeśli później ją zmienisz lub usuniesz (standard High Five).</li>
-                                <li>Wraz z poziomem subclassy otrzymujesz Subclass Certificates na progach poziomów (np. 65 / 70 / 75 / 80), które wymieniasz u odpowiedniego NPC na specjalne umiejętności.</li>
-                                <li>Certyfikaty można zdobywać i używać tylko do 80 poziomu; od 80 do 85 nadal rosną statystyki, HP/CP/MP i siła skilli, ale bez dodatkowych certyfikatów.</li>
+                                <li>Brak NPC Ivory Tower <strong>Avant-Garde</strong>. Certyfikacją zajmuje się <strong>niestandardowy NPC na placu w Giranie</strong>, u którego dodajesz mistrzostwa certów swobodnie za <strong>100&nbsp;000 adeny</strong> za każde.</li>
+                                <li>Dostępne są <strong>wszystkie certy</strong> <strong>z wyjątkiem certów Ultimate Defense (UD)</strong> dla <strong>klas tanków</strong> oraz <strong>Kamael</strong>.</li>
+                                <li><strong>Bez ksiąg certyfikacji</strong>: od <strong>poziomu 80+</strong> i <strong>trzeciej profesji</strong> każdy dozwolony cert można nauczyć się za <strong>adenę</strong> u tego NPC.</li>
                             </ul>
                         </div>
 
