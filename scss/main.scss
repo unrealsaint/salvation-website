@@ -1526,3 +1526,18 @@ body.wiki-page::after {
         }
     }
 }
+
+/* Skill name + long description column (e.g. Freya raid wiki) */
+.un_ratesTable.un_ratesTable--wideSecondCol table {
+    &:has(tbody > tr:first-child > *:nth-child(2):last-child) {
+        td:first-child,
+        th:first-child {
+            width: 22%;
+        }
+
+        td:last-child,
+        th:last-child {
+            width: 78%;
+        }
+    }
+}
