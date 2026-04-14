@@ -711,7 +711,7 @@ function initializeFeaturesPage() {
                             <div class="un_ratesTable">
                                 <table>
                                     <tr><td>Season length</td><td><strong>2 weeks</strong></td></tr>
-                                    <tr><td>Schedule</td><td><strong>Mon, Wed &amp; Fri</strong> · <strong>18:00–21:00</strong> (server time)</td></tr>
+                                    <tr><td>Schedule</td><td><strong>Mon, Wed, Fri &amp; Sun</strong> · <strong>18:00–21:00</strong> (server time)</td></tr>
                                     <tr><td>Max enchant</td><td><strong>+6</strong></td></tr>
                                 </table>
                             </div>
@@ -1019,7 +1019,7 @@ function initializeFeaturesPage() {
                             <div class="un_ratesTable">
                                 <table>
                                     <tr><td>Dlugosc sezonu</td><td><strong>2 tygodnie</strong></td></tr>
-                                    <tr><td>Harmonogram</td><td><strong>Pn / Sr / Pt</strong> · <strong>18:00–21:00</strong> (czas serwera)</td></tr>
+                                    <tr><td>Harmonogram</td><td><strong>Pn / Sr / Pt / Nd</strong> · <strong>18:00–21:00</strong> (czas serwera)</td></tr>
                                     <tr><td>Max enchant</td><td><strong>+6</strong></td></tr>
                                 </table>
                             </div>

@@ -7,12 +7,12 @@ window.WIKI_OLYMPIAD_GAMES_ARTICLE = {
         pl: 'Igrzyska Olympiad w Oasis - przewodnik gracza',
     },
     excerpt: {
-        en: 'Two-week seasons, Mon/Wed/Fri 18:00–21:00 (server time), +6 max enchant, plus match modes, points, and entry rules.',
-        pl: 'Sezony 2-tygodniowe, pn/sr/pt 18:00–21:00 (czas serwera), max enchant +6, tryby walk, punkty i zasady wejscia.',
+        en: 'Two-week seasons, Mon/Wed/Fri/Sun 18:00–21:00 (server time), +6 max enchant, plus match modes, points, and entry rules.',
+        pl: 'Sezony 2-tygodniowe, pn/sr/pt/nd 18:00–21:00 (czas serwera), max enchant +6, tryby walk, punkty i zasady wejscia.',
     },
     meta: {
         added: '2026-03-27',
-        updated: '2026-03-29',
+        updated: '2026-04-14',
     },
     body: {
         en: `
@@ -25,7 +25,7 @@ window.WIKI_OLYMPIAD_GAMES_ARTICLE = {
                     <div class="un_ratesTable">
                         <table>
                             <tr><td>Season cycle</td><td><strong>2-week period</strong></td></tr>
-                            <tr><td>Battle schedule</td><td><strong>Mon, Wed &amp; Fri</strong> · <strong>18:00–21:00</strong> (server time)</td></tr>
+                            <tr><td>Battle schedule</td><td><strong>Mon, Wed, Fri &amp; Sun</strong> · <strong>18:00–21:00</strong> (server time)</td></tr>
                             <tr><td>Match modes</td><td>Class 1v1, Open 1v1, Team 3v3</td></tr>
                             <tr><td>Entry requirement</td><td><strong>Noblesse</strong> (must be eligible)</td></tr>
                             <tr><td>Match limits</td><td>Per-season total limit + separate per-mode limits</td></tr>
@@ -42,7 +42,7 @@ window.WIKI_OLYMPIAD_GAMES_ARTICLE = {
                     <ul>
                         <li>Each Olympiad season lasts <strong>two weeks</strong>.</li>
                         <li>Ranking and Hero progress follow that <strong>2-week cycle</strong>.</li>
-                        <li>Matches run on <strong>Monday, Wednesday, and Friday</strong>, from <strong>18:00 to 21:00</strong> (server time).</li>
+                        <li>Matches run on <strong>Monday, Wednesday, Friday, and Sunday</strong>, from <strong>18:00 to 21:00</strong> (server time).</li>
                     </ul>
                 </div>
                 <div class="un_featuresPageDetailSection">
@@ -80,7 +80,7 @@ window.WIKI_OLYMPIAD_GAMES_ARTICLE = {
                 <div class="un_featuresPageDetailSection">
                     <h3>Useful Tips</h3>
                     <ul>
-                        <li>Queue early on <strong>Mon / Wed / Fri</strong> during <strong>18:00–21:00</strong> for faster matching.</li>
+                        <li>Queue early on <strong>Mon / Wed / Fri / Sun</strong> during <strong>18:00–21:00</strong> for faster matching.</li>
                         <li>Manage your per-season match count so you complete required fights before the season ends.</li>
                         <li>If you target top ranking/Hero, plan participation across all scheduled days each week of the season.</li>
                     </ul>
@@ -95,7 +95,7 @@ window.WIKI_OLYMPIAD_GAMES_ARTICLE = {
                     <div class="un_ratesTable">
                         <table>
                             <tr><td>Cykl sezonu</td><td><strong>Okres 2 tygodnie</strong></td></tr>
-                            <tr><td>Harmonogram walk</td><td><strong>Pn / Sr / Pt</strong> · <strong>18:00–21:00</strong> (czas serwera)</td></tr>
+                            <tr><td>Harmonogram walk</td><td><strong>Pn / Sr / Pt / Nd</strong> · <strong>18:00–21:00</strong> (czas serwera)</td></tr>
                             <tr><td>Tryby walk</td><td>Class 1v1, Open 1v1, Team 3v3</td></tr>
                             <tr><td>Wymaganie wejscia</td><td><strong>Noblesse</strong> (wymagana kwalifikacja)</td></tr>
                             <tr><td>Limity meczow</td><td>Limit na sezon + osobne limity na tryby</td></tr>
@@ -112,7 +112,7 @@ window.WIKI_OLYMPIAD_GAMES_ARTICLE = {
                     <ul>
                         <li>Kazdy sezon Olympiad trwa <strong>dwa tygodnie</strong>.</li>
                         <li>Postep rankingu i Hero jest liczony w <strong>dwutygodniowym cyklu</strong>.</li>
-                        <li>Walki odbywaja sie w <strong>poniedzialek, srode i piatek</strong>, od <strong>18:00 do 21:00</strong> (czas serwera).</li>
+                        <li>Walki odbywaja sie w <strong>poniedzialek, srode, piatek i niedziele</strong>, od <strong>18:00 do 21:00</strong> (czas serwera).</li>
                     </ul>
                 </div>
                 <div class="un_featuresPageDetailSection">
@@ -150,7 +150,7 @@ window.WIKI_OLYMPIAD_GAMES_ARTICLE = {
                 <div class="un_featuresPageDetailSection">
                     <h3>Praktyczne wskazowki</h3>
                     <ul>
-                        <li>Do kolejki wchodz jak najwczesniej w <strong>pn / sr / pt</strong> miedzy <strong>18:00–21:00</strong>, zeby szybciej znalezc mecz.</li>
+                        <li>Do kolejki wchodz jak najwczesniej w <strong>pn / sr / pt / nd</strong> miedzy <strong>18:00–21:00</strong>, zeby szybciej znalezc mecz.</li>
                         <li>Kontroluj limit walk na sezon, aby wyrobic wymagane minimum przed koncem sezonu.</li>
                         <li>Jesli celujesz w top ranking/Hero, planuj gre we wszystkie zaplanowane dni w kazdym tygodniu sezonu.</li>
                     </ul>
