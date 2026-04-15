@@ -40,6 +40,7 @@ const wikiCategories = [
 ];
 
 const wikiArticleMetaById = {
+    'epic-raid-boss-loot': { added: '2026-04-15', updated: '2026-04-15' },
     'ice-queen-freya-raid': { added: '2026-04-10', updated: '2026-04-10' },
     'olympiad-games-guide': { added: '2026-03-27', updated: '2026-03-27' },
     'epic-boss-spawn-guide': { added: '2026-03-26', updated: '2026-03-26' },
@@ -292,6 +293,7 @@ if (typeof window !== 'undefined') {
         window.WIKI_SUBCLASSES_CERTIFICATIONS_ARTICLE,
         window.WIKI_FREYA_RAID_ARTICLE,
         window.WIKI_DELUSION_CHAMBER_ARTICLE,
+        window.WIKI_EPIC_RAID_BOSS_LOOT_ARTICLE,
     ].filter(Boolean);
     // Keep newest loaded external articles at the top of the list.
     if (externalArticles.length) {
