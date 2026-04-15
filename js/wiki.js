@@ -44,6 +44,7 @@ const wikiArticleMetaById = {
     'olympiad-games-guide': { added: '2026-03-27', updated: '2026-03-27' },
     'epic-boss-spawn-guide': { added: '2026-03-26', updated: '2026-03-26' },
     'instance-entry-guide': { added: '2026-03-24', updated: '2026-03-24' },
+    'delusion-chamber-guide': { added: '2026-04-15', updated: '2026-04-15' },
     'steel-citadel-hellbound': { added: '2026-03-20', updated: '2026-03-24' },
     welcome: { added: '2026-03-01', updated: '2026-03-24' },
     rates: { added: '2026-03-01', updated: '2026-03-24' },
@@ -290,6 +291,7 @@ if (typeof window !== 'undefined') {
         window.WIKI_OLYMPIAD_GAMES_ARTICLE,
         window.WIKI_SUBCLASSES_CERTIFICATIONS_ARTICLE,
         window.WIKI_FREYA_RAID_ARTICLE,
+        window.WIKI_DELUSION_CHAMBER_ARTICLE,
     ].filter(Boolean);
     // Keep newest loaded external articles at the top of the list.
     if (externalArticles.length) {
