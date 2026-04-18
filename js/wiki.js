@@ -294,6 +294,7 @@ if (typeof window !== 'undefined') {
         window.WIKI_FREYA_RAID_ARTICLE,
         window.WIKI_DELUSION_CHAMBER_ARTICLE,
         window.WIKI_EPIC_RAID_BOSS_LOOT_ARTICLE,
+        window.WIKI_HELLBOUND_OASIS_PLAYER_GUIDE_ARTICLE,
     ].filter(Boolean);
     // Keep newest loaded external articles at the top of the list.
     if (externalArticles.length) {
