@@ -22,6 +22,13 @@ const lang = {
             pageTitle: 'Vote for us'
         },
 
+        interludeInvite: {
+            title: 'Join Oasis Interlude+',
+            text: 'A remastered Interlude+ experience is live — modern client, fresh progression, and a thriving community. Come play with us.',
+            cta: 'Visit Interlude+',
+            dismiss: 'Maybe later'
+        },
+
         howToStart: {
             title: "Let's Start the Gameplay!",
             steps: [
@@ -148,6 +155,13 @@ const lang = {
 
         vote: {
             pageTitle: 'Głosuj za nami'
+        },
+
+        interludeInvite: {
+            title: 'Dołącz do Oasis Interlude+',
+            text: 'Odświeżone doświadczenie Interlude+ już działa — nowoczesny klient, świeża progresja i aktywna społeczność. Zagraj z nami.',
+            cta: 'Przejdź do Interlude+',
+            dismiss: 'Może później'
         },
 
         howToStart: {

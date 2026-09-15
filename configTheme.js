@@ -260,6 +260,7 @@ const theme = [
         theme: 'theme_2', /*You can choose between theme_1 and 2 (Contact us at Templstock for more themes)*/
         defaultTheme: false,
         id: '2',
+        externalUrl: 'https://oasis-interlude.eu/en',
         loginUrl: 'https://account.oasis-interlude.com/login.php',
         registerUrl: 'https://account.oasis-interlude.com/register.php',
         panelUrl: 'https://account.oasis-interlude.com/',

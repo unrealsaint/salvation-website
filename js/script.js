@@ -19,6 +19,75 @@ const getStoredLanguage = () => {
 
 const findServerById = (serverId) => theme.find(server => server.id === serverId);
 
+/** If the world has an external site, navigate there (same tab) and reset local world to default. */
+const redirectIfExternalServer = (serverId) => {
+    const server = findServerById(serverId);
+    if (!server || !server.externalUrl) return false;
+
+    const defaultServer = theme.find(s => s.defaultTheme) || theme[0];
+    if (defaultServer) {
+        localStorage.setItem('selectedServer', defaultServer.id);
+    }
+    window.location.href = server.externalUrl;
+    return true;
+};
+
+const INTERLUDE_INVITE_DISMISS_KEY = 'interludeInviteDismissed';
+
+const getInterludeExternalUrl = () => {
+    const interludeServer = theme.find(server => server.externalUrl);
+    return (interludeServer && interludeServer.externalUrl) || 'https://oasis-interlude.eu/en';
+};
+
+const updateInterludeInviteContent = (language) => {
+    const inviteCopy = lang[language] && lang[language].interludeInvite;
+    if (!inviteCopy) return;
+
+    const titleEl = document.querySelector('.un_inviteTitle');
+    const textEl = document.querySelector('.un_inviteText');
+    const ctaEl = document.querySelector('.un_inviteCta');
+    const dismissEl = document.querySelector('.un_inviteDismiss');
+
+    if (titleEl) titleEl.textContent = inviteCopy.title;
+    if (textEl) textEl.textContent = inviteCopy.text;
+    if (ctaEl) {
+        ctaEl.textContent = inviteCopy.cta;
+        ctaEl.href = getInterludeExternalUrl();
+    }
+    if (dismissEl) dismissEl.textContent = inviteCopy.dismiss;
+};
+
+const initInterludeInvite = (language) => {
+    const invitePanel = document.getElementById('invitePanel');
+    const checkInviteInput = document.getElementById('checkInvite');
+    if (!invitePanel || !checkInviteInput) return;
+
+    updateInterludeInviteContent(language);
+
+    const ctaEl = document.querySelector('.un_inviteCta');
+    if (ctaEl && !ctaEl.dataset.inviteBound) {
+        ctaEl.dataset.inviteBound = '1';
+        ctaEl.addEventListener('click', () => {
+            localStorage.setItem(INTERLUDE_INVITE_DISMISS_KEY, '1');
+        });
+    }
+
+    invitePanel.querySelectorAll('label[for="checkInvite"]').forEach((label) => {
+        if (label.dataset.inviteBound) return;
+        label.dataset.inviteBound = '1';
+        label.addEventListener('click', () => {
+            // Checkbox toggles after this handler; dismiss once closing.
+            if (checkInviteInput.checked) {
+                localStorage.setItem(INTERLUDE_INVITE_DISMISS_KEY, '1');
+            }
+        });
+    });
+
+    if (!localStorage.getItem(INTERLUDE_INVITE_DISMISS_KEY)) {
+        checkInviteInput.checked = true;
+    }
+};
+
 const applyTheme = (theme) => {
 
     document.body.classList.add('animation');
@@ -342,6 +411,7 @@ const checkHashOnLoad = () => {
     const hash = window.location.hash.replace('#', '');
     const matchedServer = theme.find(server => server.name['en'].replace(/\s+/g, '') === hash);
     if (matchedServer) {
+        if (redirectIfExternalServer(matchedServer.id)) return;
         setThemeById(matchedServer.id);
         selectElement.value = matchedServer.id;
     } else {
@@ -423,6 +493,8 @@ const updateGlobalContent = (language, selectedServer = null) => {
     if (voteTitleEl && lang[language].vote && lang[language].vote.pageTitle) {
         voteTitleEl.textContent = lang[language].vote.pageTitle;
     }
+
+    updateInterludeInviteContent(language);
 
     const userLinksContainer = document.querySelector('.un_navUser');
     const defaultLoginHref = (lang[language].nav.userLinks.find(l => l.text === 'Login' || l.text === 'Zaloguj się') || {}).href || '/login';
@@ -551,7 +623,10 @@ const updateGlobalContent = (language, selectedServer = null) => {
 document.addEventListener('DOMContentLoaded', () => {
     const defaultLanguage = getStoredLanguage();
     const defaultServer = getStoredServer();
-    
+
+    // Worlds hosted elsewhere (e.g. Interlude+) — leave this site
+    if (redirectIfExternalServer(defaultServer)) return;
+
     // Set language selector
     if (languageSelectElement) {
         languageSelectElement.value = defaultLanguage;
@@ -593,6 +668,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set document language
     document.documentElement.setAttribute('lang', defaultLanguage);
 
+    // Default Interlude+ invite prompt (dismissible; remembered via localStorage)
+    initInterludeInvite(defaultLanguage);
+
     // Setup download button click handlers
     const headerDownloadBtn = document.querySelector('.un_header-download');
     if (headerDownloadBtn) {
@@ -609,6 +687,7 @@ document.addEventListener('DOMContentLoaded', () => {
 if (selectElement) {
     selectElement.addEventListener('change', (event) => {
         const selectedId = event.target.value;
+        if (redirectIfExternalServer(selectedId)) return;
         setThemeById(selectedId);
         // Only update URL hash on index page
         if (document.querySelector('.un_header')) {

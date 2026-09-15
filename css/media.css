@@ -11,6 +11,12 @@
   .un_voteContainer {
     padding: 2.5rem 1.5rem 1.5rem;
   }
+  .un_inviteContainer {
+    padding: 2.5rem 1.5rem 1.5rem;
+  }
+  .un_inviteTitle {
+    font-size: 1.65rem;
+  }
   .un_nav #navMobile:checked ~ .un_navWrapper {
     left: 0;
     opacity: 1;
