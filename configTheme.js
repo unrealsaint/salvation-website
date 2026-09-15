@@ -269,7 +269,7 @@ const theme = [
             pl: 'Interlude+'
         },
 
-        exp: 'X10',
+        exp: 'X100',
         header: {
             title: {
                 en: "Welcome to Interlude+ Project",

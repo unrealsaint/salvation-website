@@ -32,8 +32,6 @@ const redirectIfExternalServer = (serverId) => {
     return true;
 };
 
-const INTERLUDE_INVITE_DISMISS_KEY = 'interludeInviteDismissed';
-
 const getInterludeExternalUrl = () => {
     const interludeServer = theme.find(server => server.externalUrl);
     return (interludeServer && interludeServer.externalUrl) || 'https://oasis-interlude.eu/en';
@@ -58,34 +56,12 @@ const updateInterludeInviteContent = (language) => {
 };
 
 const initInterludeInvite = (language) => {
-    const invitePanel = document.getElementById('invitePanel');
     const checkInviteInput = document.getElementById('checkInvite');
-    if (!invitePanel || !checkInviteInput) return;
+    if (!checkInviteInput) return;
 
     updateInterludeInviteContent(language);
-
-    const ctaEl = document.querySelector('.un_inviteCta');
-    if (ctaEl && !ctaEl.dataset.inviteBound) {
-        ctaEl.dataset.inviteBound = '1';
-        ctaEl.addEventListener('click', () => {
-            localStorage.setItem(INTERLUDE_INVITE_DISMISS_KEY, '1');
-        });
-    }
-
-    invitePanel.querySelectorAll('label[for="checkInvite"]').forEach((label) => {
-        if (label.dataset.inviteBound) return;
-        label.dataset.inviteBound = '1';
-        label.addEventListener('click', () => {
-            // Checkbox toggles after this handler; dismiss once closing.
-            if (checkInviteInput.checked) {
-                localStorage.setItem(INTERLUDE_INVITE_DISMISS_KEY, '1');
-            }
-        });
-    });
-
-    if (!localStorage.getItem(INTERLUDE_INVITE_DISMISS_KEY)) {
-        checkInviteInput.checked = true;
-    }
+    // Always show on every page load; close is session/view-only (no persistence).
+    checkInviteInput.checked = true;
 };
 
 const applyTheme = (theme) => {
